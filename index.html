@@ -41,9 +41,9 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{background:var(--preto);color:var(--offwhite);font-family:var(--sans);
-  font-size:14px;line-height:1.6;overflow-x:hidden;font-weight:300}
+  font-size:14px;line-height:1.6;overflow-x:hidden;max-width:100%;font-weight:300}
 
 img{display:block;max-width:100%}
 
@@ -570,24 +570,96 @@ body.js .mf-quote.on .line:nth-child(3){transition-delay:.8s;opacity:1;transform
    ════════════════════════════════════════════════════════ */
 #app{background:var(--grafite)}
 .app-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1280px;margin:0 auto}
-@media(max-width:980px){
-  .app-inner{grid-template-columns:1.1fr 0.9fr;gap:20px;padding:0 20px}
-  .app-steps{margin-top:20px}
-  .app-step{padding:14px 0;gap:10px}
-  .app-step-num{min-width:24px;font-size:9px}
-  .app-step-name{font-size:11px;letter-spacing:2px;min-width:auto}
-  .app-step-desc{display:none!important}
-  .phone-scene{min-height:420px;perspective:1200px}
-  .phone-frame{width:190px;height:387px;border-radius:28px;transform:rotateY(-12deg) rotateX(3deg);margin:0 auto}
-  .phone-controls{margin-top:20px}
+@media(max-width:980px) {
+  .app-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px
+  }
+
+  .app-steps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    margin-top: 28px;
+  }
+
+  .app-step {
+    padding: 8px 16px !important;
+    border: 1px solid rgba(232, 232, 234, .08) !important;
+    border-radius: 100px;
+    background: rgba(232, 232, 234, .02);
+    gap: 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .app-step:hover,
+  .app-step.active {
+    background: rgba(232, 232, 234, .06);
+    border-color: rgba(232, 232, 234, .28) !important;
+  }
+
+  .app-step-num {
+    min-width: auto;
+    font-size: 8px !important;
+    letter-spacing: 0.5px
+  }
+
+  .app-step-name {
+    font-size: 10px !important;
+    letter-spacing: 1px;
+    min-width: auto
+  }
+
+  .app-step-desc {
+    display: none !important
+  }
+
+  .phone-scene {
+    min-height: 480px;
+    perspective: 1400px
+  }
+
+  .phone-frame {
+    width: 220px;
+    height: 448px;
+    border-radius: 32px;
+    transform: rotateY(-10deg) rotateX(3deg);
+    margin: 0 auto
+  }
+
+  .phone-controls {
+    margin-top: 24px
+  }
 }
-@media(max-width:480px){
-  .app-inner{grid-template-columns:1.1fr 0.9fr;gap:12px;padding:0 12px}
-  .app-step{padding:10px 0;gap:8px}
-  .app-step-name{font-size:9px;letter-spacing:1px}
-  .phone-scene{min-height:300px;perspective:800px}
-  .phone-frame{width:135px;height:275px;border-radius:20px;transform:rotateY(-10deg) rotateX(3deg)}
-  .phone-controls{margin-top:12px}
+
+@media(max-width:480px) {
+  .app-inner {
+    padding: 0 16px;
+    gap: 32px
+  }
+
+  .app-steps {
+    gap: 6px 10px;
+    margin-top: 24px
+  }
+
+  .app-step {
+    padding: 6px 12px !important
+  }
+
+  .phone-scene {
+    min-height: 420px
+  }
+
+  .phone-frame {
+    width: 175px;
+    height: 356px;
+    border-radius: 26px
+  }
 }
 
 .app-steps{display:flex;flex-direction:column;gap:0;margin-top:40px}
@@ -784,6 +856,13 @@ body.js .mf-quote.on .line:nth-child(3){transition-delay:.8s;opacity:1;transform
 .cl-meta-label{font-family:var(--sans);font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--silver-2);margin-bottom:8px;font-weight:500}
 .cl-meta-val{font-family:var(--mono);font-size:10px;color:var(--silver-1);letter-spacing:1px}
 .cl-copy{font-family:var(--sans);font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(232,232,234,.3);margin-top:64px;font-weight:500}
+
+body.loading {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed;
+  width: 100%;
+}
 
 /* ════ PRELOADER PREMIUM ════ */
 #preloader{
@@ -1792,6 +1871,7 @@ document.body.classList.add('js');
 
 /* PRELOADER PREMIUM JS */
 (function(){
+  document.body.classList.add('loading');
   var pl = document.getElementById('preloader');
   var line = document.querySelector('.preloader-line');
   var countText = document.getElementById('pl-count');
@@ -1950,6 +2030,7 @@ document.body.classList.add('js');
   function finishLoader(){
     setTimeout(function(){
       if(pl) pl.classList.add('loaded');
+      document.body.classList.remove('loading');
       document.body.classList.add('loaded');
       setTimeout(function(){
         if(pl) pl.remove();
