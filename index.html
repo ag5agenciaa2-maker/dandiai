@@ -52,20 +52,147 @@ img{display:block;max-width:100%}
 #prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#fff,#9A9A9C);
   z-index:300;width:0%;transition:width .08s linear}
 
-/* SIDENAV */
-#sidenav{position:fixed;right:24px;top:50%;transform:translateY(-50%);
-  z-index:200;display:flex;flex-direction:column;gap:14px}
-.snav-dot{width:6px;height:6px;border-radius:50%;background:rgba(232,232,234,.18);
-  transition:all .35s var(--ease);cursor:pointer;position:relative}
-.snav-dot.active{background:#fff;transform:scale(1.5);box-shadow:0 0 10px rgba(255,255,255,.4)}
-.snav-dot:hover{background:#bbb;transform:scale(1.5)}
-.snav-dot::after{content:attr(data-l);position:absolute;right:18px;top:50%;
-  transform:translateY(-50%);font-size:9px;letter-spacing:3px;text-transform:uppercase;
-  color:#fff;white-space:nowrap;opacity:0;font-family:var(--sans);font-weight:500;
-  transition:opacity .25s;pointer-events:none;background:rgba(13,13,13,.85);
-  padding:6px 10px;border:1px solid rgba(232,232,234,.1);backdrop-filter:blur(8px)}
-.snav-dot:hover::after,.snav-dot.active::after{opacity:1}
-@media(max-width:768px){#sidenav{display:none}}
+/* ════ SIDENAV ULTRA-PREMIUM ════ */
+#sidenav {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 20px 8px;
+}
+
+/* Trilho vertical de progresso */
+#snav-progress-bar {
+  position: absolute;
+  right: 12px;
+  top: 24px;
+  bottom: 24px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: -1;
+}
+
+#snav-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--scroll-progress, 0%);
+  background: linear-gradient(to bottom, #ffffff, var(--silver-2));
+  transition: height 0.1s linear;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.snav-dot {
+  width: 10px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  border-radius: 0px; /* Traço brutalista minimalista */
+}
+
+/* Moldura especial para o primeiro (Capa) e último (Fim) */
+.snav-dot[data-l="Capa"],
+.snav-dot[data-l="Fim"] {
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  border-radius: 0; /* Quadrado brutalista */
+  transform: rotate(45deg); /* Losango */
+}
+
+.snav-dot.active {
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.snav-dot[data-l="Capa"].active,
+.snav-dot[data-l="Fim"].active {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  transform: rotate(45deg) scale(1.2);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  border-color: #ffffff;
+}
+
+/* Hover orgânico nos traços */
+#sidenav:hover .snav-dot:not(.active) {
+  background: rgba(255, 255, 255, 0.35);
+  width: 14px;
+}
+
+#sidenav:hover .snav-dot[data-l="Capa"]:not(.active),
+#sidenav:hover .snav-dot[data-l="Fim"]:not(.active) {
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(45deg);
+}
+
+/* Tooltip / Rótulo flutuante */
+.snav-dot::after {
+  content: attr(data-l);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--silver-2);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #0D0D0D;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Exibe o rótulo permanentemente para o item ativo, sem caixa preta pesada, apenas o texto limpo flutuando */
+.snav-dot.active::after {
+  opacity: 0.9;
+  transform: translateY(-50%) translateX(-4px);
+  color: #ffffff;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  font-weight: 500;
+}
+
+/* Ao passar o mouse na barra lateral, mostra as caixas pretas de tooltip para os vizinhos */
+.snav-dot:hover::after {
+  opacity: 1 !important;
+  transform: translateY(-50%) translateX(-4px) !important;
+  color: #ffffff !important;
+  background: #0D0D0D !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+@media(max-width:768px) {
+  #sidenav {
+    display: none;
+  }
+}
 
 /* REVEALS — Progressive enhancement.
    Por padrão TUDO visível. Só esconde se body tem .js. */
@@ -1026,6 +1153,7 @@ body.loaded #hero{
 <div id="prog"></div>
 
 <nav id="sidenav" aria-label="Navegação do manual">
+  <div id="snav-progress-bar"></div>
   <div class="snav-dot active" data-l="Capa"           data-s="hero"></div>
   <div class="snav-dot"        data-l="História"       data-s="historia"></div>
   <div class="snav-dot"        data-l="Manifesto"      data-s="manifesto"></div>
@@ -1923,9 +2051,13 @@ document.body.classList.add('js');
 
 /* PROGRESS BAR */
 var prog = document.getElementById('prog');
+var snavProg = document.getElementById('snav-progress-bar');
 window.addEventListener('scroll', function(){
   var p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
   prog.style.width = p + '%';
+  if (snavProg) {
+    snavProg.style.setProperty('--scroll-progress', p + '%');
+  }
 });
 
 /* REVEAL ON SCROLL */
