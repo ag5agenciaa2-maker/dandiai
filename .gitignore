@@ -1,0 +1,16 @@
+# Pasta de referências internas (não vai pro deploy)
+docs/
+
+# Backups locais
+*_backup.html
+*.bak
+
+# Scripts internos
+optimize_pagespeed.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
