@@ -1,5 +1,6 @@
 # Pasta de referências internas (não vai pro deploy)
 docs/
+teste-hyperframes/
 
 # Backups locais
 *_backup.html

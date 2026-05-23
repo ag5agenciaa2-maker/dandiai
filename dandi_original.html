@@ -1,0 +1,4904 @@
+z<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dandi - Manual de Marca · 2026</title>
+  <link rel="icon" type="image/webp" href="assets/app6.webp">
+
+  <!-- Meta Tags de Compartilhamento (SEO & Social Media) -->
+  <link rel="canonical" href="https://manual-marca-dandi.ag5agencia.site/">
+  <meta property="og:title" content="Dandi - Manual de Marca · 2026">
+  <meta property="og:description"
+    content="Estilo Inteligente. O guia oficial de identidade visual, tipografia e tom de voz da marca Dandi.">
+  <meta property="og:image" content="https://manual-marca-dandi.ag5agencia.site/assets/logo-fundo-preto.webp">
+  <meta property="og:url" content="https://manual-marca-dandi.ag5agencia.site/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dandi - Manual de Marca · 2026">
+  <meta name="twitter:description"
+    content="Estilo Inteligente. O guia oficial de identidade visual, tipografia e tom de voz da marca Dandi.">
+  <meta name="twitter:image" content="https://manual-marca-dandi.ag5agencia.site/assets/logo-fundo-preto.webp">
+
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond@5/index.min.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+
+    /* ════════════════════════════════════════════════════════
+   DANDI · BRAND MANUAL v7 · 2026 · imagens garantidas + carrossel interativo
+   ════════════════════════════════════════════════════════ */
+
+    :root {
+      --preto: #0D0D0D;
+      --grafite: #1C1C1E;
+      --chumbo: #4A4A4D;
+      --cinza: #BDBDBF;
+      --marmore-d: #121214;
+      --marmore-l: #F2F2F2;
+      --offwhite: #EDEAE4;
+      --silver-1: #FAFAFA;
+      --silver-2: #9A9A9C;
+      --silver-3: #5A5A5C;
+      --display: "Helvetica Neue Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: "Helvetica Neue Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Courier New", monospace;
+      --ease: cubic-bezier(.16, 1, .3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      max-width: 100%
+    }
+
+    body {
+      background: var(--preto);
+      color: var(--offwhite);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      max-width: 100%;
+      font-weight: 300
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    .silver {
+      background: linear-gradient(180deg, #FAFAFA 0%, #C8C8CA 28%, #6A6A6C 52%, #B8B8BA 72%, #FAFAFA 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    /* PROGRESS */
+    #prog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #fff, #9A9A9C);
+      z-index: 300;
+      width: 0%;
+      transition: width .08s linear
+    }
+
+    /* ════ SIDENAV ULTRA-PREMIUM ════ */
+    #sidenav {
+      position: fixed;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+      padding: 20px 8px;
+    }
+
+    /* Trilho vertical de progresso */
+    #snav-progress-bar {
+      position: absolute;
+      right: 12px;
+      top: 24px;
+      bottom: 24px;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: -1;
+    }
+
+    #snav-progress-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--scroll-progress, 0%);
+      background: linear-gradient(to bottom, #ffffff, var(--silver-2));
+      transition: height 0.1s linear;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+
+    .snav-dot {
+      width: 10px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.15);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      position: relative;
+      border-radius: 0px;
+      /* Traço brutalista minimalista */
+    }
+
+    /* Moldura especial para o primeiro (Capa) e último (Fim) */
+    .snav-dot[data-l="Capa"],
+    .snav-dot[data-l="Fim"] {
+      width: 6px;
+      height: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: transparent;
+      border-radius: 0;
+      /* Quadrado brutalista */
+      transform: rotate(45deg);
+      /* Losango */
+    }
+
+    .snav-dot.active {
+      width: 24px;
+      height: 2px;
+      background: #ffffff;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    }
+
+    .snav-dot[data-l="Capa"].active,
+    .snav-dot[data-l="Fim"].active {
+      width: 8px;
+      height: 8px;
+      background: #ffffff;
+      transform: rotate(45deg) scale(1.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+      border-color: #ffffff;
+    }
+
+    /* Hover orgânico nos traços */
+    #sidenav:hover .snav-dot:not(.active) {
+      background: rgba(255, 255, 255, 0.35);
+      width: 14px;
+    }
+
+    #sidenav:hover .snav-dot[data-l="Capa"]:not(.active),
+    #sidenav:hover .snav-dot[data-l="Fim"]:not(.active) {
+      width: 7px;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.25);
+      transform: rotate(45deg);
+    }
+
+    /* Tooltip / Rótulo flutuante */
+    .snav-dot::after {
+      content: attr(data-l);
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background: #0D0D0D;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Exibe o rótulo permanentemente para o item ativo, sem caixa preta pesada, apenas o texto limpo flutuando */
+    .snav-dot.active::after {
+      opacity: 0.9;
+      transform: translateY(-50%) translateX(-4px);
+      color: #ffffff;
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      font-weight: 500;
+    }
+
+    /* Ao passar o mouse na barra lateral, mostra as caixas pretas de tooltip para os vizinhos */
+    .snav-dot:hover::after {
+      opacity: 1 !important;
+      transform: translateY(-50%) translateX(-4px) !important;
+      color: #ffffff !important;
+      background: #0D0D0D !important;
+      border-color: rgba(255, 255, 255, 0.12) !important;
+      backdrop-filter: blur(12px) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    @media(max-width:768px) {
+      #sidenav {
+        display: none;
+      }
+    }
+
+    /* REVEALS - Progressive enhancement.
+   Por padrão TUDO visível. Só esconde se body tem .js. */
+    .rv,
+    .rvl,
+    .rvr,
+    .rvs {
+      opacity: 1;
+      transform: none
+    }
+
+    body.js .rv {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s var(--ease), transform 1s var(--ease)
+    }
+
+    body.js .rv.on {
+      opacity: 1;
+      transform: none
+    }
+
+    body.js .rvl {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 1s var(--ease), transform 1s var(--ease)
+    }
+
+    body.js .rvl.on {
+      opacity: 1;
+      transform: none
+    }
+
+    body.js .rvr {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 1s var(--ease), transform 1s var(--ease)
+    }
+
+    body.js .rvr.on {
+      opacity: 1;
+      transform: none
+    }
+
+    body.js .rvs {
+      opacity: 0;
+      transform: scale(.95);
+      transition: opacity 1s var(--ease), transform 1s var(--ease)
+    }
+
+    body.js .rvs.on {
+      opacity: 1;
+      transform: scale(1)
+    }
+
+    .d1 {
+      transition-delay: .1s
+    }
+
+    .d2 {
+      transition-delay: .2s
+    }
+
+    .d3 {
+      transition-delay: .3s
+    }
+
+    .d4 {
+      transition-delay: .4s
+    }
+
+    .d5 {
+      transition-delay: .5s
+    }
+
+    .d6 {
+      transition-delay: .6s
+    }
+
+    .d7 {
+      transition-delay: .7s
+    }
+
+    .d8 {
+      transition-delay: .8s
+    }
+
+    /* SISTEMA TIPOGRÁFICO */
+    .tag {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 4.5px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 24px;
+      position: relative;
+      padding-left: 32px
+    }
+
+    .tag::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 22px;
+      height: 1px;
+      background: linear-gradient(90deg, #fff, transparent)
+    }
+
+    .st {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(32px, 5vw, 64px);
+      letter-spacing: clamp(2px, .6vw, 6px);
+      text-transform: uppercase;
+      line-height: 1.1;
+      color: var(--offwhite)
+    }
+
+    .st .ac {
+      font-weight: 300;
+      background: linear-gradient(180deg, #FAFAFA, #C8C8CA 28%, #6A6A6C 52%, #B8B8BA 72%, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .lead {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(16px, 1.6vw, 20px);
+      line-height: 1.55;
+      color: var(--silver-1);
+      letter-spacing: .2px;
+      max-width: 560px
+    }
+
+    .bt {
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(232, 232, 234, .72);
+      letter-spacing: .15px;
+      max-width: 540px
+    }
+
+    .bt strong {
+      color: var(--offwhite);
+      font-weight: 500
+    }
+
+    section {
+      padding: 120px 8vw;
+      position: relative
+    }
+
+    .maxw {
+      max-width: 1280px;
+      margin: 0 auto
+    }
+
+    .head {
+      margin-bottom: 48px
+    }
+
+    /* ════ HERO ════ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--preto);
+      padding: 80px 40px;
+      overflow: hidden
+    }
+
+    .hero-marble {
+      position: absolute;
+      inset: -2%;
+      background: url('assets/logo-fundo-marmore.webp') center/cover;
+      opacity: .05;
+      filter: blur(2px);
+      animation: drift 30s ease-in-out infinite alternate
+    }
+
+    @keyframes drift {
+      from {
+        transform: scale(1.02) rotate(0deg)
+      }
+
+      to {
+        transform: scale(1.08) rotate(.5deg)
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 28px
+    }
+
+    .hero-line {
+      width: 1px;
+      height: 88px;
+      background: linear-gradient(180deg, transparent, #fff, transparent);
+      margin: 0 auto 44px
+    }
+
+    .hero-logo {
+      width: min(340px, 64vw);
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .6))
+    }
+
+    body.loaded .hero-eyebrow {
+      opacity: 0;
+      animation: fadeIn 1.4s var(--ease) .4s both
+    }
+
+    body.loaded .hero-line {
+      height: 0;
+      animation: vgrow 1.6s var(--ease) .8s both
+    }
+
+    body.loaded .hero-logo {
+      animation: logoIn 1.5s var(--ease) 1.1s both
+    }
+
+    body.loaded .hero-tagline {
+      opacity: 0;
+      animation: fadeIn 1.4s var(--ease) 1.8s both
+    }
+
+    @keyframes vgrow {
+      to {
+        height: 88px
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes logoIn {
+      from {
+        opacity: 0;
+        transform: translateY(28px) scale(.95);
+        filter: blur(8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+        filter: blur(0)
+      }
+    }
+
+    .hero-tagline {
+      margin-top: 36px;
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(18px, 2.2vw, 28px);
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: var(--silver-1)
+    }
+
+    .hero-tagline em {
+      font-style: normal;
+      background: linear-gradient(180deg, #FAFAFA, #6A6A6C, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 300
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    body.loaded .scroll-cue {
+      opacity: 0;
+      animation: bob 3s ease 2.4s infinite both
+    }
+
+    .scroll-cue::after {
+      content: '';
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, #fff, transparent);
+      opacity: .4
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        opacity: .35;
+        transform: translateX(-50%) translateY(0)
+      }
+
+      50% {
+        opacity: .8;
+        transform: translateX(-50%) translateY(-6px)
+      }
+    }
+
+    /* ════ HISTÓRIA ════ */
+    #historia {
+      background: var(--grafite)
+    }
+
+    .hist-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    @media(max-width:900px) {
+      .hist-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+    }
+
+    .hist-name {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(80px, 16vw, 200px);
+      line-height: .85;
+      letter-spacing: -3px;
+      margin-bottom: 16px
+    }
+
+    .hist-phon {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--silver-2);
+      margin-bottom: 24px
+    }
+
+    .hist-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.55;
+      color: var(--silver-1);
+      border-left: 1px solid rgba(232, 232, 234, .25);
+      padding-left: 24px;
+      margin: 32px 0
+    }
+
+    .hist-quote .sig {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--chumbo);
+      margin-top: 16px
+    }
+
+    .hist-card {
+      padding: 40px 32px;
+      border: 1px solid rgba(232, 232, 234, .1);
+      background: linear-gradient(180deg, rgba(232, 232, 234, .03), transparent);
+      position: relative
+    }
+
+    .hist-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #fff, transparent)
+    }
+
+    .hist-card-tag {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 16px
+    }
+
+    .hist-card-name {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 36px;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 12px
+    }
+
+    .hist-card-name em {
+      font-style: normal;
+      background: linear-gradient(180deg, #FAFAFA, #9A9A9C, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .hist-card-dates {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 2px;
+      margin-bottom: 20px
+    }
+
+    .hist-card-bio {
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(232, 232, 234, .7)
+    }
+
+    .timeline {
+      margin-top: 80px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(232, 232, 234, .08);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      position: relative
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(232, 232, 234, .25) 10%, rgba(232, 232, 234, .25) 90%, transparent)
+    }
+
+    .tl-item {
+      position: relative;
+      padding-top: 48px;
+      text-align: center
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--grafite);
+      border: 1px solid var(--silver-2)
+    }
+
+    .tl-item.active::before {
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, .1)
+    }
+
+    .tl-year {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 6px
+    }
+
+    .tl-label {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--chumbo);
+      line-height: 1.5
+    }
+
+    @media(max-width:768px) {
+      .timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px
+      }
+
+      .timeline::before {
+        display: none
+      }
+    }
+
+    /* ════ MANIFESTO ════ */
+    #manifesto {
+      background: var(--preto);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden
+    }
+
+    .mf-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 40%, rgba(154, 154, 156, .05), transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(154, 154, 156, .05), transparent 50%);
+      pointer-events: none
+    }
+
+    .mf-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2
+    }
+
+    .mf-quote {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(40px, 7vw, 88px);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 48px
+    }
+
+    .mf-quote .line {
+      display: block
+    }
+
+    body.js .mf-quote .line {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s var(--ease), transform 1.2s var(--ease)
+    }
+
+    body.js .mf-quote.on .line:nth-child(1) {
+      transition-delay: .2s;
+      opacity: 1;
+      transform: none
+    }
+
+    body.js .mf-quote.on .line:nth-child(2) {
+      transition-delay: .5s;
+      opacity: 1;
+      transform: none
+    }
+
+    body.js .mf-quote.on .line:nth-child(3) {
+      transition-delay: .8s;
+      opacity: 1;
+      transform: none
+    }
+
+    .mf-quote .silver-line {
+      background: linear-gradient(180deg, #FAFAFA 0%, #C8C8CA 30%, #6A6A6C 55%, #B8B8BA 75%, #FAFAFA 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .mf-divider {
+      width: 48px;
+      height: 1px;
+      background: #fff;
+      margin: 0 auto 32px;
+      opacity: .6
+    }
+
+    .mf-body {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--silver-1);
+      max-width: 580px;
+      margin: 0 auto
+    }
+
+    .mf-sig {
+      margin-top: 32px;
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--silver-2)
+    }
+
+    /* ════ PERSONALIDADE ════ */
+    #personalidade {
+      background: var(--grafite)
+    }
+
+    .pers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    @media(max-width:900px) {
+      .pers-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:520px) {
+      .pers-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .pers-card {
+      padding: 32px 28px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: linear-gradient(180deg, rgba(232, 232, 234, .025), transparent);
+      transition: all .5s var(--ease);
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pers-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+      transform: scaleX(0);
+      transition: transform .6s var(--ease);
+      transform-origin: left
+    }
+
+    .pers-card:hover {
+      border-color: rgba(232, 232, 234, .22);
+      transform: translateY(-6px);
+      background: linear-gradient(180deg, rgba(232, 232, 234, .05), transparent)
+    }
+
+    .pers-card:hover::before {
+      transform: scaleX(1)
+    }
+
+    .pers-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 2px
+    }
+
+    .pers-icon {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--silver-3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 16px;
+      color: var(--silver-1);
+      margin: auto 0 16px
+    }
+
+    .pers-title {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      color: var(--offwhite)
+    }
+
+    .pers-desc {
+      font-family: var(--sans);
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(232, 232, 234, .65)
+    }
+
+    /* ════ SÍMBOLO ════ */
+    #simbolo {
+      background: var(--preto)
+    }
+
+    .symb-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center
+    }
+
+    @media(max-width:900px) {
+      .symb-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+    }
+
+    .symb-display {
+      position: relative;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #161618, #0a0a0c);
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8%
+    }
+
+    .symb-display::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('assets/icone-fundo-marmore.webp') center/cover;
+      opacity: .06;
+      pointer-events: none
+    }
+
+    .symb-display img {
+      width: 62%;
+      max-width: 340px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 20px 60px rgba(0, 0, 0, .7))
+    }
+
+    .symb-grid-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(0deg, transparent 49.5%, rgba(232, 232, 234, .08) 50%, transparent 50.5%),
+        linear-gradient(90deg, transparent 49.5%, rgba(232, 232, 234, .08) 50%, transparent 50.5%)
+    }
+
+    .symb-corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--silver-2)
+    }
+
+    .symb-corner.tl {
+      top: 12%;
+      left: 12%;
+      border-right: none;
+      border-bottom: none
+    }
+
+    .symb-corner.tr {
+      top: 12%;
+      right: 12%;
+      border-left: none;
+      border-bottom: none
+    }
+
+    .symb-corner.bl {
+      bottom: 12%;
+      left: 12%;
+      border-right: none;
+      border-top: none
+    }
+
+    .symb-corner.br {
+      bottom: 12%;
+      right: 12%;
+      border-left: none;
+      border-top: none
+    }
+
+    .symb-pieces {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(232, 232, 234, .08);
+      margin-top: 32px;
+      border: 1px solid rgba(232, 232, 234, .08)
+    }
+
+    .symb-piece {
+      aspect-ratio: 1;
+      background: var(--grafite);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative
+    }
+
+    .symb-piece img {
+      width: 65%
+    }
+
+    .symb-piece-cap {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: var(--sans);
+      font-size: 8.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--chumbo)
+    }
+
+    /* ════ VERSÕES LOGO ════ */
+    #identidade {
+      background: var(--grafite)
+    }
+
+    .logo-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px
+    }
+
+    @media(max-width:760px) {
+      .logo-3 {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .lc {
+      aspect-ratio: 1;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid transparent;
+      transition: border-color .4s
+    }
+
+    .lc:hover {
+      border-color: rgba(232, 232, 234, .25)
+    }
+
+    .lc img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s var(--ease)
+    }
+
+    .lc:hover img {
+      transform: scale(1.05)
+    }
+
+    .lc-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .85));
+      opacity: 0;
+      transition: opacity .4s var(--ease)
+    }
+
+    .lc:hover .lc-overlay {
+      opacity: 1
+    }
+
+    .lc-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: transform .5s var(--ease), opacity .4s
+    }
+
+    .lc:hover .lc-label {
+      transform: translateY(0);
+      opacity: 1
+    }
+
+    .lc-label-tag {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 6px
+    }
+
+    .lc-label-name {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: var(--offwhite)
+    }
+
+    /* ════ HORIZONTAL ════ */
+    #horizontal {
+      background: var(--marmore-d)
+    }
+
+    .horiz-img-wrap {
+      margin-top: 32px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: var(--preto);
+      padding: 40px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 160px
+    }
+
+    .horiz-img {
+      width: min(880px, 96%);
+      filter: drop-shadow(0 16px 40px rgba(0, 0, 0, .5))
+    }
+
+    @media(max-width:760px) {
+      .horiz-img-wrap {
+        padding: 24px 16px;
+        min-height: 120px
+      }
+
+      .horiz-img {
+        width: 98%
+      }
+    }
+
+    /* ════ ÍCONES DE APP ════ */
+    #icones-app {
+      background: var(--preto)
+    }
+
+    .icons-hero {
+      margin-top: 32px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden;
+      background: var(--preto)
+    }
+
+    .icons-hero img {
+      width: 100%
+    }
+
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 48px
+    }
+
+    @media(max-width:760px) {
+      .icons-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .icon-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .icon-card-img {
+      aspect-ratio: 1;
+      overflow: visible;
+      transition: all .4s var(--ease);
+      background: transparent
+    }
+
+    .icon-card-img:hover {
+      transform: translateY(-6px);
+      filter: drop-shadow(0 20px 35px rgba(0, 0, 0, .75))
+    }
+
+    .icon-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block
+    }
+
+    /* Uniformiza o tamanho visual diminuindo os ícones que cobrem 100% da imagem */
+    .icon-card-img img[src*="app4"],
+    .icon-card-img img[src*="app5"],
+    .icon-card-img img[src*="app6"],
+    .icon-card-img img[src*="app7"] {
+      width: 86%;
+      height: 86%;
+      margin: 7% auto
+    }
+
+    .icon-card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .icon-card-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 1.5px
+    }
+
+    .icon-card-name {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--chumbo)
+    }
+
+    /* ════ SPRINGBOARD ════ */
+    #springboard {
+      background: var(--grafite)
+    }
+
+    .spring-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center
+    }
+
+    @media(max-width:900px) {
+      .spring-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .spring-img-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
+      background: radial-gradient(circle, rgba(232, 232, 234, .03), transparent 70%)
+    }
+
+    .spring-video-frame {
+      max-width: 280px;
+      width: 100%;
+      aspect-ratio: 9 / 18.2;
+      border-radius: 40px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .05) inset;
+      background: #CCCCCC;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spring-video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      outline: none;
+    }
+
+    /* ════ PALETA ════ */
+    #paleta {
+      background: var(--preto)
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      border: 1px solid rgba(232, 232, 234, .08)
+    }
+
+    @media(max-width:900px) {
+      .swatches {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    @media(max-width:480px) {
+      .swatches {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .sw {
+      position: relative;
+      cursor: default;
+      transition: transform .4s var(--ease);
+      border-right: 1px solid rgba(232, 232, 234, .06)
+    }
+
+    .sw:last-child {
+      border-right: none
+    }
+
+    .sw:hover {
+      transform: translateY(-8px);
+      z-index: 2;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .5)
+    }
+
+    .sw-color {
+      aspect-ratio: 1;
+      width: 100%
+    }
+
+    .sw-meta {
+      padding: 18px 16px;
+      background: var(--grafite)
+    }
+
+    .sw-name {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--offwhite);
+      margin-bottom: 4px
+    }
+
+    .sw-hex {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 1px
+    }
+
+    .pal-ref {
+      margin-top: 32px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden
+    }
+
+    .pal-ref img {
+      width: 100%
+    }
+
+    .pal-bar {
+      margin-top: 32px;
+      display: flex;
+      height: 40px;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid rgba(232, 232, 234, .08)
+    }
+
+    .pal-bar div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, .7)
+    }
+
+    /* ════ TIPOGRAFIA ════ */
+    #tipografia {
+      background: var(--grafite)
+    }
+
+    .typo-specimen {
+      padding: 60px 32px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: radial-gradient(ellipse at center, rgba(232, 232, 234, .025), transparent 70%);
+      text-align: center
+    }
+
+    .typo-Aa {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(120px, 16vw, 220px);
+      line-height: .9;
+      letter-spacing: -4px
+    }
+
+    .typo-Aa em {
+      font-style: normal;
+      background: linear-gradient(180deg, #FAFAFA, #6A6A6C, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .typo-name {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-top: 16px
+    }
+
+    .typo-ref {
+      margin-top: 16px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden
+    }
+
+    .typo-ref img {
+      width: 100%
+    }
+
+    .typo-row {
+      display: grid;
+      grid-template-columns: 200px 1fr 140px;
+      border-top: 1px solid rgba(232, 232, 234, .06);
+      padding: 24px 0;
+      gap: 32px;
+      align-items: center
+    }
+
+    @media(max-width:800px) {
+      .typo-row {
+        grid-template-columns: 1fr;
+        gap: 14px
+      }
+    }
+
+    .typo-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--silver-2)
+    }
+
+    .typo-demo .demo-h1 {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 36px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--offwhite)
+    }
+
+    .typo-demo .demo-body {
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--silver-1)
+    }
+
+    .typo-demo .demo-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--silver-1)
+    }
+
+    .typo-demo .demo-cap {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      font-weight: 500
+    }
+
+    .typo-spec {
+      font-family: var(--mono);
+      font-size: 9.5px;
+      color: var(--chumbo);
+      letter-spacing: .5px;
+      line-height: 1.8;
+      text-align: right
+    }
+
+    @media(max-width:800px) {
+      .typo-spec {
+        text-align: left
+      }
+    }
+
+    /* ════ TOM DE VOZ ════ */
+    #tom {
+      background: var(--preto)
+    }
+
+    .tom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px
+    }
+
+    @media(max-width:760px) {
+      .tom-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .tom-col {
+      padding: 36px 32px;
+      background: linear-gradient(180deg, rgba(232, 232, 234, .025), transparent);
+      border: 1px solid rgba(232, 232, 234, .06)
+    }
+
+    .tom-col.no {
+      border-color: rgba(166, 69, 69, .18);
+      background: linear-gradient(180deg, rgba(166, 69, 69, .04), transparent)
+    }
+
+    .tom-col-tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .tom-col-tag.ok {
+      color: var(--silver-1)
+    }
+
+    .tom-col-tag.no {
+      color: #c25c5c
+    }
+
+    .tom-col-tag::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: currentColor
+    }
+
+    .tom-phrase {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--silver-1);
+      padding: 14px 0 14px 24px;
+      border-top: 1px solid rgba(232, 232, 234, .06);
+      position: relative
+    }
+
+    .tom-phrase:first-of-type {
+      border-top: none
+    }
+
+    .tom-phrase::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      font-size: 24px;
+      color: var(--silver-3);
+      line-height: 1
+    }
+
+    .tom-col.no .tom-phrase {
+      color: rgba(255, 255, 255, .4);
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+      text-decoration-color: rgba(194, 92, 92, .4)
+    }
+
+    /* ════ VOCABULÁRIO ════ */
+    #vocabulario {
+      background: var(--grafite)
+    }
+
+    .voc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px
+    }
+
+    @media(max-width:880px) {
+      .voc-grid {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+    }
+
+    .voc-col-title {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(232, 232, 234, .1)
+    }
+
+    .voc-col.evitar .voc-col-title {
+      color: #c25c5c
+    }
+
+    .voc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .voc-tag {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 8px 14px;
+      border: 1px solid rgba(232, 232, 234, .1);
+      background: rgba(232, 232, 234, .02);
+      color: var(--offwhite);
+      transition: all .35s var(--ease)
+    }
+
+    .voc-col.reforcar .voc-tag:hover {
+      border-color: #fff;
+      background: rgba(232, 232, 234, .08);
+      transform: translateY(-2px)
+    }
+
+    .voc-col.moderacao .voc-tag {
+      color: var(--silver-2);
+      border-style: dashed;
+      border-color: rgba(232, 232, 234, .18)
+    }
+
+    .voc-col.evitar .voc-tag {
+      color: rgba(255, 255, 255, .35);
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+      text-decoration-color: rgba(194, 92, 92, .5);
+      border-color: rgba(194, 92, 92, .15)
+    }
+
+    /* ════ POSICIONAMENTO ════ */
+    #posicionamento {
+      background: var(--preto)
+    }
+
+    .pos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center
+    }
+
+    @media(max-width:900px) {
+      .pos-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+    }
+
+    .pos-insight {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(36px, 4.5vw, 64px);
+      line-height: 1.05;
+      letter-spacing: 1px;
+      margin: 20px 0
+    }
+
+    .pos-insight em {
+      font-style: normal;
+      background: linear-gradient(180deg, #FAFAFA, #9A9A9C, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .pos-map {
+      position: relative;
+      aspect-ratio: 1;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: linear-gradient(135deg, rgba(232, 232, 234, .025), transparent)
+    }
+
+    .pos-axis-x,
+    .pos-axis-y {
+      position: absolute;
+      background: rgba(232, 232, 234, .18)
+    }
+
+    .pos-axis-x {
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px
+    }
+
+    .pos-axis-y {
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px
+    }
+
+    .pos-axis-label {
+      position: absolute;
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--silver-2)
+    }
+
+    .pos-axis-label.top {
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .pos-axis-label.bottom {
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .pos-axis-label.left {
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: left center;
+      white-space: nowrap
+    }
+
+    .pos-axis-label.right {
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: right center;
+      white-space: nowrap
+    }
+
+    .pos-comp {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px
+    }
+
+    .pos-comp .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: rgba(232, 232, 234, .15);
+      border: 1px solid var(--silver-2)
+    }
+
+    .pos-comp .label {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      white-space: nowrap
+    }
+
+    .pos-comp.streetwear {
+      bottom: 24%;
+      left: 14%
+    }
+
+    .pos-comp.utilidade {
+      bottom: 18%;
+      right: 14%
+    }
+
+    .pos-dandi {
+      position: absolute;
+      top: 14%;
+      right: 18%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px
+    }
+
+    .pos-dandi .dot-big {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #fff 0%, #aaa 40%, #444 100%);
+      animation: pulse 2.4s ease-in-out infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(232, 232, 234, .35)
+      }
+
+      50% {
+        box-shadow: 0 0 0 14px rgba(232, 232, 234, 0)
+      }
+    }
+
+    .pos-dandi .label-big {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--offwhite)
+    }
+
+    /* ════ O QUE EVITAR ════ */
+    #evitar {
+      background: var(--marmore-d);
+      text-align: center
+    }
+
+    .evitar-stack {
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    .evitar-word {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(40px, 8vw, 100px);
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: rgba(255, 255, 255, .2);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(232, 232, 234, .06);
+      position: relative;
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+      text-decoration-color: rgba(194, 92, 92, .5)
+    }
+
+    .evitar-word:last-child {
+      border-bottom: none
+    }
+
+    .evitar-word::before {
+      content: attr(data-num);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--silver-3);
+      letter-spacing: 2px;
+      text-decoration: none
+    }
+
+    .evitar-foot {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--silver-1);
+      margin-top: 32px
+    }
+
+    /* ════ APLICAÇÕES ════ */
+    #aplicacoes {
+      background: var(--preto)
+    }
+
+    .ap-hero {
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden
+    }
+
+    .ap-hero img {
+      width: 100%
+    }
+
+    .ap-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-top: 4px
+    }
+
+    @media(max-width:760px) {
+      .ap-row {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .ap-item {
+      padding: 24px 20px;
+      background: rgba(232, 232, 234, .02);
+      border: 1px solid rgba(232, 232, 234, .05);
+      transition: all .4s var(--ease)
+    }
+
+    .ap-item:hover {
+      background: rgba(232, 232, 234, .05);
+      border-color: rgba(232, 232, 234, .2);
+      transform: translateY(-4px)
+    }
+
+    .ap-item-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      margin-bottom: 10px;
+      letter-spacing: 1px
+    }
+
+    .ap-item-name {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--offwhite);
+      margin-bottom: 6px
+    }
+
+    .ap-item-desc {
+      font-family: var(--sans);
+      font-size: 11px;
+      line-height: 1.6;
+      color: var(--chumbo)
+    }
+
+    /* ════════════════════════════════════════════════════════
+   APP · CARROSSEL 3D INTERATIVO (refeito, bulletproof)
+   ════════════════════════════════════════════════════════ */
+    #app {
+      background: var(--grafite)
+    }
+
+    .app-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto
+    }
+
+    @media(max-width:980px) {
+      .app-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 24px
+      }
+
+      .app-steps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+        margin-top: 28px;
+      }
+
+      .app-step {
+        padding: 8px 16px !important;
+        border: 1px solid rgba(232, 232, 234, .08) !important;
+        border-radius: 100px;
+        background: rgba(232, 232, 234, .02);
+        gap: 6px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .app-step:hover,
+      .app-step.active {
+        background: rgba(232, 232, 234, .06);
+        border-color: rgba(232, 232, 234, .28) !important;
+      }
+
+      .app-step-num {
+        min-width: auto;
+        font-size: 8px !important;
+        letter-spacing: 0.5px
+      }
+
+      .app-step-name {
+        font-size: 10px !important;
+        letter-spacing: 1px;
+        min-width: auto
+      }
+
+      .app-step-desc {
+        display: none !important
+      }
+
+      .phone-scene {
+        min-height: 480px;
+        perspective: 1400px
+      }
+
+      .phone-frame {
+        width: 220px;
+        height: 448px;
+        border-radius: 32px;
+        transform: rotateY(-10deg) rotateX(3deg);
+        margin: 0 auto
+      }
+
+      .phone-controls {
+        margin-top: 24px
+      }
+    }
+
+    @media(max-width:480px) {
+      .app-inner {
+        padding: 0 16px;
+        gap: 32px
+      }
+
+      .app-steps {
+        gap: 6px 10px;
+        margin-top: 24px
+      }
+
+      .app-step {
+        padding: 6px 12px !important
+      }
+
+      .phone-scene {
+        min-height: 420px
+      }
+
+      .phone-frame {
+        width: 175px;
+        height: 356px;
+        border-radius: 26px
+      }
+    }
+
+    .app-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 40px
+    }
+
+    .app-step {
+      padding: 22px 0;
+      border-top: 1px solid rgba(232, 232, 234, .06);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      transition: all .4s var(--ease)
+    }
+
+    .app-step:hover,
+    .app-step.active {
+      border-top-color: rgba(232, 232, 234, .28)
+    }
+
+    .app-step-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--chumbo);
+      min-width: 32px;
+      transition: color .3s
+    }
+
+    .app-step.active .app-step-num {
+      color: var(--silver-1)
+    }
+
+    .app-step-name {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--chumbo);
+      transition: color .3s;
+      min-width: 120px
+    }
+
+    .app-step.active .app-step-name {
+      color: var(--offwhite)
+    }
+
+    .app-step-desc {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--chumbo);
+      margin-left: auto;
+      opacity: 0;
+      transition: opacity .35s;
+      max-width: 200px;
+      text-align: right;
+      line-height: 1.5
+    }
+
+    .app-step.active .app-step-desc {
+      opacity: .75
+    }
+
+    .phone-scene {
+      perspective: 1600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 560px
+    }
+
+    .phone-frame {
+      width: 280px;
+      height: 570px;
+      border-radius: 42px;
+      background: #080808;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 50px 120px rgba(0, 0, 0, .9), 0 0 0 1px rgba(255, 255, 255, .08) inset, 16px 16px 38px rgba(0, 0, 0, .5);
+      transform: rotateY(-14deg) rotateX(4deg);
+      transition: transform 1.2s var(--ease);
+      transform-style: preserve-3d;
+    }
+
+    .phone-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      opacity: 0;
+      transition: opacity .6s ease;
+    }
+
+    .phone-screen.active {
+      opacity: 1
+    }
+
+    .phone-glare {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 42px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .06) 0%, transparent 35%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .phone-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px
+    }
+
+    .phone-dots {
+      display: flex;
+      gap: 8px
+    }
+
+    .phone-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(232, 232, 234, .18);
+      transition: all .3s;
+      cursor: pointer;
+      border: none;
+      padding: 0
+    }
+
+    .phone-dot.active {
+      background: var(--silver-1);
+      transform: scale(1.5)
+    }
+
+    .phone-pause {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--chumbo);
+      cursor: pointer;
+      background: none;
+      border: 1px solid rgba(232, 232, 234, .1);
+      padding: 8px 14px;
+      transition: all .3s;
+      font-weight: 500
+    }
+
+    .phone-pause:hover {
+      border-color: var(--silver-2);
+      color: var(--silver-1)
+    }
+
+    /* ════ APP · CONCEITO ════ */
+    #app-conceito {
+      background: var(--preto);
+      padding: 80px 8vw
+    }
+
+    .app-conceito-hero {
+      max-width: 760px;
+      margin: 32px auto 0;
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden;
+      background: radial-gradient(circle, rgba(232, 232, 234, .03), transparent 70%)
+    }
+
+    .app-conceito-hero img {
+      width: 100%;
+      display: block
+    }
+
+    .app-conceito-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px auto 0;
+      max-width: 760px
+    }
+
+    @media(max-width:760px) {
+      .app-conceito-pillars {
+        grid-template-columns: 1fr;
+        max-width: 100%
+      }
+    }
+
+    .app-pillar {
+      padding: 24px 20px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: rgba(232, 232, 234, .02);
+      transition: all .4s var(--ease)
+    }
+
+    .app-pillar:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232, 232, 234, .22)
+    }
+
+    .app-pillar-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 1.5px;
+      margin-bottom: 10px
+    }
+
+    .app-pillar-name {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      color: var(--offwhite);
+      margin-bottom: 6px
+    }
+
+    .app-pillar-desc {
+      font-family: var(--sans);
+      font-size: 11.5px;
+      line-height: 1.55;
+      color: var(--silver-2)
+    }
+
+    /* ════ APP · DIAGNÓSTICO SEQUENCIAL ════ */
+    #app-diagnostico {
+      background: var(--grafite);
+      padding: 80px 8vw;
+      position: relative;
+      overflow: hidden
+    }
+
+    .diag-hero {
+      margin: 32px auto 0;
+      max-width: 1100px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden;
+      background: radial-gradient(circle, rgba(232, 232, 234, .03), transparent 70%);
+      position: relative
+    }
+
+    .diag-hero img {
+      width: 100%;
+      display: block
+    }
+
+    .diag-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin: 32px auto 0;
+      max-width: 1100px;
+      border: 1px solid rgba(232, 232, 234, .08)
+    }
+
+    @media(max-width:760px) {
+      .diag-steps {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .diag-step {
+      padding: 20px 18px;
+      background: rgba(232, 232, 234, .02);
+      border-right: 1px solid rgba(232, 232, 234, .06);
+      position: relative;
+      transition: all .4s var(--ease)
+    }
+
+    .diag-step:last-child {
+      border-right: none
+    }
+
+    .diag-step:hover {
+      background: rgba(232, 232, 234, .05)
+    }
+
+    .diag-step::after {
+      content: '→';
+      position: absolute;
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--silver-2);
+      background: var(--grafite);
+      padding: 0 4px;
+      line-height: 1;
+      z-index: 2
+    }
+
+    .diag-step:last-child::after {
+      display: none
+    }
+
+    @media(max-width:760px) {
+      .diag-step::after {
+        display: none
+      }
+
+      .diag-step {
+        border-right: 1px solid rgba(232, 232, 234, .06);
+        border-bottom: 1px solid rgba(232, 232, 234, .06)
+      }
+
+      .diag-step:nth-child(2n) {
+        border-right: none
+      }
+    }
+
+    .diag-step-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 1.5px;
+      margin-bottom: 8px
+    }
+
+    .diag-step-q {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: .5px;
+      color: var(--offwhite);
+      line-height: 1.4;
+      margin-bottom: 6px
+    }
+
+    .diag-step-tag {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--chumbo)
+    }
+
+    /* ════ APP · TELAS ════ */
+    #app-telas {
+      background: var(--marmore-d);
+      padding: 80px 8vw
+    }
+
+    .telas-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      margin: 32px auto 0;
+      max-width: 960px
+    }
+
+    @media(max-width:980px) {
+      .telas-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%
+      }
+    }
+
+    @media(max-width:520px) {
+      .telas-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .tela {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .tela-img {
+      aspect-ratio: 9/19.5;
+      overflow: hidden;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: #080808;
+      transition: all .4s var(--ease)
+    }
+
+    .tela-img:hover {
+      transform: translateY(-6px);
+      border-color: rgba(232, 232, 234, .3);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, .7)
+    }
+
+    .tela-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top
+    }
+
+    .tela-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: center
+    }
+
+    .tela-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 1px
+    }
+
+    .tela-name {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--offwhite)
+    }
+
+    /* ════ ASSISTENTE IA ════ */
+    #assistente {
+      background: var(--preto);
+      padding: 80px 8vw
+    }
+
+    .as-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 340px) 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 32px auto 0
+    }
+
+    @media(max-width:880px) {
+      .as-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        max-width: 560px
+      }
+    }
+
+    .as-phone {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      background: radial-gradient(circle at center, rgba(232, 232, 234, .05), transparent 70%)
+    }
+
+    .as-phone img {
+      width: 100%;
+      max-width: 300px;
+      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, .7));
+      border-radius: 36px
+    }
+
+    .as-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .as-bar-wrap {
+      padding: 24px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: radial-gradient(ellipse at center, rgba(232, 232, 234, .04), transparent 70%);
+      position: relative
+    }
+
+    .as-bar-wrap::before {
+      content: 'COMPONENTE';
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      font-family: var(--mono);
+      font-size: 8.5px;
+      letter-spacing: 2px;
+      color: var(--chumbo)
+    }
+
+    .as-bar-wrap img {
+      width: 100%;
+      display: block
+    }
+
+    .as-prompts-label {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-top: 8px
+    }
+
+    .as-prompts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px
+    }
+
+    .as-prompt {
+      padding: 16px 18px;
+      background: rgba(232, 232, 234, .025);
+      border: 1px solid rgba(232, 232, 234, .08);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--silver-1);
+      line-height: 1.5;
+      transition: all .35s var(--ease)
+    }
+
+    .as-prompt:hover {
+      background: rgba(232, 232, 234, .06);
+      border-color: var(--silver-2);
+      transform: translateX(4px)
+    }
+
+    .as-prompt::before {
+      content: '"';
+      font-size: 18px;
+      color: var(--silver-3);
+      margin-right: 4px
+    }
+
+    /* ════ BRAND BOARD ════ */
+    #brandboard {
+      background: var(--grafite);
+      text-align: center
+    }
+
+    .brand-banner {
+      margin-top: 32px;
+      border: 1px solid rgba(232, 232, 234, .08);
+      overflow: hidden;
+      background: radial-gradient(circle, rgba(232, 232, 234, .05), transparent 70%)
+    }
+
+    .brand-banner img {
+      width: 100%;
+      display: block;
+      transition: transform 6s ease;
+      transform: scale(1.01)
+    }
+
+    .brand-banner:hover img {
+      transform: scale(1.05)
+    }
+
+    /* ════ MOODBOARD ════ */
+    #moodboard {
+      background: var(--marmore-d);
+      padding: 120px 0
+    }
+
+    .mood-head {
+      max-width: 1280px;
+      margin: 0 auto 32px;
+      padding: 0 8vw
+    }
+
+    .mood-banner {
+      width: 100%;
+      overflow: hidden;
+      border-top: 1px solid rgba(232, 232, 234, .08);
+      border-bottom: 1px solid rgba(232, 232, 234, .08);
+      position: relative
+    }
+
+    .mood-banner-track {
+      display: flex;
+      width: max-content;
+      animation: moodPan 60s linear infinite
+    }
+
+    .mood-banner img {
+      height: 460px;
+      width: auto;
+      display: block;
+      flex-shrink: 0;
+      object-fit: cover
+    }
+
+    @keyframes moodPan {
+      0% {
+        transform: translate3d(0, 0, 0)
+      }
+
+      100% {
+        transform: translate3d(-50%, 0, 0)
+      }
+    }
+
+    @media(max-width:760px) {
+      .mood-banner img {
+        height: 260px
+      }
+    }
+
+    .mood-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1280px;
+      margin: 48px auto 0;
+      padding: 0 8vw
+    }
+
+    @media(max-width:760px) {
+      .mood-cols {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+    }
+
+    .mood-col-title {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(232, 232, 234, .1)
+    }
+
+    .mood-col-items {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--silver-1);
+      line-height: 2
+    }
+
+    .mood-marquee {
+      margin-top: 64px;
+      overflow: hidden;
+      border-top: 1px solid rgba(232, 232, 234, .06);
+      border-bottom: 1px solid rgba(232, 232, 234, .06);
+      padding: 24px 0
+    }
+
+    .mood-track {
+      display: flex;
+      gap: 48px;
+      white-space: nowrap;
+      animation: marquee 35s linear infinite
+    }
+
+    .mood-track span {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(20px, 3vw, 32px);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      flex-shrink: 0
+    }
+
+    .mood-track span.s {
+      background: linear-gradient(180deg, #FAFAFA, #6A6A6C, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ════ POSSIBILIDADES ════ */
+    #conexoes {
+      background: var(--preto);
+      text-align: center
+    }
+
+    .con-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    @media(max-width:900px) {
+      .con-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .con-card {
+      padding: 32px 28px;
+      background: linear-gradient(180deg, rgba(232, 232, 234, .03), transparent);
+      border: 1px solid rgba(232, 232, 234, .08);
+      text-align: left;
+      transition: all .5s var(--ease)
+    }
+
+    .con-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(232, 232, 234, .22)
+    }
+
+    .con-card-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 2px;
+      margin-bottom: 18px
+    }
+
+    .con-card-title {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 20px;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+      color: var(--offwhite);
+      text-transform: uppercase
+    }
+
+    .con-card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--silver-1);
+      line-height: 1.5
+    }
+
+    .con-card-list span {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px
+    }
+
+    .con-card-list span::before {
+      content: '';
+      width: 4px;
+      height: 1px;
+      background: var(--silver-2);
+      margin-top: 8px;
+      flex-shrink: 0
+    }
+
+    /* ════ CLOSING ════ */
+    #closing {
+      min-height: 80vh;
+      background: var(--preto);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 40px;
+      overflow: hidden
+    }
+
+    #closing::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(232, 232, 234, .05), transparent);
+      pointer-events: none
+    }
+
+    .cl-logo {
+      width: min(200px, 50vw);
+      margin-bottom: 40px;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, .6))
+    }
+
+    .cl-rule {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+      margin: 0 auto 28px
+    }
+
+    .cl-tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 20px;
+      font-weight: 500
+    }
+
+    .cl-tagline {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(28px, 5vw, 52px);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      color: var(--offwhite);
+      position: relative;
+      z-index: 2
+    }
+
+    .cl-tagline em {
+      font-style: normal;
+      background: linear-gradient(180deg, #FAFAFA, #6A6A6C, #FAFAFA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .cl-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      max-width: 580px;
+      margin: 64px auto 0;
+      text-align: left;
+      position: relative;
+      z-index: 2
+    }
+
+    @media(max-width:680px) {
+      .cl-meta {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+    }
+
+    .cl-meta-label {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 8px;
+      font-weight: 500
+    }
+
+    .cl-meta-val {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-1);
+      letter-spacing: 1px
+    }
+
+    .cl-copy {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(232, 232, 234, .3);
+      margin-top: 64px;
+      font-weight: 500
+    }
+
+    body.loading {
+      overflow: hidden !important;
+      height: 100vh !important;
+      position: fixed;
+      width: 100%;
+    }
+
+    /* ════ PRELOADER PREMIUM ════ */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #050505;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 1.4s cubic-bezier(0.85, 0, 0.15, 1), opacity 1.4s var(--ease);
+      transform-origin: top;
+    }
+
+    #preloader.loaded {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preloader-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pl-phase {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.6s var(--ease);
+    }
+
+    .pl-phase.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .pl-phase.exit {
+      opacity: 0;
+    }
+
+    /* Fase 1: Revelação Cinematográfica do Logo */
+    .pl-logo-reveal {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+
+    .pl-logo-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 1.2s var(--ease), transform 1.2s var(--ease);
+    }
+
+    .pl-phase-1.active .pl-logo-bg {
+      opacity: 0.1;
+      transform: scale(1);
+    }
+
+    .pl-logo-fill-wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      clip-path: inset(100% 0 0 0);
+      /* Inicia cortado da base */
+    }
+
+    .pl-logo-fill {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.18));
+    }
+
+    .pl-logo-glow-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 3px rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      bottom: 0;
+    }
+
+    /* Animação do preenchimento ao ativar Fase 1 */
+    .pl-phase-1.active .pl-logo-fill-wrap {
+      animation: plLogoFillAnimate 2.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    }
+
+    .pl-phase-1.active .pl-logo-glow-line {
+      animation: plLogoGlowAnimate 2.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    }
+
+    @keyframes plLogoFillAnimate {
+      0% {
+        clip-path: inset(100% 0 0 0)
+      }
+
+      100% {
+        clip-path: inset(0 0 0 0)
+      }
+    }
+
+    @keyframes plLogoGlowAnimate {
+      0% {
+        bottom: 0%;
+        opacity: 0
+      }
+
+      15% {
+        opacity: 1
+      }
+
+      85% {
+        opacity: 1
+      }
+
+      100% {
+        bottom: 100%;
+        opacity: 0
+      }
+    }
+
+    /* Fase 2: Essência */
+    .pl-brand-essence {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(40px, 5vw, 64px);
+      letter-spacing: 22px;
+      text-indent: 22px;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .pl-tagline-essence {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      text-indent: 6px;
+      display: flex;
+      align-items: center;
+      min-height: 16px;
+    }
+
+    /* Fase 3: Conexão & Progresso */
+    .preloader-type-status {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(16px, 1.8vw, 22px);
+      color: var(--silver-1);
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .preloader-line-container {
+      width: 200px;
+      height: 1px;
+      background: rgba(232, 232, 234, 0.08);
+      position: relative;
+      margin-bottom: 18px;
+      overflow: hidden;
+      transform: scaleX(0);
+      transition: transform 0.8s var(--ease);
+    }
+
+    .pl-phase-3.active .preloader-line-container {
+      transform: scaleX(1);
+    }
+
+    .preloader-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, transparent, #fff, #9A9A9C);
+      transition: width 0.4s cubic-bezier(0.1, 0.8, 0.1, 1);
+    }
+
+    .preloader-counter {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--silver-2);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 0.8s var(--ease);
+    }
+
+    .pl-phase-3.active .preloader-counter {
+      opacity: 0.6;
+    }
+
+    /* Cursor de Digitação Suave */
+    .typewriter-cursor {
+      display: inline-block;
+      width: 1.5px;
+      height: 0.8em;
+      background: var(--silver-2);
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: twCursor 0.8s infinite;
+    }
+
+    @keyframes twCursor {
+      50% {
+        opacity: 0
+      }
+    }
+
+    .pl-phase.exit .pl-logo-reveal,
+    .pl-phase.exit .pl-brand-essence,
+    .pl-phase.exit .pl-tagline-essence,
+    .pl-phase.exit .preloader-type-status,
+    .pl-phase.exit .preloader-line-container,
+    .pl-phase.exit .preloader-counter {
+      animation: plFadeOutUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes plFadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1)
+      }
+    }
+
+    @keyframes plFadeOutUp {
+      from {
+        opacity: 1;
+        transform: translateY(0) scale(1)
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95)
+      }
+    }
+
+    /* Estilos da Barra de Chat Dandi no Preloader */
+    .pl-chat-container {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      box-sizing: border-box;
+      padding: 0 24px;
+    }
+
+    .pl-chat-bar {
+      display: flex;
+      align-items: center;
+      background: #000000;
+      border: 1px solid rgba(232, 232, 234, 0.08);
+      border-radius: 18px;
+      padding: 16px 24px;
+      gap: 20px;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      text-align: left;
+      animation: plFadeInUp 1.2s var(--ease) forwards;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pl-chat-logo {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pl-chat-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .pl-chat-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .pl-chat-label {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+    }
+
+    .pl-chat-bubble {
+      background: #121214;
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: inline-block;
+      align-self: flex-start;
+      max-width: 100%;
+    }
+
+    .pl-chat-text {
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--offwhite);
+      line-height: 1.4;
+    }
+
+    .pl-chat-status {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pl-chat-glow-dot {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fff, 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .pl-chat-dots {
+      position: absolute;
+      inset: 0;
+      animation: plDotsRotate 8s linear infinite;
+    }
+
+    .pl-chat-dots span {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+    }
+
+    .pl-chat-dots span:nth-child(1) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .pl-chat-dots span:nth-child(2) {
+      top: 15%;
+      left: 85%;
+      transform: translate(-50%, -50%)
+    }
+
+    .pl-chat-dots span:nth-child(3) {
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%)
+    }
+
+    .pl-chat-dots span:nth-child(4) {
+      top: 85%;
+      left: 85%;
+      transform: translate(-50%, -50%)
+    }
+
+    .pl-chat-dots span:nth-child(5) {
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .pl-chat-dots span:nth-child(6) {
+      top: 85%;
+      left: 15%;
+      transform: translate(-50%, -50%)
+    }
+
+    .pl-chat-dots span:nth-child(7) {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%)
+    }
+
+    .pl-chat-dots span:nth-child(8) {
+      top: 15%;
+      left: 15%;
+      transform: translate(-50%, -50%)
+    }
+
+    @keyframes plDotsRotate {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* Opções Interativas de Clique */
+    .pl-chat-options {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.6s var(--ease);
+    }
+
+    .pl-chat-options.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pl-chat-btn {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--silver-1);
+      background: rgba(232, 232, 234, 0.03);
+      border: 1px solid rgba(232, 232, 234, 0.08);
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .pl-chat-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Input para escrever */
+    .pl-chat-input-wrapper {
+      display: flex;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(232, 232, 234, 0.06);
+      border-radius: 30px;
+      padding: 4px 6px 4px 18px;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.6s var(--ease) 0.15s;
+      max-width: 420px;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .pl-chat-input-wrapper.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pl-chat-input {
+      flex: 1;
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--offwhite);
+      outline: none;
+    }
+
+    .pl-chat-input::placeholder {
+      color: var(--silver-3);
+    }
+
+    .pl-chat-send {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--offwhite);
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .pl-chat-send:hover:not(:disabled) {
+      background: #fff;
+      color: #000;
+    }
+
+    .pl-chat-send:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    /* Ajuste de saída da Fase 2 */
+    .pl-phase.exit .pl-chat-container {
+      animation: plFadeOutUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Back to Models — botão pra voltar ao hub */
+    .back-to-models {
+      position: fixed; top: 24px; left: 24px; z-index: 260;
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 14px;
+      background: rgba(13,13,13,.85);
+      border: 1px solid rgba(255,255,255,.1);
+      font-family: var(--sans, Helvetica, Arial, sans-serif);
+      font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--silver-2, #9A9A9C);
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: all .3s ease;
+      font-weight: 500;
+    }
+    .back-to-models:hover { color: #fff; border-color: rgba(255,255,255,.3); }
+    .back-to-models svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    /* Botão de Controle de Som Flutuante no Canto Inferior Esquerdo */
+    .audio-control-btn {
+      position: fixed;
+      bottom: 32px;
+      left: 32px;
+      z-index: 99999;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--silver-2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      transition: all 0.3s var(--ease);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .audio-control-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      transform: scale(1.08);
+    }
+
+    .audio-control-btn svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s;
+    }
+
+    .audio-control-btn:hover svg {
+      transform: scale(1.1);
+    }
+
+    .audio-control-btn.playing {
+      color: var(--offwhite);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Balão Tooltip de Ativar Som (Estética Premium de Luxo) */
+    .audio-tooltip {
+      position: absolute;
+      left: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(13, 13, 13, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 8px 16px;
+      border-radius: 100px;
+      white-space: nowrap;
+      pointer-events: none;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      opacity: 1;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 100000;
+      animation: audioTooltipPulse 2s infinite ease-in-out;
+    }
+
+    /* Pequena seta apontando para o botão flutuante */
+    .audio-tooltip::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 8px;
+      height: 8px;
+      background: rgba(13, 13, 13, 0.85);
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .audio-tooltip span {
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--offwhite);
+      display: block;
+    }
+
+    /* Animação de pulso horizontal sutil de captação visual */
+    @keyframes audioTooltipPulse {
+
+      0%,
+      100% {
+        transform: translateY(-50%) translateX(0);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      }
+
+      50% {
+        transform: translateY(-50%) translateX(6px);
+        box-shadow: 0 10px 35px rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    /* Ocultação suave quando a página carregar ou se o usuário ativar o som */
+    body.loaded .audio-tooltip,
+    body.audio-active .audio-tooltip {
+      opacity: 0 !important;
+      transform: translateY(-50%) translateX(-15px) !important;
+      pointer-events: none !important;
+    }
+
+
+    /* Efeito de abertura no Hero */
+    body:not(.loaded) #hero {
+      opacity: 0;
+      transform: scale(1.06);
+      filter: blur(4px);
+    }
+
+    #hero {
+      transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), filter 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body.loaded #hero {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Áudio Local de Fundo · Michael Bublé · Feeling Good · começa em 8s -->
+  <audio id="bg-audio" preload="auto"
+    src="https://assets.cdn.filesafe.space/7hzaWcGgawCV1WudlwA7/media/6a0f6724ca9579c76bbf5b1a.mp3"></audio>
+
+  <!-- Botão de Controle de Áudio Flutuante -->
+  <button id="audio-toggle" class="audio-control-btn" aria-label="Ativar som" title="Música de fundo">
+    <!-- Balão de Ativar Som -->
+    <div class="audio-tooltip">
+      <span>Ativar Som ✦</span>
+    </div>
+    <svg class="audio-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+      <line x1="22" y1="9" x2="16" y2="15" />
+      <line x1="16" y1="9" x2="22" y2="15" />
+    </svg>
+    <svg class="audio-icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+      style="display:none;">
+      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+    </svg>
+  </button>
+
+  <!-- PRELOADER PREMIUM -->
+  <div id="preloader">
+    <div class="preloader-wrapper">
+      <!-- Fase 1: Revelação Cinematográfica da Logo -->
+      <div class="pl-phase pl-phase-1">
+        <div class="pl-logo-reveal">
+          <img src="assets/icone-fundo-preto.webp" alt="Dandi" class="pl-logo-bg">
+          <div class="pl-logo-fill-wrap">
+            <img src="assets/icone-fundo-preto.webp" alt="Dandi" class="pl-logo-fill">
+            <div class="pl-logo-glow-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fase 2: Digitação da Essência e Chat do Assistente de Estilo -->
+      <div class="pl-phase pl-phase-2">
+        <div class="pl-chat-container">
+          <div class="pl-chat-bar">
+            <div class="pl-chat-logo">
+              <img src="assets/icone-fundo-preto.webp" alt="Dandi">
+            </div>
+            <div class="pl-chat-content">
+              <div class="pl-chat-label">ASSISTENTE DE ESTILO</div>
+              <div class="pl-chat-bubble">
+                <span class="pl-chat-text"></span>
+              </div>
+            </div>
+            <div class="pl-chat-status">
+              <div class="pl-chat-glow-dot"></div>
+              <div class="pl-chat-dots">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Opções interativas do usuário -->
+          <div class="pl-chat-options">
+            <button class="pl-chat-btn" data-action="manual">Acessar Manual Dandi</button>
+            <button class="pl-chat-btn" data-action="vamos">Vamos lá</button>
+          </div>
+
+          <!-- Campo para o usuário escrever -->
+          <div class="pl-chat-input-wrapper">
+            <input type="text" class="pl-chat-input" placeholder="Escreva algo e aperte Enter..." disabled>
+            <button class="pl-chat-send" aria-label="Enviar" disabled>→</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fase 3: Conexão e Progresso -->
+      <div class="pl-phase pl-phase-3">
+        <div class="preloader-type-status pl-type-status"></div>
+        <div class="preloader-line-container">
+          <div class="preloader-line"></div>
+        </div>
+        <div class="preloader-counter"><span id="pl-count">00</span>%</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="prog"></div>
+
+  <nav id="sidenav" aria-label="Navegação do manual">
+    <div id="snav-progress-bar"></div>
+    <div class="snav-dot active" data-l="Capa" data-s="hero"></div>
+    <div class="snav-dot" data-l="História" data-s="historia"></div>
+    <div class="snav-dot" data-l="Manifesto" data-s="manifesto"></div>
+    <div class="snav-dot" data-l="Personalidade" data-s="personalidade"></div>
+    <div class="snav-dot" data-l="Símbolo" data-s="simbolo"></div>
+    <div class="snav-dot" data-l="Logo" data-s="identidade"></div>
+    <div class="snav-dot" data-l="Horizontal" data-s="horizontal"></div>
+    <div class="snav-dot" data-l="Ícones App" data-s="icones-app"></div>
+    <div class="snav-dot" data-l="Springboard" data-s="springboard"></div>
+    <div class="snav-dot" data-l="Paleta" data-s="paleta"></div>
+    <div class="snav-dot" data-l="Tipografia" data-s="tipografia"></div>
+    <div class="snav-dot" data-l="Tom de Voz" data-s="tom"></div>
+    <div class="snav-dot" data-l="Vocabulário" data-s="vocabulario"></div>
+    <div class="snav-dot" data-l="Posicionamento" data-s="posicionamento"></div>
+    <div class="snav-dot" data-l="O que evitar" data-s="evitar"></div>
+    <div class="snav-dot" data-l="Aplicações" data-s="aplicacoes"></div>
+    <div class="snav-dot" data-l="App" data-s="app"></div>
+    <div class="snav-dot" data-l="App · Conceito" data-s="app-conceito"></div>
+    <div class="snav-dot" data-l="App · Quiz" data-s="app-diagnostico"></div>
+    <div class="snav-dot" data-l="Assistente IA" data-s="assistente"></div>
+    <div class="snav-dot" data-l="Moodboard" data-s="moodboard"></div>
+    <div class="snav-dot" data-l="Possibilidades" data-s="conexoes"></div>
+    <div class="snav-dot" data-l="Fim" data-s="closing"></div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" aria-labelledby="hero-title">
+    <div class="hero-marble" aria-hidden="true"></div>
+    <div class="hero-eyebrow">Manual de Marca · 2026</div>
+    <div class="hero-line" aria-hidden="true"></div>
+    <img src="assets/logo-fundo-preto.webp" alt="Logotipo Dandi" class="hero-logo" id="hero-title">
+    <div class="hero-tagline">Estilo&nbsp;<em>Inteligente.</em></div>
+    <div class="scroll-cue" aria-hidden="true"></div>
+  </section>
+
+  <!-- 01 · HISTÓRIA -->
+  <section id="historia">
+    <div class="maxw">
+      <div class="head"><span class="tag rv">01 · A leitura do nome</span></div>
+      <div class="hist-grid">
+        <div class="rvl">
+          <div class="hist-name silver">Dandi</div>
+          <div class="hist-phon">/ ˈdæn.di / · <em>o dândi</em></div>
+          <p class="bt">Termo do século XVIII para o homem que cultiva o estilo como expressão de inteligência. Não
+            vaidade. <strong>Intenção.</strong></p>
+          <div class="hist-quote">
+            "Para ser elegante, é preciso passar despercebido. Se as pessoas se viram para te olhar, você não está bem
+            vestido."
+            <span class="sig">— Beau Brummell · o primeiro dândi</span>
+          </div>
+          <p class="bt">Brummell em Londres. Baudelaire em Paris. Wilde em Dublin. Machado, João do Rio e Vinicius no
+            Brasil. <strong>Dandi</strong> é a continuação dessa linhagem agora com tecnologia.</p>
+        </div>
+        <div class="rvr">
+          <div class="hist-card">
+            <div class="hist-card-tag">Referência fundadora</div>
+            <div class="hist-card-name">Beau <em>Brummell</em></div>
+            <div class="hist-card-dates">1778 - 1840 · Londres</div>
+            <div class="hist-card-bio">Inventou a ideia de que se vestir bem é uma forma de pensar bem. Estabeleceu o
+              terno escuro, a higiene diária e o refinamento pela ausência.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline rv">
+        <div class="tl-item">
+          <div class="tl-year">1778</div>
+          <div class="tl-label">Beau<br>Brummell</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1863</div>
+          <div class="tl-label">Baudelaire</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1881</div>
+          <div class="tl-label">Oscar<br>Wilde</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1908</div>
+          <div class="tl-label">João<br>do Rio</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1958</div>
+          <div class="tl-label">Bossa<br>Nova</div>
+        </div>
+        <div class="tl-item active">
+          <div class="tl-year">2026</div>
+          <div class="tl-label">Dandi<br>o app</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · MANIFESTO -->
+  <section id="manifesto">
+    <div class="mf-bg" aria-hidden="true"></div>
+    <div class="mf-wrap">
+      <span class="tag rv">02 · Manifesto</span>
+      <div class="mf-quote rv">
+        <span class="line">Refinamento.</span>
+        <span class="line">Inteligência.</span>
+        <span class="line silver-line">Presença.</span>
+      </div>
+      <div class="mf-divider rv d2"></div>
+      <div class="mf-body rv d3">Estilo não precisa de exagero. Precisa de precisão.<br>É a diferença entre usar roupas
+        e vestir uma identidade.</div>
+      <div class="mf-sig rv d4">— Dandi</div>
+    </div>
+  </section>
+
+  <!-- 03 · PERSONALIDADE -->
+  <section id="personalidade">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">03 · Personalidade</span>
+        <h2 class="st rv d1">Quem é <span class="ac">Dandi</span></h2>
+      </div>
+      <div class="pers-grid">
+        <div class="pers-card rv d1">
+          <div class="pers-num">01</div>
+          <div class="pers-icon">✦</div>
+          <div class="pers-title silver">Especialista</div>
+          <div class="pers-desc">Autoridade pelo repertório, não pelo achismo.</div>
+        </div>
+        <div class="pers-card rv d2">
+          <div class="pers-num">02</div>
+          <div class="pers-icon">◆</div>
+          <div class="pers-title silver">Natural</div>
+          <div class="pers-desc">Bom gosto sem esforço. Atemporal, não modinha.</div>
+        </div>
+        <div class="pers-card rv d3">
+          <div class="pers-num">03</div>
+          <div class="pers-icon">▲</div>
+          <div class="pers-title silver">Organizador</div>
+          <div class="pers-desc">Transforma armário em sistema. Sistema em estilo.</div>
+        </div>
+        <div class="pers-card rv d4">
+          <div class="pers-num">04</div>
+          <div class="pers-icon">●</div>
+          <div class="pers-title silver">Discreto</div>
+          <div class="pers-desc">A elegância maior é a que não precisa ser anunciada.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · SÍMBOLO -->
+  <section id="simbolo">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">04 · Construção do símbolo</span>
+        <h2 class="st rv d1">O <span class="ac">monograma</span></h2>
+      </div>
+      <div class="symb-grid">
+        <div class="rvl">
+          <div class="symb-display">
+            <div class="symb-grid-lines" aria-hidden="true"></div>
+            <span class="symb-corner tl" aria-hidden="true"></span>
+            <span class="symb-corner tr" aria-hidden="true"></span>
+            <span class="symb-corner bl" aria-hidden="true"></span>
+            <span class="symb-corner br" aria-hidden="true"></span>
+            <img src="assets/icone-fundo-preto.webp" alt="Monograma Dandi · D com N sobreposto">
+          </div>
+        </div>
+        <div class="rvr">
+          <p class="bt">O <strong>D</strong> carrega dentro de si o <strong>N</strong> que está no centro de
+            Da<strong>n</strong>di. A letra que liga começo e fim, escondida em plena vista.</p>
+          <p class="bt" style="margin-top:14px">Marca registrável. Única. Silenciosa. Como o próprio dândi.</p>
+          <div class="symb-pieces">
+            <div class="symb-piece"><img src="assets/icone-fundo-branco.webp" alt="D em preto">
+              <div class="symb-piece-cap">D · base</div>
+            </div>
+            <div class="symb-piece"><img src="assets/icone-fundo-marmore.webp" alt="D em mármore">
+              <div class="symb-piece-cap">Editorial</div>
+            </div>
+            <div class="symb-piece"><img src="assets/icone-fundo-preto.webp" alt="D em prata">
+              <div class="symb-piece-cap">Oficial</div>
+            </div>
+          </div>
+          <p class="bt" style="margin-top:24px;font-size:12px">Margem mínima: <strong>50% da altura</strong> do símbolo.
+            Mínimo digital: <strong>24px</strong> · impressão: <strong>10mm</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · VERSÕES LOGO -->
+  <section id="identidade">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">05 · Versões oficiais</span>
+        <h2 class="st rv d1">Identidade <span class="ac">visual</span></h2>
+      </div>
+      <div class="logo-3">
+        <div class="lc rv d1"><img src="assets/logo-fundo-preto.webp" alt="Logo sobre preto">
+          <div class="lc-overlay"></div>
+          <div class="lc-label">
+            <div class="lc-label-tag">Principal</div>
+            <div class="lc-label-name">Fundo preto</div>
+          </div>
+        </div>
+        <div class="lc rv d2"><img src="assets/logo-fundo-marmore.webp" alt="Logo sobre mármore">
+          <div class="lc-overlay"></div>
+          <div class="lc-label">
+            <div class="lc-label-tag">Editorial</div>
+            <div class="lc-label-name">Fundo mármore</div>
+          </div>
+        </div>
+        <div class="lc rv d3"><img src="assets/logo-fundo-branco.webp" alt="Logo sobre branco">
+          <div class="lc-overlay"></div>
+          <div class="lc-label">
+            <div class="lc-label-tag">Impresso</div>
+            <div class="lc-label-name">Fundo branco</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · LOGO HORIZONTAL -->
+  <section id="horizontal">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">06 · Versão horizontal</span>
+        <h2 class="st rv d1">Para <span class="ac">leituras em fluxo</span></h2>
+      </div>
+      <div class="horiz-img-wrap rv d2">
+        <img src="assets/logo-horizontal.webp" alt="Logo horizontal Dandi" class="horiz-img">
+      </div>
+      <p class="bt rv d3" style="margin-top:24px;text-align:center;margin-left:auto;margin-right:auto">Headers · cartões
+        de visita · assinaturas de e-mail · documentos</p>
+    </div>
+  </section>
+
+  <!-- 07 · ÍCONES DE APP -->
+  <section id="icones-app">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">07 · Estudo de ícones</span>
+        <h2 class="st rv d1">8 acabamentos <span class="ac">do app</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">O ícone oficial é o <strong
+            style="color:var(--offwhite)">01</strong>, couro preto + D em prata cromada.</p>
+      </div>
+
+      <div class="icons-grid">
+        <div class="icon-card rv d1">
+          <div class="icon-card-img"><img src="assets/app1.webp" alt="Ícone 01"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">01</span><span class="icon-card-name">Couro ·
+              oficial</span></div>
+        </div>
+        <div class="icon-card rv d2">
+          <div class="icon-card-img"><img src="assets/app2.webp" alt="Ícone 02"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">02</span><span class="icon-card-name">Mármore</span>
+          </div>
+        </div>
+        <div class="icon-card rv d3">
+          <div class="icon-card-img"><img src="assets/app3.webp" alt="Ícone 03"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">03</span><span class="icon-card-name">Prata
+              escovada</span></div>
+        </div>
+        <div class="icon-card rv d4">
+          <div class="icon-card-img"><img src="assets/app4.webp" alt="Ícone 04"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">04</span><span class="icon-card-name">Light</span>
+          </div>
+        </div>
+        <div class="icon-card rv d1">
+          <div class="icon-card-img"><img src="assets/app5.webp" alt="Ícone 05"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">05</span><span class="icon-card-name">Moldura
+              prata</span></div>
+        </div>
+        <div class="icon-card rv d2">
+          <div class="icon-card-img"><img src="assets/app6.webp" alt="Ícone 06"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">06</span><span class="icon-card-name">Stealth</span>
+          </div>
+        </div>
+        <div class="icon-card rv d3">
+          <div class="icon-card-img"><img src="assets/app7.webp" alt="Ícone 07"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">07</span><span class="icon-card-name">Mármore
+              brilho</span></div>
+        </div>
+        <div class="icon-card rv d4">
+          <div class="icon-card-img"><img src="assets/app8.webp" alt="Ícone 08"></div>
+          <div class="icon-card-meta"><span class="icon-card-num">08</span><span class="icon-card-name">Limpo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 · SPRINGBOARD -->
+  <section id="springboard">
+    <div class="maxw">
+      <div class="spring-grid">
+        <div class="rvl">
+          <div class="head"><span class="tag">08 · Ícone instalado</span>
+            <h2 class="st">No <span class="ac">iPhone</span></h2>
+          </div>
+          <p class="bt">O ícone Dandi entre os apps nativos. Chama atenção sem precisar gritar.</p>
+          <p class="bt" style="margin-top:14px">Validação em <strong>60×60px</strong> · ambiente real de uso.</p>
+        </div>
+        <div class="rvr">
+          <div class="spring-img-wrap">
+            <div class="spring-video-frame"><video autoplay loop muted playsinline>
+                <source src="assets/assistente-estilo.mp4" type="video/mp4">
+              </video></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · APP · CARROSSEL 3D INTERATIVO -->
+  <section id="app">
+    <div class="app-inner">
+      <div class="rvl">
+        <span class="tag">09 · O Aplicativo</span>
+        <h2 class="st">O App <span class="ac">Dandi</span></h2>
+        <p class="bt" style="margin-top:24px;margin-bottom:8px">Toque nos passos abaixo ou nos pontos para navegar pelo
+          fluxo do app.</p>
+
+        <div class="app-steps" role="tablist">
+          <div class="app-step active" data-i="0" role="tab" tabindex="0">
+            <span class="app-step-num">01</span>
+            <span class="app-step-name">Splash</span>
+            <span class="app-step-desc">Boas-vindas ao universo Dandi</span>
+          </div>
+          <div class="app-step" data-i="1" role="tab" tabindex="0">
+            <span class="app-step-num">02</span>
+            <span class="app-step-name">Entrar</span>
+            <span class="app-step-desc">Login com Apple ou e-mail</span>
+          </div>
+          <div class="app-step" data-i="2" role="tab" tabindex="0">
+            <span class="app-step-num">03</span>
+            <span class="app-step-name">Criar conta</span>
+            <span class="app-step-desc">Cadastro discreto</span>
+          </div>
+          <div class="app-step" data-i="3" role="tab" tabindex="0">
+            <span class="app-step-num">04</span>
+            <span class="app-step-name">Onboarding</span>
+            <span class="app-step-desc">Vamos entender seu estilo</span>
+          </div>
+          <div class="app-step" data-i="4" role="tab" tabindex="0">
+            <span class="app-step-num">05</span>
+            <span class="app-step-name">Look do dia</span>
+            <span class="app-step-desc">Sugestão IA contextual</span>
+          </div>
+          <div class="app-step" data-i="5" role="tab" tabindex="0">
+            <span class="app-step-num">06</span>
+            <span class="app-step-name">Armário</span>
+            <span class="app-step-desc">12 peças-chave</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rvr">
+        <div class="phone-scene">
+          <div class="phone-frame" id="appPhone">
+            <img class="phone-screen active" data-i="0" src="assets/mobile1.webp" alt="Tela splash">
+            <img class="phone-screen" data-i="1" src="assets/mobile2.webp" alt="Tela de login">
+            <img class="phone-screen" data-i="2" src="assets/moible2.1.webp" alt="Tela criar conta">
+            <img class="phone-screen" data-i="3" src="assets/mobile3.webp" alt="Tela onboarding">
+            <img class="phone-screen" data-i="4" src="assets/mobile4.webp" alt="Tela look do dia">
+            <img class="phone-screen" data-i="5" src="assets/mobile5.webp" alt="Tela armário">
+            <div class="phone-glare" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="phone-controls">
+          <div class="phone-dots" role="tablist">
+            <button class="phone-dot active" data-i="0" aria-label="Tela 1"></button>
+            <button class="phone-dot" data-i="1" aria-label="Tela 2"></button>
+            <button class="phone-dot" data-i="2" aria-label="Tela 3"></button>
+            <button class="phone-dot" data-i="3" aria-label="Tela 4"></button>
+            <button class="phone-dot" data-i="4" aria-label="Tela 5"></button>
+            <button class="phone-dot" data-i="5" aria-label="Tela 6"></button>
+          </div>
+          <button class="phone-pause" id="phonePause" aria-label="Pausar">⏸ Pausar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · APP · CONCEITO -->
+  <section id="app-conceito">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">10 · O Aplicativo · Conceito</span>
+        <h2 class="st rv d1">Três <span class="ac">pilares</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Sugestão · Inspiração · Composição.</p>
+      </div>
+      <div class="app-conceito-hero rv"><img
+          src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2001_27_28.webp"
+          alt="Três telas conceito · sugestão, inspiração, composição"></div>
+      <div class="app-conceito-pillars">
+        <div class="app-pillar rv d1">
+          <div class="app-pillar-num">01</div>
+          <div class="app-pillar-name silver">Sugestão</div>
+          <div class="app-pillar-desc">IA que sugere combinações com base no armário.</div>
+        </div>
+        <div class="app-pillar rv d2">
+          <div class="app-pillar-num">02</div>
+          <div class="app-pillar-name silver">Inspiração</div>
+          <div class="app-pillar-desc">Perfis curados de homens com estilo próprio.</div>
+        </div>
+        <div class="app-pillar rv d3">
+          <div class="app-pillar-num">03</div>
+          <div class="app-pillar-name silver">Composição</div>
+          <div class="app-pillar-desc">Monte looks únicos com as peças que você tem.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · APP · DIAGNÓSTICO SEQUENCIAL -->
+  <section id="app-diagnostico">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">11 · O Aplicativo · Diagnóstico</span>
+        <h2 class="st rv d1">Quiz <span class="ac">de estilo</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Fluxo sequencial de 4 perguntas para calibrar a IA antes do
+          primeiro look.</p>
+      </div>
+
+      <div class="diag-hero rv">
+        <img src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2012_35_44.webp"
+          alt="Sequência de telas do quiz de diagnóstico de estilo">
+      </div>
+
+      <div class="diag-steps">
+        <div class="diag-step rv d1">
+          <div class="diag-step-num">01</div>
+          <div class="diag-step-q">Qual sua idade?</div>
+          <div class="diag-step-tag">Faixa etária</div>
+        </div>
+        <div class="diag-step rv d2">
+          <div class="diag-step-num">02</div>
+          <div class="diag-step-q">Por onde nos conheceu?</div>
+          <div class="diag-step-tag">Canal de aquisição</div>
+        </div>
+        <div class="diag-step rv d3">
+          <div class="diag-step-num">03</div>
+          <div class="diag-step-q">Quanto tempo demora para escolher seu outfit?</div>
+          <div class="diag-step-tag">Comportamento</div>
+        </div>
+        <div class="diag-step rv d4">
+          <div class="diag-step-num">04</div>
+          <div class="diag-step-q">Frequência de dúvida ao se montar?</div>
+          <div class="diag-step-tag">Dor real</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 · ASSISTENTE IA -->
+  <section id="assistente">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">12 · Componente Assistente de Estilo</span>
+        <h2 class="st rv d1">A <span class="ac">conversa</span> sobre estilo</h2>
+        <p class="lead rv d2" style="margin-top:20px">Componente core do app. Linguagem de especialista, não de
+          algoritmo.</p>
+      </div>
+
+      <div class="as-layout">
+        <div class="as-phone rvl">
+          <img src="assets/assistente-dentro-app.webp" alt="Tela do Assistente de Estilo dentro do app">
+        </div>
+
+        <div class="as-right rvr">
+          <div class="as-bar-wrap">
+            <img src="assets/barra-assistente-ia.webp" alt="Barra do Assistente de Estilo · componente isolado">
+          </div>
+
+          <div class="as-prompts-label">Prompts de exemplo</div>
+          <div class="as-prompts">
+            <div class="as-prompt rv d1">Tenho reunião de manhã e jantar à noite. O que combina nos dois?</div>
+            <div class="as-prompt rv d2">Comprei uma calça nova. Quais peças do meu armário combinam?</div>
+            <div class="as-prompt rv d3">Vou viajar 5 dias. Monte uma cápsula com 7 peças.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 · PALETA -->
+  <section id="paleta">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">13 · Paleta institucional</span>
+        <h2 class="st rv d1">Seis cores. <span class="ac">Nada mais.</span></h2>
+      </div>
+      <div class="pal-ref rv" style="margin-top:32px"><img
+          src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2001_59_41.webp"
+          alt="Paleta institucional · referência"></div>
+    </div>
+  </section>
+
+  <!-- 14 · TIPOGRAFIA -->
+  <section id="tipografia">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">14 · Sistema tipográfico</span>
+        <h2 class="st rv d1">Duas vozes, <span class="ac">uma sintaxe</span></h2>
+      </div>
+      <div class="typo-specimen rv">
+        <div class="typo-Aa">Aa<em>Bb</em></div>
+        <div class="typo-name">Helvetica Neue Now Display · Light 200</div>
+      </div>
+      <div class="typo-ref rv d2">
+        <img src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2002_04_08.webp"
+          alt="Sistema tipográfico oficial">
+      </div>
+      <div style="margin-top:48px">
+        <div class="typo-row rv d1">
+          <div class="typo-label">Display · Hero</div>
+          <div class="typo-demo">
+            <div class="demo-h1">Estilo Inteligente</div>
+          </div>
+          <div class="typo-spec">48–72px<br>tracking 8px<br>weight 200</div>
+        </div>
+        <div class="typo-row rv d2">
+          <div class="typo-label">Corpo · Body</div>
+          <div class="typo-demo">
+            <div class="demo-body">Estilo não precisa de exagero. Precisa de precisão. É a diferença entre usar roupas e
+              vestir uma identidade.</div>
+          </div>
+          <div class="typo-spec">14–16px<br>line 1.7<br>Inter 300</div>
+        </div>
+        <div class="typo-row rv d3">
+          <div class="typo-label">Quote · Pull</div>
+          <div class="typo-demo">
+            <div class="demo-quote">"Estilo não precisa de exagero."</div>
+          </div>
+          <div class="typo-spec">18–22px<br>italic 300<br>Helvetica</div>
+        </div>
+        <div class="typo-row rv d4">
+          <div class="typo-label">Micro · Caps</div>
+          <div class="typo-demo">
+            <div class="demo-cap">Refinamento · Inteligência · Presença</div>
+          </div>
+          <div class="typo-spec">10–11px<br>tracking 4px<br>Inter 500</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 · TOM DE VOZ -->
+  <section id="tom">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">15 · Tom de voz</span>
+        <h2 class="st rv d1">Refinado, mas <span class="ac">próximo</span></h2>
+      </div>
+      <div class="tom-grid">
+        <div class="tom-col rv d1">
+          <div class="tom-col-tag ok">Falamos assim</div>
+          <p class="tom-phrase">Vamos entender seu estilo.</p>
+          <p class="tom-phrase">Seu armário começa aqui.</p>
+          <p class="tom-phrase">Essa combinação funciona bem para ocasiões casuais.</p>
+          <p class="tom-phrase">Você pode elevar esse look com uma terceira peça.</p>
+          <p class="tom-phrase">A base do guarda-roupa precisa de 12 peças.</p>
+        </div>
+        <div class="tom-col no rv d2">
+          <div class="tom-col-tag no">Não falamos assim</div>
+          <p class="tom-phrase">Look top demais!</p>
+          <p class="tom-phrase">Isso tá errado.</p>
+          <p class="tom-phrase">Bombou demais esse fit, mano!</p>
+          <p class="tom-phrase">Que peça PODEROSA, deusa!</p>
+          <p class="tom-phrase">Vibe maravilhosa, fashionista total.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 · VOCABULÁRIO -->
+  <section id="vocabulario">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">16 · Vocabulário</span>
+        <h2 class="st rv d1">Palavras com <span class="ac">intenção</span></h2>
+      </div>
+      <div class="voc-grid">
+        <div class="voc-col reforcar rv d1">
+          <div class="voc-col-title">Reforçar</div>
+          <div class="voc-tags">
+            <span class="voc-tag">composição</span><span class="voc-tag">proporção</span>
+            <span class="voc-tag">base</span><span class="voc-tag">peça-chave</span>
+            <span class="voc-tag">essencial</span><span class="voc-tag">refinado</span>
+            <span class="voc-tag">coerente</span><span class="voc-tag">intencional</span>
+            <span class="voc-tag">presença</span><span class="voc-tag">precisão</span>
+          </div>
+        </div>
+        <div class="voc-col moderacao rv d2">
+          <div class="voc-col-title">Moderação</div>
+          <div class="voc-tags">
+            <span class="voc-tag">elegante</span><span class="voc-tag">sofisticado</span>
+            <span class="voc-tag">exclusivo</span><span class="voc-tag">premium</span>
+            <span class="voc-tag">curadoria</span><span class="voc-tag">autêntico</span>
+          </div>
+        </div>
+        <div class="voc-col evitar rv d3">
+          <div class="voc-col-title">Evitar sempre</div>
+          <div class="voc-tags">
+            <span class="voc-tag">top</span><span class="voc-tag">bombar</span>
+            <span class="voc-tag">mitar</span><span class="voc-tag">vibe</span>
+            <span class="voc-tag">fashionista</span><span class="voc-tag">arrasar</span>
+            <span class="voc-tag">deusa</span><span class="voc-tag">poderoso</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17 · POSICIONAMENTO -->
+  <section id="posicionamento">
+    <div class="maxw">
+      <div class="pos-grid">
+        <div class="rvl">
+          <span class="tag">17 · Posicionamento</span>
+          <h2 class="st">O território<br><span class="ac">que ocupamos</span></h2>
+          <div class="pos-insight">Estilo<br><em>Inteligente.</em></div>
+          <p class="bt">Espaço novo entre o <strong>hype barulhento</strong> do streetwear e a <strong>frieza
+              utilitária</strong> dos apps técnicos.</p>
+        </div>
+        <div class="rvr">
+          <div class="pos-map">
+            <div class="pos-axis-x" aria-hidden="true"></div>
+            <div class="pos-axis-y" aria-hidden="true"></div>
+            <div class="pos-axis-label top">Acolhedor</div>
+            <div class="pos-axis-label bottom">Frio</div>
+            <div class="pos-axis-label left">Hype</div>
+            <div class="pos-axis-label right">Intencional</div>
+            <div class="pos-comp streetwear"><span class="dot"></span><span class="label">Streetwear</span></div>
+            <div class="pos-comp utilidade"><span class="dot"></span><span class="label">Utilidade fria</span></div>
+            <div class="pos-dandi"><span class="dot-big"></span><span class="label-big">Dandi</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18 · O QUE EVITAR -->
+  <section id="evitar">
+    <div class="maxw">
+      <div class="head" style="text-align:center">
+        <span class="tag rv">18 · O que evitar</span>
+        <h2 class="st rv d1">Dandi nunca <span class="ac">é</span></h2>
+      </div>
+      <div class="evitar-stack">
+        <div class="evitar-word rv d1" data-num="01">Arrogante.</div>
+        <div class="evitar-word rv d2" data-num="02">Inacessível.</div>
+        <div class="evitar-word rv d3" data-num="03">Fashionista demais.</div>
+      </div>
+      <div class="evitar-foot rv d4">Porque o produto é utilitário, social e acessível.</div>
+    </div>
+  </section>
+
+  <!-- 19 · APLICAÇÕES -->
+  <section id="aplicacoes">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">19 · Marca aplicada</span>
+        <h2 class="st rv d1">No mundo <span class="ac">físico</span></h2>
+      </div>
+      <div class="ap-hero rv"><img src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2002_01_26.webp"
+          alt="Aplicações da marca · hangtag, embalagem, fachada"></div>
+      <div class="ap-row">
+        <div class="ap-item rv d1">
+          <div class="ap-item-num">01</div>
+          <div class="ap-item-name">Hangtag</div>
+          <div class="ap-item-desc">Cartão preto fosco · logo em prata</div>
+        </div>
+        <div class="ap-item rv d2">
+          <div class="ap-item-num">02</div>
+          <div class="ap-item-name">Embalagem</div>
+          <div class="ap-item-desc">Caixa magnética · símbolo em relevo</div>
+        </div>
+        <div class="ap-item rv d3">
+          <div class="ap-item-num">03</div>
+          <div class="ap-item-name">Fachada</div>
+          <div class="ap-item-desc">Aço escovado · monograma iluminado</div>
+        </div>
+        <div class="ap-item rv d4">
+          <div class="ap-item-num">04</div>
+          <div class="ap-item-name">Sacola</div>
+          <div class="ap-item-desc">Kraft preto · cordão de algodão</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 20 · MOODBOARD -->
+  <section id="moodboard">
+    <div class="mood-head">
+      <span class="tag rv">20 · Moodboard</span>
+      <h2 class="st rv d1">Universo <span class="ac">visual</span></h2>
+    </div>
+    <div class="mood-banner rv">
+      <div class="mood-banner-track">
+        <img src="assets/imagem-diversas.webp" alt="Moodboard Dandi">
+        <img src="assets/imagem-diversas.webp" alt="Moodboard Dandi" aria-hidden="true">
+      </div>
+    </div>
+    <div class="mood-cols">
+      <div class="rv d1">
+        <div class="mood-col-title">Estética</div>
+        <div class="mood-col-items">Minimalismo de luxo<br>Preto e prata<br>Mármore e metal<br>Editorial sóbrio</div>
+      </div>
+      <div class="rv d2">
+        <div class="mood-col-title">Referências</div>
+        <div class="mood-col-items">Alta alfaiataria<br>Arquitetura contemporânea<br>Design industrial<br>Cinema noir
+        </div>
+      </div>
+      <div class="rv d3">
+        <div class="mood-col-title">Sensação</div>
+        <div class="mood-col-items">Confiança silenciosa<br>Precisão intencional<br>Sofisticação
+          acessível<br>Inteligência elegante</div>
+      </div>
+    </div>
+    <div class="mood-marquee" aria-hidden="true">
+      <div class="mood-track">
+        <span>Refinamento</span><span class="s">·</span>
+        <span>Inteligência</span><span class="s">·</span>
+        <span>Presença</span><span class="s">·</span>
+        <span>Estilo Inteligente</span><span class="s">·</span>
+        <span>Refinamento</span><span class="s">·</span>
+        <span>Inteligência</span><span class="s">·</span>
+        <span>Presença</span><span class="s">·</span>
+        <span>Estilo Inteligente</span><span class="s">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 22 · POSSIBILIDADES -->
+  <section id="conexoes">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">21 · Possibilidades</span>
+        <h2 class="st rv d1">Onde Dandi <span class="ac">pode ir</span></h2>
+      </div>
+      <div class="con-grid">
+        <div class="con-card rv d1">
+          <div class="con-card-num">01 · Produto digital</div>
+          <div class="con-card-title silver">No celular</div>
+          <div class="con-card-list">
+            <span>App iOS + Android</span>
+            <span>Assistente IA conversacional</span>
+            <span>Armário digital · 12 peças-chave</span>
+            <span>Apple Watch · widget de look</span>
+          </div>
+        </div>
+        <div class="con-card rv d2">
+          <div class="con-card-num">02 · Curadoria física</div>
+          <div class="con-card-title silver">No produto</div>
+          <div class="con-card-list">
+            <span>Box das 12 peças-chave</span>
+            <span>Linha de acessórios essenciais</span>
+            <span>Hangtag em parceiros</span>
+            <span>Box de assinatura mensal</span>
+          </div>
+        </div>
+        <div class="con-card rv d3">
+          <div class="con-card-num">03 · Conteúdo</div>
+          <div class="con-card-title silver">Na conversa</div>
+          <div class="con-card-list">
+            <span>Newsletter "A peça da semana"</span>
+            <span>Guia editorial em vídeo</span>
+            <span>Podcast estilo masculino</span>
+            <span>Pop-up store curatorial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="closing">
+    <img src="assets/logo-fundo-preto.webp" alt="Logo Dandi" class="cl-logo rv">
+    <div class="cl-rule rv d1"></div>
+    <div class="cl-tag rv d2">Manual de Marca · 2026</div>
+    <div class="cl-tagline rv d3">Estilo&nbsp;&nbsp;<em>Inteligente.</em></div>
+    <div class="cl-copy rv d7">© 2026 Dandi · Todos os direitos reservados</div>
+  </section>
+
+  <script>
+    /* Marca body.js para habilitar animações progressivas - sem JS, tudo já está visível */
+    document.body.classList.add('js');
+
+    /* PRELOADER PREMIUM JS */
+    (function () {
+      document.body.classList.add('loading');
+      var pl = document.getElementById('preloader');
+      var line = document.querySelector('.preloader-line');
+      var countText = document.getElementById('pl-count');
+      var phase1 = document.querySelector('.pl-phase-1');
+      var phase2 = document.querySelector('.pl-phase-2');
+      var phase3 = document.querySelector('.pl-phase-3');
+
+      var titleEl = document.querySelector('.pl-type-title');
+      var taglineEl = document.querySelector('.pl-type-tagline');
+      var statusEl = document.querySelector('.pl-type-status');
+
+      // Função Typewriter
+      function typeEffect(element, text, speed, callback) {
+        if (!element) return;
+        var i = 0;
+        element.textContent = "";
+        var cursor = document.createElement('span');
+        cursor.className = 'typewriter-cursor';
+        element.appendChild(cursor);
+
+        function type() {
+          if (i < text.length) {
+            cursor.insertAdjacentHTML('beforebegin', text.charAt(i));
+            i++;
+            setTimeout(type, speed + (Math.random() * 25));
+          } else {
+            cursor.remove();
+            if (callback) callback();
+          }
+        }
+        type();
+      }
+
+      // Inicia Fase 1 (Revelação cinemática do Logo) imediatamente
+      setTimeout(function () {
+        if (phase1) phase1.classList.add('active');
+      }, 100);
+
+      // Elementos do Chat
+      var chatTextEl = document.querySelector('.pl-chat-text');
+      var chatOptionsEl = document.querySelector('.pl-chat-options');
+      var chatInputWrapperEl = document.querySelector('.pl-chat-input-wrapper');
+      var chatInputEl = document.querySelector('.pl-chat-input');
+      var chatSendEl = document.querySelector('.pl-chat-send');
+      var fallbackTimer = null;
+      var interativeProceeding = false;
+
+      // Transição para Fase 2 (após 3.4s) - Quando acaba a revelação da logo
+      setTimeout(function () {
+        if (phase1) {
+          phase1.classList.remove('active');
+          phase1.classList.add('exit');
+        }
+        setTimeout(function () {
+          if (phase2) {
+            phase2.classList.add('active');
+            // Assistente de estilo começa a digitar a pergunta interativa
+            typeEffect(chatTextEl, "Olá. Eu sou o seu Assistente de Estilo Dandi. Deseja iniciar a apresentação do nosso manual de marca?", 30, function () {
+              // Exibe as opções de interação assim que terminar de digitar
+              if (chatOptionsEl) chatOptionsEl.classList.add('show');
+              if (chatInputWrapperEl) chatInputWrapperEl.classList.add('show');
+              if (chatInputEl) {
+                chatInputEl.removeAttribute('disabled');
+                chatInputEl.focus();
+              }
+              if (chatSendEl) chatSendEl.removeAttribute('disabled');
+
+              // Fallback de 15 segundos se não houver interação do usuário (para SEO e usuários inativos)
+              fallbackTimer = setTimeout(function () {
+                handleChatAction("Acessar Manual Dandi");
+              }, 15000);
+            });
+          }
+        }, 450);
+      }, 3400);
+
+      // Função para processar a ação interativa e prosseguir
+      function handleChatAction(userInputText) {
+        if (interativeProceeding) return;
+        interativeProceeding = true;
+
+        if (fallbackTimer) clearTimeout(fallbackTimer);
+
+        // Desabilitar todas as interações
+        if (chatInputEl) chatInputEl.setAttribute('disabled', 'true');
+        if (chatSendEl) chatSendEl.setAttribute('disabled', 'true');
+        if (chatOptionsEl) chatOptionsEl.classList.remove('show');
+        if (chatInputWrapperEl) chatInputWrapperEl.classList.remove('show');
+
+        // Pequeno feedback do assistente digitando rapidamente
+        setTimeout(function () {
+          typeEffect(chatTextEl, "Excelente escolha. Acessando as diretrizes de marca Dandi...", 20, function () {
+            // Após responder, transiciona para a Fase 3 de carregamento
+            setTimeout(function () {
+              if (phase2) {
+                phase2.classList.remove('active');
+                phase2.classList.add('exit');
+              }
+              setTimeout(function () {
+                if (phase3) {
+                  phase3.classList.add('active');
+                  typeEffect(statusEl, "Carregando o universo Dandi...", 25, function () {
+                    setTimeout(startCounter, 200);
+                  });
+                }
+              }, 450);
+            }, 800);
+          });
+        }, 150);
+      }
+
+      // Adiciona listeners para os cliques nas sugestões
+      var chatBtns = document.querySelectorAll('.pl-chat-btn');
+      chatBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          handleChatAction(btn.textContent);
+        });
+      });
+
+      // Listener para o input de texto do usuário (Enter)
+      if (chatInputEl) {
+        chatInputEl.addEventListener('keypress', function (e) {
+          if (e.key === 'Enter' && chatInputEl.value.trim() !== '') {
+            handleChatAction(chatInputEl.value.trim());
+          }
+        });
+      }
+      if (chatSendEl && chatInputEl) {
+        chatSendEl.addEventListener('click', function () {
+          if (chatInputEl.value.trim() !== '') {
+            handleChatAction(chatInputEl.value.trim());
+          }
+        });
+      }
+
+      function startCounter() {
+        var count = 0;
+        var duration = 2000; // Contador de progresso roda por 2s
+        var intervalTime = 16;
+        var step = 100 / (duration / intervalTime);
+
+        var timer = setInterval(function () {
+          count += step + (Math.random() * 1.5);
+          if (count >= 100) {
+            count = 100;
+            clearInterval(timer);
+            finishLoader();
+          }
+          var displayCount = Math.floor(count);
+          if (displayCount < 10) displayCount = '0' + displayCount;
+          if (countText) countText.textContent = displayCount;
+          if (line) line.style.width = count + '%';
+        }, intervalTime);
+      }
+
+      function finishLoader() {
+        setTimeout(function () {
+          if (pl) pl.classList.add('loaded');
+          document.body.classList.remove('loading');
+          document.body.classList.add('loaded');
+          setTimeout(function () {
+            if (pl) pl.remove();
+          }, 1400);
+        }, 300);
+      }
+    })();
+
+    /* LOCAL MP3 BACKGROUND AUDIO · Michael Bublé · Feeling Good · começa em 8s */
+    (function () {
+      var audio = document.getElementById('bg-audio');
+      var btn = document.getElementById('audio-toggle');
+      if (!audio || !btn) return;
+
+      var mutedIcon = btn.querySelector('.audio-icon-muted');
+      var playingIcon = btn.querySelector('.audio-icon-playing');
+      var btnText = btn.querySelector('.audio-btn-text');
+      var autoplayAttempted = false;
+
+      // Função: garante que o áudio começa em 8s
+      function seekToStart() {
+        try { if (audio.currentTime < 8) audio.currentTime = 8; } catch (e) { }
+      }
+
+      // Atualiza UI conforme estado do áudio
+      function updateUI(playing) {
+        if (playing) {
+          document.body.classList.add('audio-active');
+          mutedIcon.style.display = 'none';
+          playingIcon.style.display = 'block';
+          if (btnText) btnText.textContent = 'SOUND ON';
+          btn.classList.add('playing');
+          btn.setAttribute('aria-label', 'Pausar som');
+        } else {
+          mutedIcon.style.display = 'block';
+          playingIcon.style.display = 'none';
+          if (btnText) btnText.textContent = 'SOUND OFF';
+          btn.classList.remove('playing');
+          btn.setAttribute('aria-label', 'Ativar som');
+        }
+      }
+
+      // Tenta dar play (pode ser bloqueado por política de autoplay do browser)
+      function tryPlay() {
+        seekToStart();
+        var p = audio.play();
+        if (p && typeof p.then === 'function') {
+          p.then(function () { updateUI(true); })
+            .catch(function () {
+              updateUI(false);
+              // Browser bloqueou autoplay: agenda play no primeiro clique/tecla
+              document.addEventListener('click', firstInteractionPlay, true);
+              document.addEventListener('keydown', firstInteractionPlay, true);
+              document.addEventListener('touchstart', firstInteractionPlay, true);
+            });
+        }
+      }
+
+      function firstInteractionPlay(e) {
+        // Não dispara se foi clique no próprio botão (já é tratado abaixo)
+        if (e.target.closest && e.target.closest('#audio-toggle')) return;
+        document.removeEventListener('click', firstInteractionPlay, true);
+        document.removeEventListener('keydown', firstInteractionPlay, true);
+        document.removeEventListener('touchstart', firstInteractionPlay, true);
+        seekToStart();
+        audio.play().then(function () { updateUI(true); }).catch(function () { });
+      }
+
+      // Loop manual reiniciando em 8s (em vez de 0)
+      audio.addEventListener('ended', function () {
+        audio.currentTime = 8;
+        audio.play().then(function () { updateUI(true); }).catch(function () { });
+      });
+
+      // Quando metadados carregarem, posiciona em 8s
+      audio.addEventListener('loadedmetadata', seekToStart);
+
+      // Botão de toggle play/pause
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (audio.paused) {
+          seekToStart();
+          audio.play().then(function () { updateUI(true); }).catch(function () { });
+        } else {
+          audio.pause();
+          updateUI(false);
+        }
+      });
+
+      // Tenta autoplay assim que possível
+      function init() {
+        if (autoplayAttempted) return;
+        autoplayAttempted = true;
+        tryPlay();
+      }
+      if (audio.readyState >= 2) { init(); }
+      else { audio.addEventListener('canplay', init, { once: true }); }
+
+      // Estado inicial da UI
+      updateUI(false);
+    })();
+
+    /* PROGRESS BAR */
+    var prog = document.getElementById('prog');
+    var snavProg = document.getElementById('snav-progress-bar');
+    window.addEventListener('scroll', function () {
+      var p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      prog.style.width = p + '%';
+      if (snavProg) {
+        snavProg.style.setProperty('--scroll-progress', p + '%');
+      }
+    });
+
+    /* REVEAL ON SCROLL */
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.rv,.rvl,.rvr,.rvs,.mf-quote').forEach(function (el) { ro.observe(el); });
+
+    /* SIDENAV */
+    var sdots = document.querySelectorAll('.snav-dot');
+    var so = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var id = e.target.id;
+          sdots.forEach(function (d) { d.classList.toggle('active', d.dataset.s === id); });
+        }
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('section').forEach(function (s) { so.observe(s); });
+    sdots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        var t = document.getElementById(d.dataset.s);
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    /* APP CAROUSEL 3D */
+    var phoneAngles = [[-14, 4], [-9, 3], [-3, 2], [3, 3], [10, 4], [16, 5]];
+    var pScreens = document.querySelectorAll('.phone-screen');
+    var pDots = document.querySelectorAll('.phone-dot');
+    var aSteps = document.querySelectorAll('.app-step');
+    var aPhone = document.getElementById('appPhone');
+    var aCurr = 0;
+    var aTimer = null;
+    var isPaused = false;
+
+    function goApp(n) {
+      pScreens[aCurr].classList.remove('active');
+      pDots[aCurr].classList.remove('active');
+      aSteps[aCurr].classList.remove('active');
+      aCurr = n;
+      pScreens[aCurr].classList.add('active');
+      pDots[aCurr].classList.add('active');
+      aSteps[aCurr].classList.add('active');
+      var a = phoneAngles[aCurr];
+      if (aPhone) aPhone.style.transform = 'rotateY(' + a[0] + 'deg) rotateX(' + a[1] + 'deg)';
+    }
+
+    function startCarousel() {
+      if (aTimer) clearInterval(aTimer);
+      aTimer = setInterval(function () { if (!isPaused) goApp((aCurr + 1) % 6); }, 3600);
+    }
+    if (aPhone) startCarousel();
+
+    var pauseBtn = document.getElementById('phonePause');
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', function () {
+        isPaused = !isPaused;
+        pauseBtn.textContent = isPaused ? '▶ Retomar' : '⏸ Pausar';
+        pauseBtn.setAttribute('aria-label', isPaused ? 'Retomar' : 'Pausar');
+      });
+    }
+
+    pDots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        goApp(parseInt(d.dataset.i));
+        if (!isPaused) startCarousel();
+      });
+    });
+    aSteps.forEach(function (s) {
+      s.addEventListener('click', function () {
+        goApp(parseInt(s.dataset.i));
+        if (!isPaused) startCarousel();
+      });
+      s.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          goApp(parseInt(s.dataset.i));
+          if (!isPaused) startCarousel();
+        }
+      });
+    });
+    if (aPhone) {
+      aPhone.addEventListener('click', function () {
+        if (!isPaused) { goApp((aCurr + 1) % 6); startCarousel(); }
+      });
+    }
+
+    /* HERO PARALLAX */
+    var heroMarble = document.querySelector('.hero-marble');
+    if (heroMarble) {
+      window.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth - 0.5) * 12;
+        var y = (e.clientY / window.innerHeight - 0.5) * 12;
+        heroMarble.style.transform = 'scale(1.05) translate(' + x + 'px,' + y + 'px)';
+      });
+    }
+  </script>
+</body>
+
+</html>
