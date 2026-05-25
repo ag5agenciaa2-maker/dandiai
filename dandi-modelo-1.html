@@ -1,4 +1,4 @@
-z<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -57,9 +57,7 @@ z<!DOCTYPE html>
     }
 
     html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      max-width: 100%
+      scroll-behavior: smooth
     }
 
     body {
@@ -69,7 +67,6 @@ z<!DOCTYPE html>
       font-size: 14px;
       line-height: 1.6;
       overflow-x: hidden;
-      max-width: 100%;
       font-weight: 300
     }
 
@@ -141,8 +138,7 @@ z<!DOCTYPE html>
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
       position: relative;
-      border-radius: 0px;
-      /* Traço brutalista minimalista */
+      border-radius: 0px; /* Traço brutalista minimalista */
     }
 
     /* Moldura especial para o primeiro (Capa) e último (Fim) */
@@ -152,10 +148,8 @@ z<!DOCTYPE html>
       height: 6px;
       border: 1px solid rgba(255, 255, 255, 0.25);
       background: transparent;
-      border-radius: 0;
-      /* Quadrado brutalista */
-      transform: rotate(45deg);
-      /* Losango */
+      border-radius: 0; /* Quadrado brutalista */
+      transform: rotate(45deg); /* Losango */
     }
 
     .snav-dot.active {
@@ -238,7 +232,7 @@ z<!DOCTYPE html>
 
     @media(max-width:768px) {
       #sidenav {
-        display: none;
+        display: none
       }
     }
 
@@ -1253,6 +1247,11 @@ z<!DOCTYPE html>
       margin: 7% auto
     }
 
+    .icon-card-img img[src*="app1"] {
+      transform: scale(1.135);
+      transform-origin: center center;
+    }
+
     .icon-card-meta {
       display: flex;
       justify-content: space-between;
@@ -2089,8 +2088,8 @@ z<!DOCTYPE html>
       }
 
       .phone-frame {
-        width: 175px;
-        height: 356px;
+        width: 180px;
+        height: 366px;
         border-radius: 26px
       }
     }
@@ -3494,28 +3493,160 @@ z<!DOCTYPE html>
       cursor: not-allowed;
     }
 
+    /* ════ PICKER DE MODELOS — grande, destacado, obrigatório ════ */
+    .pl-models-row {
+      width: 100%;
+      max-width: 1280px;
+      margin: 24px auto 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.9s var(--ease) 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    .pl-models-row.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pl-models-label {
+      font-family: var(--sans);
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .pl-models-label::before,
+    .pl-models-label::after {
+      content: '';
+      flex: 0 0 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(232, 232, 234, .4), transparent);
+    }
+
+    .pl-models-track {
+      display: flex;
+      gap: 22px;
+      width: 100%;
+      overflow-x: auto;
+      padding: 12px 14px 22px;
+      justify-content: center;
+      flex-wrap: wrap;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(232,232,234,.18) transparent;
+    }
+    .pl-models-track::-webkit-scrollbar { height: 6px; }
+    .pl-models-track::-webkit-scrollbar-track { background: transparent; }
+    .pl-models-track::-webkit-scrollbar-thumb { background: rgba(232,232,234,.18); border-radius: 3px; }
+
+    .pl-model-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 168px;
+      flex-shrink: 0;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: transform .4s var(--ease);
+      position: relative;
+    }
+    .pl-model-card:hover { transform: translateY(-8px); }
+
+    .pl-model-thumb {
+      width: 160px;
+      height: 160px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(232, 232, 234, .15);
+      background: #0a0a0c;
+      position: relative;
+      transition: all .4s var(--ease);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .5);
+    }
+    .pl-model-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .8s var(--ease);
+    }
+    .pl-model-card:hover .pl-model-thumb {
+      border-color: var(--silver-1);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, .8), 0 0 0 2px rgba(255, 255, 255, .12), 0 0 30px rgba(255, 255, 255, .08);
+    }
+    .pl-model-card:hover .pl-model-thumb img {
+      transform: scale(1.06);
+    }
+
+    .pl-model-card.current .pl-model-thumb {
+      border-color: var(--silver-1);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .6), 0 0 0 2px rgba(255, 255, 255, .2);
+    }
+
+    .pl-model-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      color: #000;
+      background: linear-gradient(180deg, #FAFAFA, #C8C8CA);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+    }
+
+    .pl-model-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .pl-model-num {
+      font-family: var(--mono, "JetBrains Mono", monospace);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      color: var(--silver-2);
+      transition: color .3s;
+    }
+    .pl-model-name {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--silver-1);
+      font-weight: 500;
+      transition: color .3s;
+    }
+    .pl-model-card:hover .pl-model-num,
+    .pl-model-card:hover .pl-model-name { color: #fff; }
+
+    @media (max-width: 880px) {
+      .pl-model-card { width: 132px; }
+      .pl-model-thumb { width: 124px; height: 124px; border-radius: 14px; }
+      .pl-models-track { gap: 14px; }
+    }
+    @media (max-width: 520px) {
+      .pl-model-card { width: 108px; gap: 10px; }
+      .pl-model-thumb { width: 104px; height: 104px; border-radius: 12px; }
+      .pl-models-track { gap: 10px; padding: 8px 6px 16px; }
+      .pl-model-badge { font-size: 7px; padding: 3px 6px; top: 8px; right: 8px; }
+    }
+
     /* Ajuste de saída da Fase 2 */
     .pl-phase.exit .pl-chat-container {
       animation: plFadeOutUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-
-    /* Back to Models — botão pra voltar ao hub */
-    .back-to-models {
-      position: fixed; top: 24px; left: 24px; z-index: 260;
-      display: flex; align-items: center; gap: 8px;
-      padding: 10px 14px;
-      background: rgba(13,13,13,.85);
-      border: 1px solid rgba(255,255,255,.1);
-      font-family: var(--sans, Helvetica, Arial, sans-serif);
-      font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--silver-2, #9A9A9C);
-      text-decoration: none;
-      backdrop-filter: blur(8px);
-      transition: all .3s ease;
-      font-weight: 500;
-    }
-    .back-to-models:hover { color: #fff; border-color: rgba(255,255,255,.3); }
-    .back-to-models svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
     /* Botão de Controle de Som Flutuante no Canto Inferior Esquerdo */
     .audio-control-btn {
@@ -3609,17 +3740,8 @@ z<!DOCTYPE html>
 
     /* Animação de pulso horizontal sutil de captação visual */
     @keyframes audioTooltipPulse {
-
-      0%,
-      100% {
-        transform: translateY(-50%) translateX(0);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      }
-
-      50% {
-        transform: translateY(-50%) translateX(6px);
-        box-shadow: 0 10px 35px rgba(255, 255, 255, 0.08);
-      }
+      0%, 100% { transform: translateY(-50%) translateX(0); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); }
+      50% { transform: translateY(-50%) translateX(6px); box-shadow: 0 10px 35px rgba(255, 255, 255, 0.08); }
     }
 
     /* Ocultação suave quando a página carregar ou se o usuário ativar o som */
@@ -3710,16 +3832,59 @@ z<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Opções interativas do usuário -->
-          <div class="pl-chat-options">
+          <!-- Opções interativas (ocultas — agora a escolha é via imagens dos modelos) -->
+          <div class="pl-chat-options" style="display:none">
             <button class="pl-chat-btn" data-action="manual">Acessar Manual Dandi</button>
             <button class="pl-chat-btn" data-action="vamos">Vamos lá</button>
           </div>
 
-          <!-- Campo para o usuário escrever -->
-          <div class="pl-chat-input-wrapper">
+          <!-- Campo de input (oculto — escolha é por imagem) -->
+          <div class="pl-chat-input-wrapper" style="display:none">
             <input type="text" class="pl-chat-input" placeholder="Escreva algo e aperte Enter..." disabled>
             <button class="pl-chat-send" aria-label="Enviar" disabled>→</button>
+          </div>
+
+          <!-- Pré-escolha de Modelos de Marca -->
+          <div class="pl-models-row" aria-label="Escolha um modelo de marca para continuar">
+            <div class="pl-models-label">Toque em um modelo para continuar</div>
+            <div class="pl-models-track">
+              <a class="pl-model-card current" href="#" data-modelo="1" aria-label="Modelo 01 · D+N clássico em prata cromada">
+                <div class="pl-model-thumb">
+                  <img src="assets/logo-fundo-preto.webp" alt="Modelo 01" decoding="async">
+                </div>
+                <span class="pl-model-num">01</span>
+              </a>
+              <a class="pl-model-card" href="modelo-2/index.html" aria-label="Modelo 02 · D com cavalheiro de chapéu">
+                <div class="pl-model-thumb">
+                  <img src="modelo-2/assets/ChatGPT Image 23 de mai. de 2026, 10_44_08.webp" alt="Modelo 02" decoding="async">
+                </div>
+                <span class="pl-model-num">02</span>
+              </a>
+              <a class="pl-model-card" href="modelo-3/index.html" aria-label="Modelo 03">
+                <div class="pl-model-thumb">
+                  <img src="modelo-3/assets/ChatGPT Image 23 de mai. de 2026, 10_48_17.webp" alt="Modelo 03" decoding="async">
+                </div>
+                <span class="pl-model-num">03</span>
+              </a>
+              <a class="pl-model-card" href="modelo-4/index.html" aria-label="Modelo 04">
+                <div class="pl-model-thumb">
+                  <img src="modelo-4/assets/ChatGPT Image 25 de mai. de 2026, 18_35_34.webp" alt="Modelo 04" decoding="async">
+                </div>
+                <span class="pl-model-num">04</span>
+              </a>
+              <a class="pl-model-card" href="modelo-5/index.html" aria-label="Modelo 05">
+                <div class="pl-model-thumb">
+                  <img src="modelo-5/assets/ChatGPT Image 25 de mai. de 2026, 18_37_17.webp" alt="Modelo 05" decoding="async">
+                </div>
+                <span class="pl-model-num">05</span>
+              </a>
+              <a class="pl-model-card" href="modelo-6/index.html" aria-label="Modelo 06">
+                <div class="pl-model-thumb">
+                  <img src="modelo-6/assets/ChatGPT Image 25 de mai. de 2026, 18_30_19.webp" alt="Modelo 06" decoding="async">
+                </div>
+                <span class="pl-model-num">06</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -4575,6 +4740,7 @@ z<!DOCTYPE html>
       var chatInputWrapperEl = document.querySelector('.pl-chat-input-wrapper');
       var chatInputEl = document.querySelector('.pl-chat-input');
       var chatSendEl = document.querySelector('.pl-chat-send');
+      var modelsRowEl = document.querySelector('.pl-models-row');
       var fallbackTimer = null;
       var interativeProceeding = false;
 
@@ -4588,20 +4754,10 @@ z<!DOCTYPE html>
           if (phase2) {
             phase2.classList.add('active');
             // Assistente de estilo começa a digitar a pergunta interativa
-            typeEffect(chatTextEl, "Olá. Eu sou o seu Assistente de Estilo Dandi. Deseja iniciar a apresentação do nosso manual de marca?", 30, function () {
-              // Exibe as opções de interação assim que terminar de digitar
-              if (chatOptionsEl) chatOptionsEl.classList.add('show');
-              if (chatInputWrapperEl) chatInputWrapperEl.classList.add('show');
-              if (chatInputEl) {
-                chatInputEl.removeAttribute('disabled');
-                chatInputEl.focus();
-              }
-              if (chatSendEl) chatSendEl.removeAttribute('disabled');
-
-              // Fallback de 15 segundos se não houver interação do usuário (para SEO e usuários inativos)
-              fallbackTimer = setTimeout(function () {
-                handleChatAction("Acessar Manual Dandi");
-              }, 15000);
+            typeEffect(chatTextEl, "Olá. Sou o seu Assistente de Estilo Dandi. Escolha abaixo o modelo de marca que deseja explorar.", 30, function () {
+              // Exibe o picker de modelos como ÚNICA forma de prosseguir
+              if (modelsRowEl) modelsRowEl.classList.add('show');
+              // Não há fallback timer — usuário precisa clicar em um modelo
             });
           }
         }, 450);
@@ -4619,6 +4775,7 @@ z<!DOCTYPE html>
         if (chatSendEl) chatSendEl.setAttribute('disabled', 'true');
         if (chatOptionsEl) chatOptionsEl.classList.remove('show');
         if (chatInputWrapperEl) chatInputWrapperEl.classList.remove('show');
+        if (modelsRowEl) modelsRowEl.classList.remove('show');
 
         // Pequeno feedback do assistente digitando rapidamente
         setTimeout(function () {
@@ -4649,6 +4806,15 @@ z<!DOCTYPE html>
           handleChatAction(btn.textContent);
         });
       });
+
+      // Listener para card MODELO 01 (atual) — dispara preloader pra entrar no manual
+      var currentModelCard = document.querySelector('.pl-model-card.current');
+      if (currentModelCard) {
+        currentModelCard.addEventListener('click', function (e) {
+          e.preventDefault();
+          handleChatAction("Modelo 01 selecionado");
+        });
+      }
 
       // Listener para o input de texto do usuário (Enter)
       if (chatInputEl) {
