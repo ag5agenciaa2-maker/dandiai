@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dandi - Manual de Marca · 2026</title>
+  <title>Dandi · Manual de Marca · 2026</title>
   <link rel="icon" type="image/webp" href="assets/app6.webp">
 
   <!-- Meta Tags de Compartilhamento (SEO & Social Media) -->
@@ -1181,6 +1181,195 @@
       }
     }
 
+    /* ════ ÁREA DE PROTEÇÃO ════ */
+    #protecao {
+      background: var(--preto)
+    }
+
+    .prot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 8px
+    }
+
+    @media(max-width:900px) {
+      .prot-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .prot-card {
+      border: 1px solid rgba(232, 232, 234, .08);
+      background: linear-gradient(180deg, rgba(232, 232, 234, .025), transparent);
+      padding: 32px 28px
+    }
+
+    .prot-card-tag {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      margin-bottom: 24px
+    }
+
+    .prot-stage {
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px dashed rgba(232, 232, 234, .14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12%;
+      background: var(--grafite)
+    }
+
+    .prot-margin {
+      position: absolute;
+      inset: 12%;
+      border: 1px solid rgba(154, 154, 156, .35);
+      pointer-events: none
+    }
+
+    .prot-stage img {
+      width: 70%;
+      max-width: 260px;
+      position: relative;
+      z-index: 2
+    }
+
+    .prot-sizes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(232, 232, 234, .08);
+      border: 1px solid rgba(232, 232, 234, .08)
+    }
+
+    .prot-size {
+      background: var(--grafite);
+      padding: 26px 20px;
+      text-align: center
+    }
+
+    .prot-size img {
+      width: 40px;
+      margin: 0 auto 14px;
+      opacity: .9
+    }
+
+    .prot-size-label {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--offwhite);
+      margin-bottom: 8px
+    }
+
+    .prot-size-val {
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.7;
+      color: var(--silver-2)
+    }
+
+    .prot-size-val strong {
+      color: var(--offwhite);
+      font-weight: 500
+    }
+
+    .prot-note {
+      margin-top: 20px;
+      font-family: var(--sans);
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: rgba(232, 232, 234, .65)
+    }
+
+    .prot-note strong {
+      color: var(--offwhite);
+      font-weight: 500
+    }
+
+    /* ════ USOS INDEVIDOS ════ */
+    #usos-indevidos {
+      background: var(--grafite)
+    }
+
+    .dont-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    @media(max-width:760px) {
+      .dont-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:460px) {
+      .dont-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .dont-card {
+      position: relative;
+      border: 1px solid rgba(166, 69, 69, .18);
+      background: linear-gradient(180deg, rgba(166, 69, 69, .04), transparent);
+      padding: 28px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 190px
+    }
+
+    .dont-x {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 14px;
+      color: #c25c5c;
+      opacity: .8
+    }
+
+    .dont-preview {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden
+    }
+
+    .dont-preview img {
+      width: 54%;
+      max-width: 110px;
+      opacity: .85
+    }
+
+    .dont-recolor img {
+      filter: sepia(1) saturate(6) hue-rotate(340deg)
+    }
+
+    .dont-busy {
+      background: repeating-linear-gradient(45deg, #2a2a2c, #2a2a2c 6px, #1c1c1e 6px, #1c1c1e 12px)
+    }
+
+    .dont-label {
+      margin-top: 18px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      text-align: center
+    }
+
     /* ════ ÍCONES DE APP ════ */
     #icones-app {
       background: var(--preto)
@@ -1437,6 +1626,24 @@
       font-size: 11.5px;
       line-height: 1.5;
       color: var(--silver-2)
+    }
+
+    .pal-sw-specs {
+      margin: 14px 18px 0;
+      padding-top: 12px;
+      border-top: 1px solid rgba(232, 232, 234, .08);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      line-height: 1.85;
+      letter-spacing: .3px;
+      color: var(--chumbo)
+    }
+
+    .pal-sw-specs b {
+      color: var(--silver-2);
+      font-weight: 400;
+      display: inline-block;
+      width: 58px
     }
 
     .pal-prop {
@@ -4152,8 +4359,9 @@
     <div class="snav-dot" data-l="Símbolo" data-s="simbolo"></div>
     <div class="snav-dot" data-l="Logo" data-s="identidade"></div>
     <div class="snav-dot" data-l="Horizontal" data-s="horizontal"></div>
-    <div class="snav-dot" data-l="Ícones App" data-s="icones-app"></div>
-    <div class="snav-dot" data-l="Springboard" data-s="springboard"></div>
+    <div class="snav-dot" data-l="Área de proteção" data-s="protecao"></div>
+    <div class="snav-dot" data-l="Usos indevidos" data-s="usos-indevidos"></div>
+    <div class="snav-dot" data-l="Ícone" data-s="icones-app"></div>
     <div class="snav-dot" data-l="Paleta" data-s="paleta"></div>
     <div class="snav-dot" data-l="Prata" data-s="prata"></div>
     <div class="snav-dot" data-l="Tipografia" data-s="tipografia"></div>
@@ -4162,10 +4370,7 @@
     <div class="snav-dot" data-l="Posicionamento" data-s="posicionamento"></div>
     <div class="snav-dot" data-l="O que evitar" data-s="evitar"></div>
     <div class="snav-dot" data-l="Aplicações" data-s="aplicacoes"></div>
-    <div class="snav-dot" data-l="App" data-s="app"></div>
-    <div class="snav-dot" data-l="App · Conceito" data-s="app-conceito"></div>
-    <div class="snav-dot" data-l="App · Voz" data-s="app-diagnostico"></div>
-    <div class="snav-dot" data-l="Assistente IA" data-s="assistente"></div>
+    <div class="snav-dot" data-l="Co-branding" data-s="cobranding"></div>
     <div class="snav-dot" data-l="Moodboard" data-s="moodboard"></div>
     <div class="snav-dot" data-l="Possibilidades" data-s="conexoes"></div>
     <div class="snav-dot" data-l="Arquivos" data-s="arquivos"></div>
@@ -4234,7 +4439,7 @@
         </div>
         <div class="tl-item active">
           <div class="tl-year">2026</div>
-          <div class="tl-label">Dandi<br>o app</div>
+          <div class="tl-label">Dandi<br>a marca</div>
         </div>
       </div>
     </div>
@@ -4376,26 +4581,116 @@
       <div class="horiz-img-wrap rv d2">
         <img src="assets/logo-horizontal.webp" alt="Logo horizontal Dandi" class="horiz-img">
       </div>
-      <p class="bt rv d3" style="margin-top:24px;text-align:center;margin-left:auto;margin-right:auto">Headers · cartões
-        de visita · assinaturas de e-mail · documentos</p>
+      <p class="bt rv d3" style="margin-top:24px;text-align:center;margin-left:auto;margin-right:auto">Cabeçalhos · cartões
+        de visita · assinaturas de e-mail · documentos institucionais</p>
     </div>
   </section>
 
-  <!-- 07 · ÍCONES DE APP -->
+  <!-- 07 · ÁREA DE PROTEÇÃO E REDUÇÃO -->
+  <section id="protecao">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">07 · Respiro e redução</span>
+        <h2 class="st rv d1">A marca precisa de <span class="ac">ar ao redor</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Nenhum texto, imagem ou borda invade a área de proteção. É o que
+          mantém a leitura limpa em qualquer fundo.</p>
+      </div>
+
+      <div class="prot-grid">
+        <div class="prot-card rvl">
+          <div class="prot-card-tag">Área de proteção</div>
+          <div class="prot-stage" aria-hidden="true">
+            <span class="prot-margin"></span>
+            <img src="assets/logo-sem-fundo-preto.webp" alt="Área de proteção da marca Dandi">
+          </div>
+          <p class="prot-note">Margem mínima livre ao redor da marca: <strong>metade da altura do símbolo</strong> em
+            todos os lados. Essa distância cresce junto com a marca, nunca diminui.</p>
+        </div>
+
+        <div class="prot-card rvr">
+          <div class="prot-card-tag">Redução mínima</div>
+          <div class="prot-sizes">
+            <div class="prot-size">
+              <img src="assets/icone-sem-fundo-preto.webp" alt="Símbolo em tamanho mínimo digital">
+              <div class="prot-size-label">Tela</div>
+              <div class="prot-size-val">símbolo a partir de <strong>24px</strong><br>logo horizontal a partir de
+                <strong>120px</strong></div>
+            </div>
+            <div class="prot-size">
+              <img src="assets/icone-sem-fundo-preto.webp" alt="Símbolo em tamanho mínimo impresso">
+              <div class="prot-size-label">Impresso</div>
+              <div class="prot-size-val">símbolo a partir de <strong>10mm</strong><br>logo horizontal a partir de
+                <strong>30mm</strong></div>
+            </div>
+          </div>
+          <p class="prot-note">Abaixo do mínimo, a marca perde definição. Em peças grandes (acima de 1m), use sempre o
+            arquivo vetorial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 · USOS INDEVIDOS -->
+  <section id="usos-indevidos">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">08 · O que nunca fazer</span>
+        <h2 class="st rv d1">A marca se mantém <span class="ac">intacta</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">A integridade da marca vale mais do que a criatividade do momento.
+          Estes seis usos descaracterizam a Dandi.</p>
+      </div>
+
+      <div class="dont-grid">
+        <div class="dont-card rv d1">
+          <div class="dont-x" aria-hidden="true">✕</div>
+          <div class="dont-preview" style="transform:scaleX(1.6)"><img src="assets/icone-sem-fundo-preto.webp" alt=""></div>
+          <div class="dont-label">Distorcer ou esticar</div>
+        </div>
+        <div class="dont-card rv d2">
+          <div class="dont-x" aria-hidden="true">✕</div>
+          <div class="dont-preview" style="transform:rotate(18deg)"><img src="assets/icone-sem-fundo-preto.webp" alt=""></div>
+          <div class="dont-label">Girar a marca</div>
+        </div>
+        <div class="dont-card rv d3">
+          <div class="dont-x" aria-hidden="true">✕</div>
+          <div class="dont-preview" style="filter:drop-shadow(0 6px 4px rgba(255,255,255,.6))"><img src="assets/icone-sem-fundo-preto.webp" alt=""></div>
+          <div class="dont-label">Aplicar sombra ou efeito</div>
+        </div>
+        <div class="dont-card rv d1">
+          <div class="dont-x" aria-hidden="true">✕</div>
+          <div class="dont-preview dont-recolor"><img src="assets/icone-sem-fundo-preto.webp" alt=""></div>
+          <div class="dont-label">Recolorir fora da paleta</div>
+        </div>
+        <div class="dont-card rv d2">
+          <div class="dont-x" aria-hidden="true">✕</div>
+          <div class="dont-preview dont-busy"><img src="assets/icone-sem-fundo-preto.webp" alt=""></div>
+          <div class="dont-label">Fundo de baixo contraste</div>
+        </div>
+        <div class="dont-card rv d3">
+          <div class="dont-x" aria-hidden="true">✕</div>
+          <div class="dont-preview" style="transform:scale(.62)"><img src="assets/icone-sem-fundo-preto.webp" alt=""></div>
+          <div class="dont-label">Abaixo da redução mínima</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · ÍCONE -->
   <section id="icones-app">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">07 · Estudo de ícones</span>
-        <h2 class="st rv d1">8 acabamentos <span class="ac">do app</span></h2>
-        <p class="lead rv d2" style="margin-top:20px">O ícone oficial é o <strong
-            style="color:var(--offwhite)">01</strong>, couro preto + D em prata cromada.</p>
+        <span class="tag rv">09 · Estudo de acabamentos</span>
+        <h2 class="st rv d1">Oito acabamentos <span class="ac">do símbolo</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">A direção atual é o <strong
+            style="color:var(--offwhite)">01</strong>, couro preto com o D em prata cromada. O acabamento de couro segue
+          em avaliação; os demais ficam como reserva oficial.</p>
       </div>
 
       <div class="icons-grid">
         <div class="icon-card rv d1">
           <div class="icon-card-img"><img src="assets/app1.webp" alt="Ícone 01"></div>
           <div class="icon-card-meta"><span class="icon-card-num">01</span><span class="icon-card-name">Couro ·
-              oficial</span></div>
+              direção atual</span></div>
         </div>
         <div class="icon-card rv d2">
           <div class="icon-card-img"><img src="assets/app2.webp" alt="Ícone 02"></div>
@@ -4436,208 +4731,11 @@
     </div>
   </section>
 
-  <!-- 08 · SPRINGBOARD -->
-  <section id="springboard">
-    <div class="maxw">
-      <div class="spring-grid">
-        <div class="rvl">
-          <div class="head"><span class="tag">08 · Ícone instalado</span>
-            <h2 class="st">No <span class="ac">iPhone</span></h2>
-          </div>
-          <p class="bt">O ícone Dandi entre os apps nativos. Chama atenção sem precisar gritar.</p>
-          <p class="bt" style="margin-top:14px">O ícone visto no tamanho real de uso, <strong>60×60px</strong>, entre apps nativos.</p>
-        </div>
-        <div class="rvr">
-          <div class="spring-img-wrap">
-            <div class="spring-video-frame"><video autoplay loop muted playsinline>
-                <source src="assets/assistente-estilo.mp4" type="video/mp4">
-              </video></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 09 · APP · CARROSSEL 3D INTERATIVO -->
-  <section id="app">
-    <div class="app-inner">
-      <div class="rvl">
-        <span class="tag">09 · O Aplicativo</span>
-        <h2 class="st">O App <span class="ac">Dandi</span></h2>
-        <p class="bt" style="margin-top:24px;font-size:13px;opacity:.66">As telas a seguir mostram a marca aplicada ao
-          produto. Servem como referência visual de identidade, não como definição de telas, fluxo ou comportamento do
-          app. Essas decisões ficam com o time de desenvolvimento.</p>
-        <p class="bt" style="margin-top:18px;margin-bottom:8px">Toque nos passos abaixo ou nos pontos para ver a marca
-          aplicada em cada tela.</p>
-
-        <div class="app-steps" role="tablist">
-          <div class="app-step active" data-i="0" role="tab" tabindex="0">
-            <span class="app-step-num">01</span>
-            <span class="app-step-name">Splash</span>
-            <span class="app-step-desc">Boas-vindas ao universo Dandi</span>
-          </div>
-          <div class="app-step" data-i="1" role="tab" tabindex="0">
-            <span class="app-step-num">02</span>
-            <span class="app-step-name">Entrar</span>
-            <span class="app-step-desc">Acesso à conta</span>
-          </div>
-          <div class="app-step" data-i="2" role="tab" tabindex="0">
-            <span class="app-step-num">03</span>
-            <span class="app-step-name">Criar conta</span>
-            <span class="app-step-desc">Cadastro discreto</span>
-          </div>
-          <div class="app-step" data-i="3" role="tab" tabindex="0">
-            <span class="app-step-num">04</span>
-            <span class="app-step-name">Onboarding</span>
-            <span class="app-step-desc">Vamos entender seu estilo</span>
-          </div>
-          <div class="app-step" data-i="4" role="tab" tabindex="0">
-            <span class="app-step-num">05</span>
-            <span class="app-step-name">Look do dia</span>
-            <span class="app-step-desc">Sugestão IA contextual</span>
-          </div>
-          <div class="app-step" data-i="5" role="tab" tabindex="0">
-            <span class="app-step-num">06</span>
-            <span class="app-step-name">Armário</span>
-            <span class="app-step-desc">12 peças-chave</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="rvr">
-        <div class="phone-scene">
-          <div class="phone-frame" id="appPhone">
-            <img class="phone-screen active" data-i="0" src="assets/mobile1.webp" alt="Tela splash">
-            <img class="phone-screen" data-i="1" src="assets/mobile2.webp" alt="Tela de login">
-            <img class="phone-screen" data-i="2" src="assets/moible2.1.webp" alt="Tela criar conta">
-            <img class="phone-screen" data-i="3" src="assets/mobile3.webp" alt="Tela onboarding">
-            <img class="phone-screen" data-i="4" src="assets/mobile4.webp" alt="Tela look do dia">
-            <img class="phone-screen" data-i="5" src="assets/mobile5.webp" alt="Tela armário">
-            <div class="phone-glare" aria-hidden="true"></div>
-          </div>
-        </div>
-        <div class="phone-controls">
-          <div class="phone-dots" role="tablist">
-            <button class="phone-dot active" data-i="0" aria-label="Tela 1"></button>
-            <button class="phone-dot" data-i="1" aria-label="Tela 2"></button>
-            <button class="phone-dot" data-i="2" aria-label="Tela 3"></button>
-            <button class="phone-dot" data-i="3" aria-label="Tela 4"></button>
-            <button class="phone-dot" data-i="4" aria-label="Tela 5"></button>
-            <button class="phone-dot" data-i="5" aria-label="Tela 6"></button>
-          </div>
-          <button class="phone-pause" id="phonePause" aria-label="Pausar">⏸ Pausar</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10 · APP · CONCEITO -->
-  <section id="app-conceito">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">10 · O Aplicativo · Conceito</span>
-        <h2 class="st rv d1">Três <span class="ac">pilares</span></h2>
-        <p class="lead rv d2" style="margin-top:20px">Sugestão · Inspiração · Composição.</p>
-      </div>
-      <div class="app-conceito-hero rv"><img
-          src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2001_27_28.webp"
-          alt="Três telas conceito · sugestão, inspiração, composição"></div>
-      <div class="app-conceito-pillars">
-        <div class="app-pillar rv d1">
-          <div class="app-pillar-num">01</div>
-          <div class="app-pillar-name silver">Sugestão</div>
-          <div class="app-pillar-desc">IA que sugere combinações com base no armário.</div>
-        </div>
-        <div class="app-pillar rv d2">
-          <div class="app-pillar-num">02</div>
-          <div class="app-pillar-name silver">Inspiração</div>
-          <div class="app-pillar-desc">Perfis curados de homens com estilo próprio.</div>
-        </div>
-        <div class="app-pillar rv d3">
-          <div class="app-pillar-num">03</div>
-          <div class="app-pillar-name silver">Composição</div>
-          <div class="app-pillar-desc">Monte looks únicos com as peças que você tem.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11 · APP · DIAGNÓSTICO SEQUENCIAL -->
-  <section id="app-diagnostico">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">11 · O Aplicativo · Diagnóstico</span>
-        <h2 class="st rv d1">A voz <span class="ac">em uso</span></h2>
-        <p class="lead rv d2" style="margin-top:20px">Exemplo de como a marca conversa com o usuário dentro do produto. A
-          estrutura, as perguntas reais e o fluxo ficam a cargo do desenvolvimento.</p>
-      </div>
-
-      <div class="diag-hero rv">
-        <img src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2012_35_44.webp"
-          alt="Sequência de telas do diagnóstico de estilo">
-      </div>
-
-      <div class="diag-steps">
-        <div class="diag-step rv d1">
-          <div class="diag-step-num">01</div>
-          <div class="diag-step-q">Qual sua idade?</div>
-          <div class="diag-step-tag">Exemplo de tom</div>
-        </div>
-        <div class="diag-step rv d2">
-          <div class="diag-step-num">02</div>
-          <div class="diag-step-q">Por onde nos conheceu?</div>
-          <div class="diag-step-tag">Exemplo de tom</div>
-        </div>
-        <div class="diag-step rv d3">
-          <div class="diag-step-num">03</div>
-          <div class="diag-step-q">Quanto tempo demora para escolher seu outfit?</div>
-          <div class="diag-step-tag">Exemplo de tom</div>
-        </div>
-        <div class="diag-step rv d4">
-          <div class="diag-step-num">04</div>
-          <div class="diag-step-q">Frequência de dúvida ao se montar?</div>
-          <div class="diag-step-tag">Exemplo de tom</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12 · ASSISTENTE IA -->
-  <section id="assistente">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">12 · A voz da marca em uso</span>
-        <h2 class="st rv d1">A <span class="ac">conversa</span> sobre estilo</h2>
-        <p class="lead rv d2" style="margin-top:20px">Exemplo de como a marca fala com o usuário: linguagem de
-          especialista, não de algoritmo.</p>
-      </div>
-
-      <div class="as-layout">
-        <div class="as-phone rvl">
-          <img src="assets/assistente-dentro-app.webp" alt="Tela do Assistente de Estilo dentro do app">
-        </div>
-
-        <div class="as-right rvr">
-          <div class="as-bar-wrap">
-            <img src="assets/barra-assistente-ia.webp" alt="Barra do Assistente de Estilo · componente isolado">
-          </div>
-
-          <div class="as-prompts-label">Prompts de exemplo</div>
-          <div class="as-prompts">
-            <div class="as-prompt rv d1">Tenho reunião de manhã e jantar à noite. O que combina nos dois?</div>
-            <div class="as-prompt rv d2">Comprei uma calça nova. Quais peças do meu armário combinam?</div>
-            <div class="as-prompt rv d3">Vou viajar 5 dias. Monte uma cápsula com 7 peças.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 13 · PALETA -->
+  <!-- 10 · PALETA -->
   <section id="paleta">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">13 · Paleta institucional</span>
+        <span class="tag rv">10 · Paleta institucional</span>
         <h2 class="st rv d1">Seis cores. <span class="ac">Nada mais.</span></h2>
       </div>
 
@@ -4647,36 +4745,66 @@
           <div class="pal-sw-name">Preto</div>
           <div class="pal-sw-hex">#0D0D0D</div>
           <div class="pal-sw-role">Fundo institucional dominante</div>
+          <div class="pal-sw-specs">
+            <b>RGB</b>13 · 13 · 13<br>
+            <b>CMYK</b>0 · 0 · 0 · 95<br>
+            <b>Pantone</b>Black 6 C
+          </div>
         </div>
         <div class="pal-sw">
           <div class="pal-sw-chip" style="background:var(--grafite)"></div>
           <div class="pal-sw-name">Grafite</div>
           <div class="pal-sw-hex">#1C1C1E</div>
           <div class="pal-sw-role">Cartões e superfícies</div>
+          <div class="pal-sw-specs">
+            <b>RGB</b>28 · 28 · 30<br>
+            <b>CMYK</b>7 · 7 · 0 · 88<br>
+            <b>Pantone</b>Black 3 C
+          </div>
         </div>
         <div class="pal-sw">
           <div class="pal-sw-chip" style="background:var(--chumbo)"></div>
           <div class="pal-sw-name">Cinza chumbo</div>
           <div class="pal-sw-hex">#4A4A4D</div>
           <div class="pal-sw-role">Textos secundários</div>
+          <div class="pal-sw-specs">
+            <b>RGB</b>74 · 74 · 77<br>
+            <b>CMYK</b>4 · 4 · 0 · 70<br>
+            <b>Pantone</b>425 C
+          </div>
         </div>
         <div class="pal-sw">
           <div class="pal-sw-chip" style="background:var(--cinza)"></div>
           <div class="pal-sw-name">Cinza claro</div>
           <div class="pal-sw-hex">#BDBDBF</div>
           <div class="pal-sw-role">Bordas e divisores</div>
+          <div class="pal-sw-specs">
+            <b>RGB</b>189 · 189 · 191<br>
+            <b>CMYK</b>1 · 1 · 0 · 25<br>
+            <b>Pantone</b>Cool Gray 4 C
+          </div>
         </div>
         <div class="pal-sw">
           <div class="pal-sw-chip" style="background:var(--marmore-d)"></div>
           <div class="pal-sw-name">Mármore escuro</div>
           <div class="pal-sw-hex">#121214</div>
           <div class="pal-sw-role">Fundo editorial profundo</div>
+          <div class="pal-sw-specs">
+            <b>RGB</b>18 · 18 · 20<br>
+            <b>CMYK</b>10 · 10 · 0 · 92<br>
+            <b>Pantone</b>Black 6 C
+          </div>
         </div>
         <div class="pal-sw">
           <div class="pal-sw-chip light" style="background:var(--marmore-l)"></div>
           <div class="pal-sw-name">Mármore claro</div>
           <div class="pal-sw-hex">#F2F2F2</div>
           <div class="pal-sw-role">Fundo invertido e impressão</div>
+          <div class="pal-sw-specs">
+            <b>RGB</b>242 · 242 · 242<br>
+            <b>CMYK</b>0 · 0 · 0 · 5<br>
+            <b>Pantone</b>663 C
+          </div>
         </div>
       </div>
 
@@ -4706,7 +4834,7 @@
   <section id="prata">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">13 · Paleta · Uso do prata</span>
+        <span class="tag rv">11 · Paleta · Uso do prata</span>
         <h2 class="st rv d1">O prata é detalhe, <span class="ac">não é base</span></h2>
         <p class="lead rv d2" style="margin-top:20px">O cromado é o único acento da marca. Funciona porque é raro. Usado
           em tudo, perde o valor e a peça parece amadora. Aparece em no máximo um elemento por composição, sempre sobre
@@ -4740,7 +4868,7 @@
   <section id="tipografia">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">14 · Sistema tipográfico</span>
+        <span class="tag rv">12 · Sistema tipográfico</span>
         <h2 class="st rv d1">Duas vozes, <span class="ac">uma sintaxe</span></h2>
       </div>
       <div class="typo-specimen rv">
@@ -4789,7 +4917,7 @@
   <section id="tom">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">15 · Tom de voz</span>
+        <span class="tag rv">13 · Tom de voz</span>
         <h2 class="st rv d1">Refinado, mas <span class="ac">próximo</span></h2>
       </div>
       <div class="tom-grid">
@@ -4817,7 +4945,7 @@
   <section id="vocabulario">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">16 · Vocabulário</span>
+        <span class="tag rv">14 · Vocabulário</span>
         <h2 class="st rv d1">Palavras com <span class="ac">intenção</span></h2>
       </div>
       <div class="voc-grid">
@@ -4857,7 +4985,7 @@
     <div class="maxw">
       <div class="pos-grid">
         <div class="rvl">
-          <span class="tag">17 · Posicionamento</span>
+          <span class="tag">15 · Posicionamento</span>
           <h2 class="st">O território<br><span class="ac">que ocupamos</span></h2>
           <div class="pos-insight">Estilo<br><em>Inteligente.</em></div>
           <p class="bt">Espaço novo entre o <strong>hype barulhento</strong> do streetwear e a <strong>frieza
@@ -4884,7 +5012,7 @@
   <section id="evitar">
     <div class="maxw">
       <div class="head" style="text-align:center">
-        <span class="tag rv">18 · O que evitar</span>
+        <span class="tag rv">16 · O que evitar</span>
         <h2 class="st rv d1">Dandi nunca <span class="ac">é</span></h2>
       </div>
       <div class="evitar-stack">
@@ -4900,8 +5028,10 @@
   <section id="aplicacoes">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">19 · Marca aplicada</span>
+        <span class="tag rv">17 · Marca aplicada</span>
         <h2 class="st rv d1">No mundo <span class="ac">físico</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Este manual rege a marca em tudo: produto, redes, campanha,
+          evento e brinde. A mesma lógica de preto, respiro e prata cirúrgica vale em qualquer superfície.</p>
       </div>
       <div class="ap-hero rv"><img src="assets/ChatGPT%20Image%2021%20de%20mai.%20de%202026%2C%2002_01_26.webp"
           alt="Aplicações da marca · hangtag, embalagem, fachada"></div>
@@ -4964,9 +5094,9 @@
         </div>
       </div>
 
-      <div class="cob-block rv" style="margin-top:64px">
+      <div class="cob-block rv" id="cobranding" style="margin-top:64px;scroll-margin-top:80px">
         <div class="head">
-          <span class="tag">Co-branding · <span class="ac">Parcerias</span></span>
+          <span class="tag">18 · Co-branding · <span class="ac">Parcerias</span></span>
           <h2 class="st" style="margin-top:8px">A marca ao lado de <span class="ac">um parceiro</span></h2>
         </div>
         <div class="cob-grid">
@@ -4994,7 +5124,7 @@
   <!-- 20 · MOODBOARD -->
   <section id="moodboard">
     <div class="mood-head">
-      <span class="tag rv">20 · Moodboard</span>
+      <span class="tag rv">19 · Moodboard</span>
       <h2 class="st rv d1">Universo <span class="ac">visual</span></h2>
     </div>
     <div class="mood-banner rv">
@@ -5037,7 +5167,7 @@
   <section id="conexoes">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">21 · Possibilidades</span>
+        <span class="tag rv">20 · Possibilidades</span>
         <h2 class="st rv d1">Onde Dandi <span class="ac">pode ir</span></h2>
       </div>
       <div class="con-grid">
@@ -5079,7 +5209,7 @@
   <section id="arquivos">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">22 · Arquivos da marca</span>
+        <span class="tag rv">21 · Arquivos da marca</span>
         <h2 class="st rv d1">O que vem <span class="ac">no pacote</span></h2>
         <p class="lead rv d2" style="margin-top:20px">O pacote completo da marca acompanha este manual em um drive. Cada
           variação é entregue em dois formatos.</p>
@@ -5415,68 +5545,6 @@
         if (t) t.scrollIntoView({ behavior: 'smooth' });
       });
     });
-
-    /* APP CAROUSEL 3D */
-    var phoneAngles = [[-14, 4], [-9, 3], [-3, 2], [3, 3], [10, 4], [16, 5]];
-    var pScreens = document.querySelectorAll('.phone-screen');
-    var pDots = document.querySelectorAll('.phone-dot');
-    var aSteps = document.querySelectorAll('.app-step');
-    var aPhone = document.getElementById('appPhone');
-    var aCurr = 0;
-    var aTimer = null;
-    var isPaused = false;
-
-    function goApp(n) {
-      pScreens[aCurr].classList.remove('active');
-      pDots[aCurr].classList.remove('active');
-      aSteps[aCurr].classList.remove('active');
-      aCurr = n;
-      pScreens[aCurr].classList.add('active');
-      pDots[aCurr].classList.add('active');
-      aSteps[aCurr].classList.add('active');
-      var a = phoneAngles[aCurr];
-      if (aPhone) aPhone.style.transform = 'rotateY(' + a[0] + 'deg) rotateX(' + a[1] + 'deg)';
-    }
-
-    function startCarousel() {
-      if (aTimer) clearInterval(aTimer);
-      aTimer = setInterval(function () { if (!isPaused) goApp((aCurr + 1) % 6); }, 3600);
-    }
-    if (aPhone) startCarousel();
-
-    var pauseBtn = document.getElementById('phonePause');
-    if (pauseBtn) {
-      pauseBtn.addEventListener('click', function () {
-        isPaused = !isPaused;
-        pauseBtn.textContent = isPaused ? '▶ Retomar' : '⏸ Pausar';
-        pauseBtn.setAttribute('aria-label', isPaused ? 'Retomar' : 'Pausar');
-      });
-    }
-
-    pDots.forEach(function (d) {
-      d.addEventListener('click', function () {
-        goApp(parseInt(d.dataset.i));
-        if (!isPaused) startCarousel();
-      });
-    });
-    aSteps.forEach(function (s) {
-      s.addEventListener('click', function () {
-        goApp(parseInt(s.dataset.i));
-        if (!isPaused) startCarousel();
-      });
-      s.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          goApp(parseInt(s.dataset.i));
-          if (!isPaused) startCarousel();
-        }
-      });
-    });
-    if (aPhone) {
-      aPhone.addEventListener('click', function () {
-        if (!isPaused) { goApp((aCurr + 1) % 6); startCarousel(); }
-      });
-    }
 
     /* HERO PARALLAX */
     var heroMarble = document.querySelector('.hero-marble');
