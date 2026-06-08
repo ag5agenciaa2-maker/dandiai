@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dandi · Manual de Marca · 2026</title>
-  <link rel="icon" type="image/png" href="assets/marca/favicon-32.png">
+  <title>Dandi · Manual de Marca · Versão para Impressão</title>
+  <link rel="icon" type="image/png" href="../assets/marca/favicon-32.png">
 
   <!-- Meta Tags de Compartilhamento (SEO & Social Media) -->
   <link rel="canonical" href="https://manual-marca-dandi.ag5agencia.site/">
   <meta property="og:title" content="Dandi - Manual de Marca · 2026">
   <meta property="og:description"
     content="Estilo Inteligente. O guia oficial de identidade visual, tipografia e tom de voz da marca Dandi.">
-  <meta property="og:image" content="https://manual-marca-dandi.ag5agencia.site/assets/marca/og-card.png">
+  <meta property="og:image" content="https://manual-marca-dandi.ag5agencia.site/../assets/marca/og-card.png">
   <meta property="og:url" content="https://manual-marca-dandi.ag5agencia.site/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Dandi - Manual de Marca · 2026">
   <meta name="twitter:description"
     content="Estilo Inteligente. O guia oficial de identidade visual, tipografia e tom de voz da marca Dandi.">
-  <meta name="twitter:image" content="https://manual-marca-dandi.ag5agencia.site/assets/marca/og-card.png">
+  <meta name="twitter:image" content="https://manual-marca-dandi.ag5agencia.site/../assets/marca/og-card.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -468,24 +468,7 @@
       filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .6))
     }
 
-    body.loaded .hero-eyebrow {
-      opacity: 0;
-      animation: fadeIn 1.4s var(--ease) .4s both
-    }
 
-    body.loaded .hero-line {
-      height: 0;
-      animation: vgrow 1.6s var(--ease) .8s both
-    }
-
-    body.loaded .hero-logo {
-      animation: logoIn 1.5s var(--ease) 1.1s both
-    }
-
-    body.loaded .hero-tagline {
-      opacity: 0;
-      animation: fadeIn 1.4s var(--ease) 1.8s both
-    }
 
     @keyframes vgrow {
       to {
@@ -542,10 +525,7 @@
       align-items: center
     }
 
-    body.loaded .scroll-cue {
-      opacity: 0;
-      animation: bob 3s ease 2.4s infinite both
-    }
+
 
     .scroll-cue::after {
       content: '';
@@ -3506,7 +3486,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url('assets/marca/fundo-marmore.webp') center/cover no-repeat;
+      background: url('../assets/marca/fundo-marmore.webp') center/cover no-repeat;
       border-top: 1px solid rgba(232, 232, 234, .07);
       border-bottom: 1px solid rgba(232, 232, 234, .07);
       overflow: hidden
@@ -4312,8 +4292,7 @@
     /* Opções Interativas de Clique */
     .pl-chat-options {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px 12px;
+      gap: 12px;
       justify-content: center;
       opacity: 0;
       transform: translateY(10px);
@@ -4668,79 +4647,7 @@
     }
 
 
-    /* Efeito de abertura no Hero */
-    body:not(.loaded) #hero {
-      opacity: 0;
-      transform: scale(1.06);
-      filter: blur(4px);
-    }
 
-    #hero {
-      transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), filter 1.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    body.loaded #hero {
-      opacity: 1;
-      transform: none;
-      filter: blur(0);
-    }
-
-    /* ==========================================================================
-       AJUSTES DE RESPONSIVIDADE MOBILE (UX/UI PREMIUM)
-       ========================================================================== */
-    @media (max-width: 768px) {
-      section {
-        padding: 80px 6vw !important;
-      }
-      
-      .ap-img-wrap {
-        height: 280px !important;
-      }
-
-      .audio-control-btn {
-        bottom: 16px !important;
-        left: 16px !important;
-        width: 40px !important;
-        height: 40px !important;
-      }
-      
-      .audio-tooltip {
-        left: 52px !important;
-      }
-
-      .pl-models-track {
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .pub-trait {
-        grid-template-columns: 1fr !important;
-        gap: 6px !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .pl-chat-bar {
-        padding: 12px 16px !important;
-        gap: 12px !important;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .pos-dandi .dot-big {
-        width: 48px !important;
-        height: 48px !important;
-      }
-      .pos-dandi .label-big {
-        font-size: 11px !important;
-      }
-    }
 
     /* ==========================================================================
        REGRAS DE IMPRESSÃO (PDF AUTO-PAGINADO SEM CHAT/PRELOADER)
@@ -4826,7 +4733,7 @@
   </style>
 </head>
 
-<body>
+<body class="loaded">
 
   <!-- Áudio Local de Fundo · Michael Bublé · Feeling Good · começa em 8s -->
   <audio id="bg-audio" preload="auto"
@@ -4851,65 +4758,7 @@
     </svg>
   </button>
 
-  <!-- PRELOADER PREMIUM -->
-  <div id="preloader">
-    <div class="preloader-wrapper">
-      <!-- Fase 1: Revelação Cinematográfica da Logo -->
-      <div class="pl-phase pl-phase-1">
-        <div class="pl-logo-reveal">
-          <img src="assets/marca/app-icon-preto.png" alt="Dandi" class="pl-logo-bg">
-          <div class="pl-logo-fill-wrap">
-            <img src="assets/marca/app-icon-preto.png" alt="Dandi" class="pl-logo-fill">
-            <div class="pl-logo-glow-line"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fase 2: Digitação da Essência e Chat do Assistente de Estilo -->
-      <div class="pl-phase pl-phase-2">
-        <div class="pl-chat-container">
-          <div class="pl-chat-bar">
-            <div class="pl-chat-logo">
-              <img src="assets/marca/icone-claro.svg" alt="Dandi">
-            </div>
-            <div class="pl-chat-content">
-              <div class="pl-chat-label">ASSISTENTE DE ESTILO</div>
-              <div class="pl-chat-bubble">
-                <span class="pl-chat-text"></span>
-              </div>
-            </div>
-            <div class="pl-chat-status">
-              <div class="pl-chat-glow-dot"></div>
-              <div class="pl-chat-dots">
-                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ação para prosseguir -->
-          <div class="pl-chat-options">
-            <button class="pl-chat-btn" data-action="vamos">Vamos lá</button>
-          </div>
-
-          <!-- Campo de input (oculto · escolha é por imagem) -->
-          <div class="pl-chat-input-wrapper" style="display:none">
-            <input type="text" class="pl-chat-input" placeholder="Escreva algo e aperte Enter..." disabled>
-            <button class="pl-chat-send" aria-label="Enviar" disabled>→</button>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Fase 3: Conexão e Progresso -->
-      <div class="pl-phase pl-phase-3">
-        <div class="preloader-type-status pl-type-status"></div>
-        <div class="preloader-line-container">
-          <div class="preloader-line"></div>
-        </div>
-        <div class="preloader-counter"><span id="pl-count">00</span>%</div>
-      </div>
-    </div>
-  </div>
+  <!-- PRELOADER PREMIUM REMOVIDO PARA VERSÃO DE IMPRESSÃO (ABRE DIRETO) -->
 
   <div id="prog"></div>
 
@@ -4930,7 +4779,7 @@
   <section id="hero" aria-labelledby="hero-title">
     <div class="hero-eyebrow">Manual de Marca · 2026</div>
     <div class="hero-line" aria-hidden="true"></div>
-    <img src="assets/marca/logo-vertical-slogan-prata.svg" alt="Logotipo Dandi com slogan" class="hero-logo" id="hero-title">
+    <img src="../assets/marca/logo-vertical-slogan-prata.svg" alt="Logotipo Dandi com slogan" class="hero-logo" id="hero-title">
     <div class="scroll-cue" aria-hidden="true"></div>
   </section>
 
@@ -4958,7 +4807,7 @@
     <div class="logo-marble-overlay" aria-hidden="true"></div>
     <div class="logo-marble-inner rv">
       <span class="logo-marble-eyebrow">Parte 01 · A Marca</span>
-      <img src="assets/marca/logo-horizontal-slogan-branca.svg" alt="Logo Dandi com slogan" class="logo-marble-img">
+      <img src="../assets/marca/logo-horizontal-slogan-branca.svg" alt="Logo Dandi com slogan" class="logo-marble-img">
     </div>
   </section>
 
@@ -5033,7 +4882,7 @@
       <span class="marmore-eyebrow">03 · Tradução estratégica</span>
       <h2 class="marmore-line">Não estamos criando um app de moda. Estamos criando o <em class="prata">dândi
           moderno</em>. <span class="marmore-sub">Acessível, prático e orientado por tecnologia.</span></h2>
-      <img src="assets/marca/app-na-tela-shopping.png" alt="App Dandi na tela de um smartphone" class="marmore-img rv d2">
+      <img src="../assets/marca/app-na-tela-shopping.png" alt="App Dandi na tela de um smartphone" class="marmore-img rv d2">
     </div>
   </section>
 
@@ -5320,7 +5169,7 @@
 
   <!-- DESTAQUE · LOGO VERTICAL -->
   <section id="logo-vertical-feature" class="logo-feature" aria-label="Logo vertical Dandi">
-    <img src="assets/marca/logo-vertical-clara.svg" alt="Logo vertical Dandi" class="logo-feature-img rv">
+    <img src="../assets/marca/logo-vertical-clara.svg" alt="Logo vertical Dandi" class="logo-feature-img rv">
   </section>
 
   <section id="simbolo">
@@ -5337,8 +5186,8 @@
             <span class="symb-corner tr" aria-hidden="true"></span>
             <span class="symb-corner bl" aria-hidden="true"></span>
             <span class="symb-corner br" aria-hidden="true"></span>
-            <img src="assets/marca/icone-claro.svg" alt="" class="symb-ghost" aria-hidden="true">
-            <img src="assets/marca/icone-claro.svg" alt="Monograma Dandi · D com N sobreposto" class="symb-front">
+            <img src="../assets/marca/icone-claro.svg" alt="" class="symb-ghost" aria-hidden="true">
+            <img src="../assets/marca/icone-claro.svg" alt="Monograma Dandi · D com N sobreposto" class="symb-front">
           </div>
         </div>
         <div class="rvr">
@@ -5346,13 +5195,13 @@
             Da<strong>n</strong>di. A letra que liga começo e fim, escondida em plena vista.</p>
           <p class="bt" style="margin-top:14px">Marca registrável. Única. Silenciosa. Como o próprio dândi.</p>
           <div class="symb-pieces">
-            <div class="symb-piece"><img src="assets/marca/icone-claro.svg" alt="D em off-white">
+            <div class="symb-piece"><img src="../assets/marca/icone-claro.svg" alt="D em off-white">
               <div class="symb-piece-cap">Off-white</div>
             </div>
-            <div class="symb-piece"><img src="assets/marca/icone-prata.svg" alt="D em prata">
+            <div class="symb-piece"><img src="../assets/marca/icone-prata.svg" alt="D em prata">
               <div class="symb-piece-cap">Prata</div>
             </div>
-            <div class="symb-piece" style="background:#F2F2F2"><img src="assets/marca/icone-escuro.svg" alt="D em preto">
+            <div class="symb-piece" style="background:#F2F2F2"><img src="../assets/marca/icone-escuro.svg" alt="D em preto">
               <div class="symb-piece-cap">Preto</div>
             </div>
           </div>
@@ -5366,7 +5215,7 @@
       </div>
       <div class="build-wrap">
         <div class="build-stage rvl">
-          <img src="assets/marca/icone-claro.svg" alt="Grid de construção do monograma Dandi">
+          <img src="../assets/marca/icone-claro.svg" alt="Grid de construção do monograma Dandi">
         </div>
         <div class="rvr">
           <p class="bt">O símbolo é desenhado sobre uma malha de <strong>12 × 12 unidades</strong>. Toda proporção
@@ -5401,21 +5250,21 @@
         <h2 class="st rv d1">Identidade <span class="ac">visual</span></h2>
       </div>
       <div class="logo-3">
-        <div class="lc rv d1" style="background:#0D0D0D"><img src="assets/marca/logo-vertical-clara.svg" alt="Logo sobre preto">
+        <div class="lc rv d1" style="background:#0D0D0D"><img src="../assets/marca/logo-vertical-clara.svg" alt="Logo sobre preto">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Principal</div>
             <div class="lc-label-name">Fundo preto</div>
           </div>
         </div>
-        <div class="lc rv d2" style="background:linear-gradient(135deg,#1c1c1e,#0e0e10)"><img src="assets/marca/logo-vertical-prata.svg" alt="Logo sobre grafite">
+        <div class="lc rv d2" style="background:linear-gradient(135deg,#1c1c1e,#0e0e10)"><img src="../assets/marca/logo-vertical-prata.svg" alt="Logo sobre grafite">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Editorial</div>
             <div class="lc-label-name">Fundo Grafite</div>
           </div>
         </div>
-        <div class="lc rv d3" style="background:#F2F2F2"><img src="assets/marca/logo-vertical-escura.svg" alt="Logo sobre branco">
+        <div class="lc rv d3" style="background:#F2F2F2"><img src="../assets/marca/logo-vertical-escura.svg" alt="Logo sobre branco">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Impresso</div>
@@ -5433,7 +5282,7 @@
         <h2 class="st rv d1">Para <span class="ac">leituras em fluxo</span></h2>
       </div>
       <div class="horiz-img-wrap rv d2">
-        <img src="assets/marca/logo-horizontal-clara.svg" alt="Logo horizontal Dandi" class="horiz-img">
+        <img src="../assets/marca/logo-horizontal-clara.svg" alt="Logo horizontal Dandi" class="horiz-img">
       </div>
       <p class="bt rv d3" style="margin-top:24px;text-align:center;margin-left:auto;margin-right:auto">Cabeçalhos · cartões
         de visita · assinaturas de e-mail · documentos institucionais</p>
@@ -5454,7 +5303,7 @@
           <div class="prot-card-tag">Área de proteção</div>
           <div class="prot-stage" aria-hidden="true">
             <span class="prot-margin"></span>
-            <img src="assets/marca/logo-vertical-clara.svg" alt="Área de proteção da marca Dandi">
+            <img src="../assets/marca/logo-vertical-clara.svg" alt="Área de proteção da marca Dandi">
           </div>
           <p class="prot-note">A unidade de espaçamento <strong>X</strong> é definida pela <strong>largura do espaço interno central do monograma "D"</strong> (medido horizontalmente no espaço negativo da letra). A margem de proteção e respiro mínimo ao redor de qualquer versão da marca é de <strong>1X</strong> em todos os lados (superior, inferior e laterais).</p>
         </div>
@@ -5463,13 +5312,13 @@
           <div class="prot-card-tag">Redução mínima</div>
           <div class="prot-sizes">
             <div class="prot-size">
-              <img src="assets/marca/icone-claro.svg" alt="Símbolo em tamanho mínimo digital">
+              <img src="../assets/marca/icone-claro.svg" alt="Símbolo em tamanho mínimo digital">
               <div class="prot-size-label">Tela</div>
               <div class="prot-size-val">símbolo a partir de <strong>24px</strong><br>logo horizontal a partir de
                 <strong>120px</strong></div>
             </div>
             <div class="prot-size">
-              <img src="assets/marca/icone-claro.svg" alt="Símbolo em tamanho mínimo impresso">
+              <img src="../assets/marca/icone-claro.svg" alt="Símbolo em tamanho mínimo impresso">
               <div class="prot-size-label">Impresso</div>
               <div class="prot-size-val">símbolo a partir de <strong>10mm</strong><br>logo horizontal a partir de
                 <strong>30mm</strong></div>
@@ -5494,32 +5343,32 @@
       <div class="dont-grid">
         <div class="dont-card rv d1">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="transform:scaleX(1.6)"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="transform:scaleX(1.6)"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Distorcer ou esticar</div>
         </div>
         <div class="dont-card rv d2">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="transform:rotate(18deg)"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="transform:rotate(18deg)"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Girar a marca</div>
         </div>
         <div class="dont-card rv d3">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="filter:drop-shadow(0 6px 4px rgba(255,255,255,.6))"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="filter:drop-shadow(0 6px 4px rgba(255,255,255,.6))"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Aplicar sombra ou efeito</div>
         </div>
         <div class="dont-card rv d1">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview dont-recolor"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview dont-recolor"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Recolorir fora da paleta</div>
         </div>
         <div class="dont-card rv d2">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview dont-busy"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview dont-busy"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Fundo de baixo contraste</div>
         </div>
         <div class="dont-card rv d3">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="transform:scale(.62)"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="transform:scale(.62)"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Abaixo da redução mínima</div>
         </div>
       </div>
@@ -5538,27 +5387,27 @@
 
       <div class="icons-grid">
         <div class="icon-card rv d1">
-          <div class="icon-card-img"><img src="assets/marca/app-icon-couro.jpg" alt="Ícone couro com D prata"></div>
+          <div class="icon-card-img"><img src="../assets/marca/app-icon-couro.jpg" alt="Ícone couro com D prata"></div>
           <div class="icon-card-meta"><span class="icon-card-num">01</span><span class="icon-card-name">Couro ·
               direção oficial</span></div>
         </div>
         <div class="icon-card rv d2">
-          <div class="icon-card-img"><img src="assets/marca/app-icon-couro-prata.jpg" alt="Ícone couro com D prata cromada"></div>
+          <div class="icon-card-img"><img src="../assets/marca/app-icon-couro-prata.jpg" alt="Ícone couro com D prata cromada"></div>
           <div class="icon-card-meta"><span class="icon-card-num">02</span><span class="icon-card-name">Couro ·
               prata cromada</span></div>
         </div>
         <div class="icon-card rv d3">
-          <div class="icon-card-img"><img src="assets/marca/app-icon-prata.png" alt="Ícone D prata sobre preto"></div>
+          <div class="icon-card-img"><img src="../assets/marca/app-icon-prata.png" alt="Ícone D prata sobre preto"></div>
           <div class="icon-card-meta"><span class="icon-card-num">03</span><span class="icon-card-name">Prata ·
               fundo preto</span></div>
         </div>
         <div class="icon-card rv d4">
-          <div class="icon-card-img"><img src="assets/marca/app-icon-preto.png" alt="Ícone D off-white sobre preto"></div>
+          <div class="icon-card-img"><img src="../assets/marca/app-icon-preto.png" alt="Ícone D off-white sobre preto"></div>
           <div class="icon-card-meta"><span class="icon-card-num">04</span><span class="icon-card-name">Off-white ·
               fundo preto</span></div>
         </div>
         <div class="icon-card rv d1">
-          <div class="icon-card-img"><img src="assets/marca/app-icon-claro.png" alt="Ícone D preto sobre off-white"></div>
+          <div class="icon-card-img"><img src="../assets/marca/app-icon-claro.png" alt="Ícone D preto sobre off-white"></div>
           <div class="icon-card-meta"><span class="icon-card-num">05</span><span class="icon-card-name">Claro ·
               impressão</span></div>
         </div>
@@ -5892,12 +5741,12 @@
       <div class="prot-grid" style="margin-top:32px">
         <div class="prot-card rvl">
           <div class="prot-card-tag">Textura de Mármore</div>
-          <div class="prot-stage" style="aspect-ratio:16/10;background:url('assets/marca/fundo-marmore.webp') center/cover no-repeat;border:none" aria-hidden="true"></div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:url('../assets/marca/fundo-marmore.webp') center/cover no-repeat;border:none" aria-hidden="true"></div>
           <p class="prot-note" style="margin-top:20px"><strong>Uso editorial estático.</strong> O mármore preto representa a solidez estrutural e a sofisticação da marca. Deve ser usado apenas como textura de fundo de capítulos, mockups de alta joalheria ou planos de fundo de apresentações.</p>
         </div>
         <div class="prot-card rvr">
           <div class="prot-card-tag">Textura de Couro</div>
-          <div class="prot-stage" style="aspect-ratio:16/10;background:url('assets/marca/fundo-couro.png') center/cover no-repeat;border:none" aria-hidden="true"></div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:url('../assets/marca/fundo-couro.png') center/cover no-repeat;border:none" aria-hidden="true"></div>
           <p class="prot-note" style="margin-top:20px"><strong>Uso físico e tátil.</strong> O couro preto fosco traz a sensação de calor, robustez e vestuário clássico. É de uso exclusivo para o fundo do ícone oficial do aplicativo (springboard) e acabamentos físicos de papelaria (sacolas, caixas).</p>
         </div>
       </div>
@@ -6208,14 +6057,14 @@
       <div class="ap-grid rv">
         <div class="ap-grid-col">
           <div class="ap-img-wrap rv d1" style="height:320px">
-            <img src="assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
+            <img src="../assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
             <div class="ap-img-caption">
               <span>Kit Presentes & Embalagem</span>
               <span style="opacity:0.5;font-size:8px">01</span>
             </div>
           </div>
           <div class="ap-img-wrap rv d3" style="height:440px">
-            <img src="assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
+            <img src="../assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
             <div class="ap-img-caption">
               <span>Campanhas & Outdoors</span>
               <span style="opacity:0.5;font-size:8px">02</span>
@@ -6224,14 +6073,14 @@
         </div>
         <div class="ap-grid-col">
           <div class="ap-img-wrap rv d2" style="height:440px">
-            <img src="assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
+            <img src="../assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
             <div class="ap-img-caption">
               <span>Fachadas & Eventos</span>
               <span style="opacity:0.5;font-size:8px">03</span>
             </div>
           </div>
           <div class="ap-img-wrap rv d4" style="height:320px">
-            <img src="assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
+            <img src="../assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
             <div class="ap-img-caption">
               <span>Mídia Urbana</span>
               <span style="opacity:0.5;font-size:8px">04</span>
@@ -6245,7 +6094,7 @@
         <span class="tag rv">Marca aplicada · <span class="ac">No digital</span></span>
       </div>
       <div class="ap-digital-img-wrap rv" style="max-width: 900px; margin: 32px auto 0;">
-        <img src="assets/marca/modelo-instagram.png" alt="Mockup da marca aplicada no Instagram">
+        <img src="../assets/marca/modelo-instagram.png" alt="Mockup da marca aplicada no Instagram">
       </div>
 
       <div class="cob-block rv" id="cobranding" style="margin-top:64px;scroll-margin-top:80px">
@@ -6255,7 +6104,7 @@
         </div>
         <div class="cob-grid">
           <div class="cob-lockup rv">
-            <img class="cob-mark-img" src="assets/marca/icone-prata.svg" alt="Monograma Dandi em prata">
+            <img class="cob-mark-img" src="../assets/marca/icone-prata.svg" alt="Monograma Dandi em prata">
             <span class="cob-bar" aria-hidden="true"></span>
             <span class="cob-partner">Parceiro</span>
           </div>
@@ -6537,7 +6386,7 @@
   </section>
 
   <section id="closing">
-    <img src="assets/marca/logo-vertical-clara.svg" alt="Logo Dandi" class="cl-logo rv">
+    <img src="../assets/marca/logo-vertical-clara.svg" alt="Logo Dandi" class="cl-logo rv">
     <div class="cl-rule rv d1"></div>
     <div class="cl-tag rv d2">Manual de Marca · 2026</div>
     <div class="cl-tagline rv d3">Estilo&nbsp;&nbsp;<em>Inteligente.</em></div>
@@ -6546,169 +6395,8 @@
   </section>
 
   <script>
-    /* Marca body.js para habilitar animações progressivas - sem JS, tudo já está visível */
-    document.body.classList.add('js');
-
-    /* PRELOADER PREMIUM JS */
-    (function () {
-      document.body.classList.add('loading');
-      var pl = document.getElementById('preloader');
-      var line = document.querySelector('.preloader-line');
-      var countText = document.getElementById('pl-count');
-      var phase1 = document.querySelector('.pl-phase-1');
-      var phase2 = document.querySelector('.pl-phase-2');
-      var phase3 = document.querySelector('.pl-phase-3');
-
-      var titleEl = document.querySelector('.pl-type-title');
-      var taglineEl = document.querySelector('.pl-type-tagline');
-      var statusEl = document.querySelector('.pl-type-status');
-
-      // Função Typewriter
-      function typeEffect(element, text, speed, callback) {
-        if (!element) return;
-        var i = 0;
-        element.textContent = "";
-        var cursor = document.createElement('span');
-        cursor.className = 'typewriter-cursor';
-        element.appendChild(cursor);
-
-        function type() {
-          if (i < text.length) {
-            cursor.insertAdjacentHTML('beforebegin', text.charAt(i));
-            i++;
-            setTimeout(type, speed + (Math.random() * 25));
-          } else {
-            cursor.remove();
-            if (callback) callback();
-          }
-        }
-        type();
-      }
-
-      // Inicia Fase 1 (Revelação cinemática do Logo) imediatamente
-      setTimeout(function () {
-        if (phase1) phase1.classList.add('active');
-      }, 100);
-
-      // Elementos do Chat
-      var chatTextEl = document.querySelector('.pl-chat-text');
-      var chatOptionsEl = document.querySelector('.pl-chat-options');
-      var chatInputWrapperEl = document.querySelector('.pl-chat-input-wrapper');
-      var chatInputEl = document.querySelector('.pl-chat-input');
-      var chatSendEl = document.querySelector('.pl-chat-send');
-      var modelsRowEl = document.querySelector('.pl-models-row');
-      var fallbackTimer = null;
-      var interativeProceeding = false;
-
-      // Transição para Fase 2 (após 3.4s) - Quando acaba a revelação da logo
-      setTimeout(function () {
-        if (phase1) {
-          phase1.classList.remove('active');
-          phase1.classList.add('exit');
-        }
-        setTimeout(function () {
-          if (phase2) {
-            phase2.classList.add('active');
-            // Assistente de estilo começa a digitar a pergunta interativa
-            typeEffect(chatTextEl, "Olá. Sou o seu Assistente de Estilo Dandi. Quando quiser, acesse o manual de marca.", 30, function () {
-              // Exibe o botão como única forma de prosseguir
-              if (chatOptionsEl) chatOptionsEl.classList.add('show');
-            });
-          }
-        }, 450);
-      }, 3400);
-
-      // Função para processar a ação interativa e prosseguir
-      function handleChatAction(userInputText) {
-        if (interativeProceeding) return;
-        interativeProceeding = true;
-
-        if (fallbackTimer) clearTimeout(fallbackTimer);
-
-        // Desabilitar todas as interações
-        if (chatInputEl) chatInputEl.setAttribute('disabled', 'true');
-        if (chatSendEl) chatSendEl.setAttribute('disabled', 'true');
-        if (chatOptionsEl) chatOptionsEl.classList.remove('show');
-        if (chatInputWrapperEl) chatInputWrapperEl.classList.remove('show');
-        if (modelsRowEl) modelsRowEl.classList.remove('show');
-
-        // Pequeno feedback do assistente digitando rapidamente
-        setTimeout(function () {
-          typeEffect(chatTextEl, "Excelente escolha. Acessando as diretrizes de marca Dandi...", 20, function () {
-            // Após responder, transiciona para a Fase 3 de carregamento
-            setTimeout(function () {
-              if (phase2) {
-                phase2.classList.remove('active');
-                phase2.classList.add('exit');
-              }
-              setTimeout(function () {
-                if (phase3) {
-                  phase3.classList.add('active');
-                  typeEffect(statusEl, "Carregando o universo Dandi...", 25, function () {
-                    setTimeout(startCounter, 200);
-                  });
-                }
-              }, 450);
-            }, 800);
-          });
-        }, 150);
-      }
-
-      // Adiciona listeners para os cliques nas sugestões
-      var chatBtns = document.querySelectorAll('.pl-chat-btn');
-      chatBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          handleChatAction(btn.textContent);
-        });
-      });
-
-      // Listener para o input de texto do usuário (Enter)
-      if (chatInputEl) {
-        chatInputEl.addEventListener('keypress', function (e) {
-          if (e.key === 'Enter' && chatInputEl.value.trim() !== '') {
-            handleChatAction(chatInputEl.value.trim());
-          }
-        });
-      }
-      if (chatSendEl && chatInputEl) {
-        chatSendEl.addEventListener('click', function () {
-          if (chatInputEl.value.trim() !== '') {
-            handleChatAction(chatInputEl.value.trim());
-          }
-        });
-      }
-
-      function startCounter() {
-        var count = 0;
-        var duration = 2000; // Contador de progresso roda por 2s
-        var intervalTime = 16;
-        var step = 100 / (duration / intervalTime);
-
-        var timer = setInterval(function () {
-          count += step + (Math.random() * 1.5);
-          if (count >= 100) {
-            count = 100;
-            clearInterval(timer);
-            finishLoader();
-          }
-          var displayCount = Math.floor(count);
-          if (displayCount < 10) displayCount = '0' + displayCount;
-          if (countText) countText.textContent = displayCount;
-          if (line) line.style.width = count + '%';
-        }, intervalTime);
-      }
-
-      function finishLoader() {
-        setTimeout(function () {
-          if (pl) pl.classList.add('loaded');
-          document.body.classList.remove('loading');
-          document.body.classList.add('loaded');
-          setTimeout(function () {
-            if (pl) pl.remove();
-          }, 1400);
-        }, 300);
-      }
-    })();
+    // Mantém carregado para estilos estáticos, mas sem adicionar classe 'js' para evitar esconder elementos por padrão
+    document.body.classList.add('loaded');
 
     /* LOCAL MP3 BACKGROUND AUDIO · Michael Bublé · Feeling Good · começa em 8s */
     (function () {
@@ -6815,11 +6503,7 @@
       }
     });
 
-    /* REVEAL ON SCROLL */
-    var ro = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('on'); });
-    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.rv,.rvl,.rvr,.rvs,.mf-quote').forEach(function (el) { ro.observe(el); });
+    /* REVEAL ON SCROLL - Desativado para a versão PDF */
 
     /* SIDENAV */
     var sdots = document.querySelectorAll('.snav-dot');
