@@ -50,7 +50,7 @@
       --alerta: #3A3510;
       --display: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       --sans: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      --serif: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: "Montserrat", Georgia, "Times New Roman", serif;
       --mono: "SF Mono", "JetBrains Mono", "Courier New", monospace;
       --ease: cubic-bezier(.16, 1, .3, 1);
     }
@@ -1708,6 +1708,20 @@
       font-weight: 500
     }
 
+    /* ════ SISTEMA DE ESPAÇAMENTO ════ */
+    .esp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px
+    }
+
+    @media(max-width:960px) {
+      .esp-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
     .prot-note {
       margin-top: 20px;
       font-family: var(--sans);
@@ -1876,55 +1890,6 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--chumbo)
-    }
-
-    /* ════ SPRINGBOARD ════ */
-    #springboard {
-      background: var(--grafite)
-    }
-
-    .spring-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center
-    }
-
-    @media(max-width:900px) {
-      .spring-grid {
-        grid-template-columns: 1fr
-      }
-    }
-
-    .spring-img-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 32px;
-      background: radial-gradient(circle, rgba(232, 232, 234, .03), transparent 70%)
-    }
-
-    .spring-video-frame {
-      max-width: 280px;
-      width: 100%;
-      aspect-ratio: 9 / 18.2;
-      border-radius: 40px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      overflow: hidden;
-      box-shadow: 0 40px 100px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .05) inset;
-      background: #CCCCCC;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .spring-video-frame video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      outline: none;
     }
 
     /* ════ PALETA ════ */
@@ -2103,6 +2068,18 @@
 
     @media(max-width:600px) {
       .pal-tech-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .pal-feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    @media(max-width:850px) {
+      .pal-feedback-grid {
         grid-template-columns: 1fr
       }
     }
@@ -3298,6 +3275,12 @@
       color: transparent
     }
 
+    .cob-mark-img {
+      height: 48px;
+      width: auto;
+      display: block
+    }
+
     .cob-bar {
       width: 1px;
       height: 48px;
@@ -3310,648 +3293,7 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--silver-2)
-    }
-
-    /* ════════════════════════════════════════════════════════
-   APP · CARROSSEL 3D INTERATIVO (refeito, bulletproof)
-   ════════════════════════════════════════════════════════ */
-    #app {
-      background: var(--grafite)
-    }
-
-    .app-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      max-width: 1280px;
-      margin: 0 auto
-    }
-
-    @media(max-width:980px) {
-      .app-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 0 24px
-      }
-
-      .app-steps {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 12px;
-        margin-top: 28px;
-      }
-
-      .app-step {
-        padding: 8px 16px !important;
-        border: 1px solid rgba(232, 232, 234, .08) !important;
-        border-radius: 100px;
-        background: rgba(232, 232, 234, .02);
-        gap: 6px;
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .app-step:hover,
-      .app-step.active {
-        background: rgba(232, 232, 234, .06);
-        border-color: rgba(232, 232, 234, .28) !important;
-      }
-
-      .app-step-num {
-        min-width: auto;
-        font-size: 8px !important;
-        letter-spacing: 0.5px
-      }
-
-      .app-step-name {
-        font-size: 10px !important;
-        letter-spacing: 1px;
-        min-width: auto
-      }
-
-      .app-step-desc {
-        display: none !important
-      }
-
-      .phone-scene {
-        min-height: 480px;
-        perspective: 1400px
-      }
-
-      .phone-frame {
-        width: 220px;
-        height: 448px;
-        border-radius: 32px;
-        transform: rotateY(-10deg) rotateX(3deg);
-        margin: 0 auto
-      }
-
-      .phone-controls {
-        margin-top: 24px
-      }
-    }
-
-    @media(max-width:480px) {
-      .app-inner {
-        padding: 0 16px;
-        gap: 32px
-      }
-
-      .app-steps {
-        gap: 6px 10px;
-        margin-top: 24px
-      }
-
-      .app-step {
-        padding: 6px 12px !important
-      }
-
-      .phone-scene {
-        min-height: 420px
-      }
-
-      .phone-frame {
-        width: 180px;
-        height: 366px;
-        border-radius: 26px
-      }
-    }
-
-    .app-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin-top: 40px
-    }
-
-    .app-step {
-      padding: 22px 0;
-      border-top: 1px solid rgba(232, 232, 234, .06);
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      cursor: pointer;
-      transition: all .4s var(--ease)
-    }
-
-    .app-step:hover,
-    .app-step.active {
-      border-top-color: rgba(232, 232, 234, .28)
-    }
-
-    .app-step-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 1px;
-      color: var(--chumbo);
-      min-width: 32px;
-      transition: color .3s
-    }
-
-    .app-step.active .app-step-num {
-      color: var(--silver-1)
-    }
-
-    .app-step-name {
-      font-family: var(--display);
-      font-weight: 300;
-      font-size: 14px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--chumbo);
-      transition: color .3s;
-      min-width: 120px
-    }
-
-    .app-step.active .app-step-name {
-      color: var(--offwhite)
-    }
-
-    .app-step-desc {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 13px;
-      color: var(--chumbo);
-      margin-left: auto;
-      opacity: 0;
-      transition: opacity .35s;
-      max-width: 200px;
-      text-align: right;
-      line-height: 1.5
-    }
-
-    .app-step.active .app-step-desc {
-      opacity: .75
-    }
-
-    .phone-scene {
-      perspective: 1600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 560px
-    }
-
-    .phone-frame {
-      width: 280px;
-      height: 570px;
-      border-radius: 42px;
-      background: #080808;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 50px 120px rgba(0, 0, 0, .9), 0 0 0 1px rgba(255, 255, 255, .08) inset, 16px 16px 38px rgba(0, 0, 0, .5);
-      transform: rotateY(-14deg) rotateX(4deg);
-      transition: transform 1.2s var(--ease);
-      transform-style: preserve-3d;
-    }
-
-    .phone-screen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      opacity: 0;
-      transition: opacity .6s ease;
-    }
-
-    .phone-screen.active {
-      opacity: 1
-    }
-
-    .phone-glare {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 42px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, .06) 0%, transparent 35%);
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    .phone-controls {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      margin-top: 28px
-    }
-
-    .phone-dots {
-      display: flex;
-      gap: 8px
-    }
-
-    .phone-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: rgba(232, 232, 234, .18);
-      transition: all .3s;
-      cursor: pointer;
-      border: none;
-      padding: 0
-    }
-
-    .phone-dot.active {
-      background: var(--silver-1);
-      transform: scale(1.5)
-    }
-
-    .phone-pause {
-      font-family: var(--sans);
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--chumbo);
-      cursor: pointer;
-      background: none;
-      border: 1px solid rgba(232, 232, 234, .1);
-      padding: 8px 14px;
-      transition: all .3s;
-      font-weight: 500
-    }
-
-    .phone-pause:hover {
-      border-color: var(--silver-2);
-      color: var(--silver-1)
-    }
-
-    /* ════ APP · CONCEITO ════ */
-    #app-conceito {
-      background: var(--preto);
-      padding: 80px 8vw
-    }
-
-    .app-conceito-hero {
-      max-width: 760px;
-      margin: 32px auto 0;
-      border: 1px solid rgba(232, 232, 234, .08);
-      overflow: hidden;
-      background: radial-gradient(circle, rgba(232, 232, 234, .03), transparent 70%)
-    }
-
-    .app-conceito-hero img {
-      width: 100%;
-      display: block
-    }
-
-    .app-conceito-pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin: 32px auto 0;
-      max-width: 760px
-    }
-
-    @media(max-width:760px) {
-      .app-conceito-pillars {
-        grid-template-columns: 1fr;
-        max-width: 100%
-      }
-    }
-
-    .app-pillar {
-      padding: 24px 20px;
-      border: 1px solid rgba(232, 232, 234, .08);
-      background: rgba(232, 232, 234, .02);
-      transition: all .4s var(--ease)
-    }
-
-    .app-pillar:hover {
-      transform: translateY(-4px);
-      border-color: rgba(232, 232, 234, .22)
-    }
-
-    .app-pillar-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--silver-2);
-      letter-spacing: 1.5px;
-      margin-bottom: 10px
-    }
-
-    .app-pillar-name {
-      font-family: var(--display);
-      font-weight: 200;
-      font-size: 18px;
-      letter-spacing: 1.5px;
-      color: var(--offwhite);
-      margin-bottom: 6px
-    }
-
-    .app-pillar-desc {
-      font-family: var(--sans);
-      font-size: 11.5px;
-      line-height: 1.55;
-      color: var(--silver-2)
-    }
-
-    /* ════ APP · DIAGNÓSTICO SEQUENCIAL ════ */
-    #app-diagnostico {
-      background: var(--grafite);
-      padding: 80px 8vw;
-      position: relative;
-      overflow: hidden
-    }
-
-    .diag-hero {
-      margin: 32px auto 0;
-      max-width: 1100px;
-      border: 1px solid rgba(232, 232, 234, .08);
-      overflow: hidden;
-      background: radial-gradient(circle, rgba(232, 232, 234, .03), transparent 70%);
-      position: relative
-    }
-
-    .diag-hero img {
-      width: 100%;
-      display: block
-    }
-
-    .diag-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      margin: 32px auto 0;
-      max-width: 1100px;
-      border: 1px solid rgba(232, 232, 234, .08)
-    }
-
-    @media(max-width:760px) {
-      .diag-steps {
-        grid-template-columns: repeat(2, 1fr)
-      }
-    }
-
-    .diag-step {
-      padding: 20px 18px;
-      background: rgba(232, 232, 234, .02);
-      border-right: 1px solid rgba(232, 232, 234, .06);
-      position: relative;
-      transition: all .4s var(--ease)
-    }
-
-    .diag-step:last-child {
-      border-right: none
-    }
-
-    .diag-step:hover {
-      background: rgba(232, 232, 234, .05)
-    }
-
-    .diag-step::after {
-      content: '→';
-      position: absolute;
-      right: -9px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--mono);
-      font-size: 14px;
-      color: var(--silver-2);
-      background: var(--grafite);
-      padding: 0 4px;
-      line-height: 1;
-      z-index: 2
-    }
-
-    .diag-step:last-child::after {
-      display: none
-    }
-
-    @media(max-width:760px) {
-      .diag-step::after {
-        display: none
-      }
-
-      .diag-step {
-        border-right: 1px solid rgba(232, 232, 234, .06);
-        border-bottom: 1px solid rgba(232, 232, 234, .06)
-      }
-
-      .diag-step:nth-child(2n) {
-        border-right: none
-      }
-    }
-
-    .diag-step-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--silver-2);
-      letter-spacing: 1.5px;
-      margin-bottom: 8px
-    }
-
-    .diag-step-q {
-      font-family: var(--display);
-      font-weight: 300;
-      font-size: 13px;
-      letter-spacing: .5px;
-      color: var(--offwhite);
-      line-height: 1.4;
-      margin-bottom: 6px
-    }
-
-    .diag-step-tag {
-      font-family: var(--sans);
-      font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--chumbo)
-    }
-
-    /* ════ APP · TELAS ════ */
-    #app-telas {
-      background: var(--marmore-d);
-      padding: 80px 8vw
-    }
-
-    .telas-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
-      margin: 32px auto 0;
-      max-width: 960px
-    }
-
-    @media(max-width:980px) {
-      .telas-grid {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 100%
-      }
-    }
-
-    @media(max-width:520px) {
-      .telas-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-    }
-
-    .tela {
-      display: flex;
-      flex-direction: column;
-      gap: 10px
-    }
-
-    .tela-img {
-      aspect-ratio: 9/19.5;
-      overflow: hidden;
-      border: 1px solid rgba(232, 232, 234, .08);
-      background: #080808;
-      transition: all .4s var(--ease)
-    }
-
-    .tela-img:hover {
-      transform: translateY(-6px);
-      border-color: rgba(232, 232, 234, .3);
-      box-shadow: 0 24px 50px rgba(0, 0, 0, .7)
-    }
-
-    .tela-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top
-    }
-
-    .tela-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      text-align: center
-    }
-
-    .tela-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--silver-2);
-      letter-spacing: 1px
-    }
-
-    .tela-name {
-      font-family: var(--sans);
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--offwhite)
-    }
-
-    /* ════ ASSISTENTE IA ════ */
-    #assistente {
-      background: var(--preto);
-      padding: 80px 8vw
-    }
-
-    .as-layout {
-      display: grid;
-      grid-template-columns: minmax(260px, 340px) 1fr;
-      gap: 64px;
-      align-items: center;
-      max-width: 1100px;
-      margin: 32px auto 0
-    }
-
-    @media(max-width:880px) {
-      .as-layout {
-        grid-template-columns: 1fr;
-        gap: 48px;
-        max-width: 560px
-      }
-    }
-
-    .as-phone {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-      background: radial-gradient(circle at center, rgba(232, 232, 234, .05), transparent 70%)
-    }
-
-    .as-phone img {
-      width: 100%;
-      max-width: 300px;
-      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, .7));
-      border-radius: 36px
-    }
-
-    .as-right {
-      display: flex;
-      flex-direction: column;
-      gap: 20px
-    }
-
-    .as-bar-wrap {
-      padding: 24px;
-      border: 1px solid rgba(232, 232, 234, .08);
-      background: radial-gradient(ellipse at center, rgba(232, 232, 234, .04), transparent 70%);
-      position: relative
-    }
-
-    .as-bar-wrap::before {
-      content: 'COMPONENTE';
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      font-family: var(--mono);
-      font-size: 8.5px;
-      letter-spacing: 2px;
-      color: var(--chumbo)
-    }
-
-    .as-bar-wrap img {
-      width: 100%;
-      display: block
-    }
-
-    .as-prompts-label {
-      font-family: var(--sans);
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--silver-2);
-      margin-top: 8px
-    }
-
-    .as-prompts {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px
-    }
-
-    .as-prompt {
-      padding: 16px 18px;
-      background: rgba(232, 232, 234, .025);
-      border: 1px solid rgba(232, 232, 234, .08);
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 13px;
-      color: var(--silver-1);
-      line-height: 1.5;
-      transition: all .35s var(--ease)
-    }
-
-    .as-prompt:hover {
-      background: rgba(232, 232, 234, .06);
-      border-color: var(--silver-2);
-      transform: translateX(4px)
-    }
-
-    .as-prompt::before {
-      content: '"';
-      font-size: 18px;
-      color: var(--silver-3);
-      margin-right: 4px
-    }
-
-    /* ════ BRAND BOARD ════ */
+    }    /* ════ BRAND BOARD ════ */
     #brandboard {
       background: var(--grafite);
       text-align: center
@@ -4501,6 +3843,26 @@
       color: rgba(232, 232, 234, .3);
       margin-top: 64px;
       font-weight: 500
+    }
+
+    .cl-credits {
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(232, 232, 234, .25);
+      margin-top: 16px;
+      font-weight: 500
+    }
+
+    .cl-credits a {
+      color: rgba(232, 232, 234, .35);
+      text-decoration: none;
+      transition: color .3s ease
+    }
+
+    .cl-credits a:hover {
+      color: var(--offwhite)
     }
 
     body.loading {
@@ -5441,7 +4803,7 @@
       <div class="idx-grid rv d2">
         <a class="idx-row" href="#marca-marmore"><span class="idx-n">01</span><span class="idx-name">A Marca</span><span class="idx-dot"></span><span class="idx-pg">História</span></a>
         <a class="idx-row" href="#parte-logotipo"><span class="idx-n">02</span><span class="idx-name">Logotipo</span><span class="idx-dot"></span><span class="idx-pg">Símbolo</span></a>
-        <a class="idx-row" href="#parte-cores"><span class="idx-n">03</span><span class="idx-name">Cores</span><span class="idx-dot"></span><span class="idx-pg">Paleta institucional</span></a>
+        <a class="idx-row" href="#parte-cores"><span class="idx-n">03</span><span class="idx-name">Cores</span><span class="idx-dot"></span><span class="idx-pg">Paleta, texturas e grid</span></a>
         <a class="idx-row" href="#parte-tipografia"><span class="idx-n">04</span><span class="idx-name">Tipografia</span><span class="idx-dot"></span><span class="idx-pg">Sistema tipográfico</span></a>
         <a class="idx-row" href="#parte-aplicacao"><span class="idx-n">05</span><span class="idx-name">Aplicação</span><span class="idx-dot"></span><span class="idx-pg">Marca aplicada</span></a>
         <a class="idx-row" href="#parte-arquivos"><span class="idx-n">06</span><span class="idx-name">Arquivos</span><span class="idx-dot"></span><span class="idx-pg">O pacote da marca</span></a>
@@ -5467,7 +4829,7 @@
           <div class="hist-name silver">Dandi</div>
           <div class="hist-phon">/ ˈdæn.di / · <em>o dândi</em></div>
           <p class="bt">Termo histórico usado desde o século XIX para o homem que cultiva o estilo como expressão de
-            inteligência e cuidado consigo mesmo. Não vaidade. <strong>Intenção.</strong></p>
+            inteligência e cuidado consigo mesmo. Não é vaidade. <strong>Intenção.</strong></p>
         </div>
         <div class="rvr">
           <div class="hist-card">
@@ -5527,7 +4889,7 @@
 
   <section id="marmore" class="marmore-stmt" aria-label="Tradução estratégica">
     <div class="marmore-content rv">
-      <span class="marmore-eyebrow">Tradução estratégica</span>
+      <span class="marmore-eyebrow">03 · Tradução estratégica</span>
       <h2 class="marmore-line">Não estamos criando um app de moda. Estamos criando o <em class="prata">dândi
           moderno</em>. <span class="marmore-sub">Acessível, prático e orientado por tecnologia.</span></h2>
       <img src="assets/marca/app-na-tela-shopping.png" alt="App Dandi na tela de um smartphone" class="marmore-img rv d2">
@@ -5537,7 +4899,7 @@
   <section id="dna">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">03 · DNA da marca</span>
+        <span class="tag rv">04 · DNA da marca</span>
         <h2 class="st rv d1">O que sustenta o <span class="ac">Dandi</span></h2>
       </div>
       <div class="dna-grid">
@@ -5573,7 +4935,7 @@
     <div class="maxw">
       <div class="pos-grid">
         <div class="rvl">
-          <span class="tag">18 · Posicionamento</span>
+          <span class="tag">05 · Posicionamento</span>
           <h2 class="st">O território<br><span class="ac">que ocupamos</span></h2>
           <div class="pos-insight">Estilo<br><em>Inteligente.</em></div>
           <p class="bt">Espaço novo entre o <strong>hype barulhento</strong> do streetwear e a <strong>frieza
@@ -5599,7 +4961,7 @@
   <section id="publico">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">04 · Público</span>
+        <span class="tag rv">06 · Público</span>
         <h2 class="st rv d1">Para quem a <span class="ac">Dandi</span> fala</h2>
       </div>
       <div class="pub-grid">
@@ -5639,7 +5001,7 @@
   <section id="personalidade">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">06 · Personalidade</span>
+        <span class="tag rv">07 · Personalidade</span>
         <h2 class="st rv d1">Quem é <span class="ac">Dandi</span></h2>
       </div>
       <div class="pers-grid">
@@ -5671,9 +5033,25 @@
     </div>
   </section>
 
+  <section id="evitar">
+    <div class="maxw">
+      <div class="head" style="text-align:center">
+        <span class="tag rv">08 · O que evitar</span>
+        <h2 class="st rv d1">Dandi nunca <span class="ac">é</span></h2>
+      </div>
+      <div class="evitar-stack">
+        <div class="evitar-word rv d1" data-num="01">Arrogante.</div>
+        <div class="evitar-word rv d2" data-num="02">Inacessível.</div>
+        <div class="evitar-word rv d3" data-num="03">Fashionista demais.</div>
+      </div>
+      <div class="evitar-foot rv d4">Porque o produto é utilitário, social e acessível.</div>
+    </div>
+  </section>
+
+
   <section id="slogan">
     <div class="maxw">
-      <span class="tag rv" style="padding-left:32px;display:inline-block">05 · Nome e slogan</span>
+      <span class="tag rv" style="padding-left:32px;display:inline-block">09 · Nome e slogan</span>
       <div class="slo-lockup rv d1">Estilo&nbsp;<em>Inteligente.</em></div>
       <p class="slo-sub rv d2">O slogan resume a marca em duas palavras: estilo que vem de método, não de sorte. Anda
         sempre ao lado do nome, nunca o substitui.</p>
@@ -5702,7 +5080,7 @@
   <section id="tom">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">16 · Tom de voz</span>
+        <span class="tag rv">10 · Tom de voz</span>
         <h2 class="st rv d1">Refinado, mas <span class="ac">próximo</span></h2>
       </div>
       <div class="tom-grid">
@@ -5729,7 +5107,7 @@
   <section id="vocabulario">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">17 · Vocabulário</span>
+        <span class="tag rv">11 · Vocabulário</span>
         <h2 class="st rv d1">Palavras com <span class="ac">intenção</span></h2>
       </div>
       <div class="voc-grid">
@@ -5764,12 +5142,38 @@
     </div>
   </section>
 
+  <!-- SEÇÃO 11.1 · REDES SOCIAIS -->
+  <section id="redes-sociais" style="background:var(--preto)">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">11.1 · Redes Sociais</span>
+        <h2 class="st rv d1">A voz no <span class="ac">mundo digital</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Nossa escrita nas redes sociais (Instagram, e-mail e campanhas) segue a mesma calma do aplicativo. Somos silenciosos, precisos e editoriais.</p>
+      </div>
+      <div class="tom-grid" style="margin-top:32px">
+        <div class="tom-col rv d1">
+          <div class="tom-col-tag ok">Legendas recomendadas</div>
+          <p class="tom-phrase">A simplicidade é uma escolha consciente. Conheça o armário inteligente Dandi no link da bio. <br><br><em>Refinamento. Inteligência. Presença.</em></p>
+          <p class="tom-phrase">12 peças, infinitas composições. A precisão do caimento aplicada ao seu dia a dia.</p>
+          <p class="tom-phrase">O dândi moderno não se veste para impressionar, mas por intenção. Iniciamos a curadoria de estilo no app.</p>
+        </div>
+        <div class="tom-col no rv d2">
+          <div class="tom-col-tag no">O que evitar sempre</div>
+          <p class="tom-phrase">Galera, olha esse look deuso 🔥 Corre no app pra ver a vibe fashionista e arrasar no rolê de hoje! 😱👇</p>
+          <p class="tom-phrase">Você NÃO PODE perder essa novidade premium sensacional!!! O melhor estilo do Brasil está aqui!</p>
+          <p class="tom-phrase">#estilo #moda #lookdodia #dandistyle #top #modamasculina #estilomasculino #trends</p>
+        </div>
+      </div>
+      <p class="bt rv d4" style="margin-top:32px;font-size:12px;color:var(--silver-2);text-align:center;margin-left:auto;margin-right:auto"><strong>Regra geral:</strong> Sem uso de gírias, emojis coloridos excessivos ou hashtags em massa. O tom é o de uma revista de lifestyle de luxo.</p>
+    </div>
+  </section>
+
   <!-- PARTE 02 -->
   <section id="parte-logotipo" class="part-divider part-divider-half" aria-label="Parte 02: Logotipo">
     <div class="part-inner rv">
       <span class="part-num">Parte 02</span>
       <h2 class="part-title">Logotipo</h2>
-      <span class="part-sub">símbolo · versões · horizontal · respiro · usos indevidos · acabamentos</span>
+      <span class="part-sub">símbolo · versões · horizontal · respiro · usos indevidos · acabamentos · iconografia</span>
     </div>
   </section>
 
@@ -5781,7 +5185,7 @@
   <section id="simbolo">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">07 · Construção do símbolo</span>
+        <span class="tag rv">12 · Construção do símbolo</span>
         <h2 class="st rv d1">O <span class="ac">monograma</span></h2>
       </div>
       <div class="symb-grid">
@@ -5852,7 +5256,7 @@
   <section id="identidade">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">08 · Versões oficiais</span>
+        <span class="tag rv">13 · Versões oficiais</span>
         <h2 class="st rv d1">Identidade <span class="ac">visual</span></h2>
       </div>
       <div class="logo-3">
@@ -5884,7 +5288,7 @@
   <section id="horizontal">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">09 · Versão horizontal</span>
+        <span class="tag rv">14 · Versão horizontal</span>
         <h2 class="st rv d1">Para <span class="ac">leituras em fluxo</span></h2>
       </div>
       <div class="horiz-img-wrap rv d2">
@@ -5898,7 +5302,7 @@
   <section id="protecao">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">10 · Respiro e redução</span>
+        <span class="tag rv">15 · Respiro e redução</span>
         <h2 class="st rv d1">A marca precisa de <span class="ac">ar ao redor</span></h2>
         <p class="lead rv d2" style="margin-top:20px">Nenhum texto, imagem ou borda invade a área de proteção. É o que
           mantém a leitura limpa em qualquer fundo.</p>
@@ -5911,8 +5315,7 @@
             <span class="prot-margin"></span>
             <img src="assets/marca/logo-vertical-clara.svg" alt="Área de proteção da marca Dandi">
           </div>
-          <p class="prot-note">Margem mínima livre ao redor da marca: <strong>metade da altura do símbolo</strong> em
-            todos os lados. Essa distância cresce junto com a marca, nunca diminui.</p>
+          <p class="prot-note">A unidade de espaçamento <strong>X</strong> é definida pela <strong>largura do espaço interno central do monograma "D"</strong> (medido horizontalmente no espaço negativo da letra). A margem de proteção e respiro mínimo ao redor de qualquer versão da marca é de <strong>1X</strong> em todos os lados (superior, inferior e laterais).</p>
         </div>
 
         <div class="prot-card rvr">
@@ -5941,7 +5344,7 @@
   <section id="usos-indevidos">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">11 · O que nunca fazer</span>
+        <span class="tag rv">16 · O que nunca fazer</span>
         <h2 class="st rv d1">A marca se mantém <span class="ac">intacta</span></h2>
         <p class="lead rv d2" style="margin-top:20px">A integridade da marca vale mais do que a criatividade do momento.
           Estes seis usos descaracterizam a Dandi.</p>
@@ -5985,7 +5388,7 @@
   <section id="icones-app">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">12 · Acabamentos do símbolo</span>
+        <span class="tag rv">17 · Acabamentos do símbolo</span>
         <h2 class="st rv d1">O ícone <span class="ac">em aplicação</span></h2>
         <p class="lead rv d2" style="margin-top:20px">A direção oficial é o <strong
             style="color:var(--offwhite)">01</strong>, couro preto com o D em prata cromada. As demais versões cobrem
@@ -6022,19 +5425,47 @@
     </div>
   </section>
 
+  <!-- SEÇÃO 17.1 · DIRETRIZES DE ICONOGRAFIA -->
+  <section id="iconografia" style="background:var(--preto)">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">17.1 · Diretrizes de Iconografia</span>
+        <h2 class="st rv d1">Como desenhar <span class="ac">novos ícones</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Para expandir o ecossistema do app ou sinalização sem descaracterizar a marca, todos os novos ícones devem seguir a mesma disciplina geométrica e linear da Dandi.</p>
+      </div>
+      <div class="slo-rules" style="margin-top:32px">
+        <div class="slo-rule rv d1">
+          <div class="slo-rule-n">01</div>
+          <div class="slo-rule-t">Linear e geométrico</div>
+          <div class="slo-rule-d">Os ícones devem ser estritamente lineares. A espessura do traço oficial em tela é de <strong>1.5px</strong> a <strong>2px</strong>, desenhados sobre uma malha quadrada de <strong>24 × 24 unidades</strong>.</div>
+        </div>
+        <div class="slo-rule rv d2">
+          <div class="slo-rule-t">Brutalidade nos cantos</div>
+          <div class="slo-rule-n">02</div>
+          <div class="slo-rule-d">Terminações quadradas e cantos retos. Evite arredondamentos infantis ou orgânicos. A curvatura do canto deve ter raio máximo de <strong>1.5px</strong>, combinando com a força da tipografia.</div>
+        </div>
+        <div class="slo-rule rv d3">
+          <div class="slo-rule-n">03</div>
+          <div class="slo-rule-t">O que evitar sempre</div>
+          <div class="slo-rule-d">Nunca use preenchimento (solid shapes), traços com espessuras diferentes no mesmo ícone, ou desenhos figurativos complexos/lúdicos. A simplicidade é a prioridade.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PARTE 03 -->
   <section id="parte-cores" class="part-divider" aria-label="Parte 03: Cores">
     <div class="part-inner rv">
       <span class="part-num">Parte 03</span>
       <h2 class="part-title">Cores</h2>
-      <span class="part-sub">paleta institucional · uso do prata</span>
+      <span class="part-sub">paleta institucional · uso do prata · texturas · grid e espaçamento</span>
     </div>
   </section>
 
   <section id="paleta">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">13 · Paleta institucional</span>
+        <span class="tag rv">18 · Paleta institucional</span>
         <h2 class="st rv d1">Quatro cores. <span class="ac">Nada mais.</span></h2>
       </div>
 
@@ -6109,6 +5540,37 @@
         </div>
       </div>
 
+      <div class="pal-tech rv d3" style="margin-top:40px">
+        <div class="pal-tech-head">Cores semânticas · Feedback</div>
+        <p class="pal-tech-note">Para interfaces digitais e estados de sistema. Tons profundos e dessaturados que respeitam o tema escuro da Dandi sem quebrar a identidade visual premium.</p>
+        <div class="pal-feedback-grid">
+          <div class="pal-tech-sw">
+            <div class="pal-tech-chip" style="background:var(--erro)"></div>
+            <div class="pal-tech-info">
+              <div class="pal-sw-name">Erro</div>
+              <div class="pal-sw-hex">#4A1A1A</div>
+              <div class="pal-tech-use">Alertas críticos, campos inválidos, falhas e cancelamentos de fluxo.</div>
+            </div>
+          </div>
+          <div class="pal-tech-sw">
+            <div class="pal-tech-chip" style="background:var(--sucesso)"></div>
+            <div class="pal-tech-info">
+              <div class="pal-sw-name">Sucesso</div>
+              <div class="pal-sw-hex">#1F2F1F</div>
+              <div class="pal-tech-use">Confirmações de ações bem-sucedidas, validações de campos e transações positivas.</div>
+            </div>
+          </div>
+          <div class="pal-tech-sw">
+            <div class="pal-tech-chip" style="background:var(--alerta)"></div>
+            <div class="pal-tech-info">
+              <div class="pal-sw-name">Alerta</div>
+              <div class="pal-sw-hex">#3A3510</div>
+              <div class="pal-tech-use">Avisos preventivos, estados de atenção ou carregamento intermediário.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="pal-prop rv d4">
         <div class="pal-prop-title">Proporção de uso</div>
         <div class="pal-prop-bar">
@@ -6130,7 +5592,7 @@
   <section id="prata">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">14 · Paleta · Uso do prata</span>
+        <span class="tag rv">19 · Paleta · Uso do prata</span>
         <h2 class="st rv d1">O prata é detalhe, <span class="ac">não é base</span></h2>
         <p class="lead rv d2" style="margin-top:20px">O cromado é o único acento da marca. Funciona porque é raro. Usado
           em tudo, perde o valor e a peça parece amadora. Aparece em no máximo um elemento por composição, sempre sobre
@@ -6160,6 +5622,138 @@
     </div>
   </section>
 
+  <!-- SEÇÃO 19.1 · TEXTURAS DE APOIO -->
+  <section id="texturas-apoio" style="background:var(--grafite)">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">19.1 · Texturas de Apoio</span>
+        <h2 class="st rv d1">A matéria <span class="ac">e a superfície</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">A identidade física e tátil da Dandi se manifesta através de duas texturas contrastantes: o mármore frio e o couro orgânico.</p>
+      </div>
+      <div class="prot-grid" style="margin-top:32px">
+        <div class="prot-card rvl">
+          <div class="prot-card-tag">Textura de Mármore</div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:url('assets/marca/fundo-marmore.webp') center/cover no-repeat;border:none" aria-hidden="true"></div>
+          <p class="prot-note" style="margin-top:20px"><strong>Uso editorial estático.</strong> O mármore preto representa a solidez estrutural e a sofisticação da marca. Deve ser usado apenas como textura de fundo de capítulos, mockups de alta joalheria ou planos de fundo de apresentações.</p>
+        </div>
+        <div class="prot-card rvr">
+          <div class="prot-card-tag">Textura de Couro</div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:url('assets/marca/fundo-couro.png') center/cover no-repeat;border:none" aria-hidden="true"></div>
+          <p class="prot-note" style="margin-top:20px"><strong>Uso físico e tátil.</strong> O couro preto fosco traz a sensação de calor, robustez e vestuário clássico. É de uso exclusivo para o fundo do ícone oficial do aplicativo (springboard) e acabamentos físicos de papelaria (sacolas, caixas).</p>
+        </div>
+      </div>
+      <p class="bt rv d4" style="margin-top:32px;font-size:12px;color:var(--silver-2);text-align:center;margin-left:auto;margin-right:auto"><strong>Regra de convivência:</strong> As duas texturas nunca devem competir no mesmo espaço visual de forma sobreposta. Escolha uma para predominar por tela ou peça física.</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 19.2 · SISTEMA DE ESPAÇAMENTO -->
+  <section id="sistema-espacamento" style="background:var(--preto)">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">19.2 · Grid de Layout e Espaçamento</span>
+        <h2 class="st rv d1">A matemática <span class="ac">do layout</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">Telas, páginas web e materiais impressos da Dandi seguem o Grid System de 8px. Esta disciplina matemática confere consistência visual, eliminando decisões arbitrárias e estabelecendo proporções harmoniosas.</p>
+      </div>
+
+      <div class="esp-grid">
+        <div class="prot-card rvl">
+          <div class="prot-card-tag">8px Grid System</div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:var(--grafite);padding:0;border:none;overflow:hidden" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid8-1" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.75"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid8-1)"/>
+              <rect x="40" y="40" width="240" height="120" fill="var(--preto)" stroke="rgba(232,232,234,0.08)" stroke-width="1"/>
+              <rect x="72" y="76" width="176" height="48" fill="var(--grafite)" stroke="rgba(232,232,234,0.15)" stroke-width="1"/>
+              <text x="160" y="104" font-family="var(--sans)" font-size="11" font-weight="300" fill="var(--offwhite)" letter-spacing="2" text-anchor="middle">BOTÃO</text>
+              <line x1="258" y1="76" x2="258" y2="124" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <line x1="254" y1="76" x2="262" y2="76" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <line x1="254" y1="124" x2="262" y2="124" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <text x="266" y="104" font-family="var(--mono)" font-size="9" fill="var(--silver-2)">48px</text>
+              <line x1="40" y1="148" x2="72" y2="148" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <line x1="40" y1="144" x2="40" y2="152" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <line x1="72" y1="144" x2="72" y2="152" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <text x="56" y="140" font-family="var(--mono)" font-size="9" fill="var(--silver-2)" text-anchor="middle">32px</text>
+              <line x1="20" y1="40" x2="20" y2="76" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <line x1="16" y1="40" x2="24" y2="40" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <line x1="16" y1="76" x2="24" y2="76" stroke="rgba(250,250,252,0.4)" stroke-width="1"/>
+              <text x="14" y="62" font-family="var(--mono)" font-size="9" fill="var(--silver-2)" text-anchor="end">36px</text>
+              <text x="160" y="24" font-family="var(--sans)" font-size="9" font-weight="500" fill="var(--silver-2)" letter-spacing="2" text-anchor="middle">REGRAS DE ESPAÇAMENTO INTERNO</text>
+            </svg>
+          </div>
+          <p class="prot-note" style="margin-top:20px"><strong>Múltiplos de 8px.</strong> Altura de botões, paddings de cards, margens internas, espaçamentos entre blocos e gutters devem ser múltiplos exatos de 8 (ex: 8px, 16px, 24px, 32px, 48px, 64px, 80px, 96px).</p>
+        </div>
+
+        <div class="prot-card rvc">
+          <div class="prot-card-tag">Desktop Layout</div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:var(--grafite);padding:0;border:none;overflow:hidden" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid8-2" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.75"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid8-2)"/>
+              <rect x="20" y="30" width="280" height="150" fill="var(--preto)" stroke="rgba(232,232,234,0.12)" stroke-width="1.5" rx="3"/>
+              <line x1="20" y1="45" x2="300" y2="45" stroke="rgba(232,232,234,0.12)" stroke-width="1"/>
+              <circle cx="28" cy="37" r="2" fill="rgba(232,232,234,0.25)"/>
+              <circle cx="34" cy="37" r="2" fill="rgba(232,232,234,0.25)"/>
+              <circle cx="40" cy="37" r="2" fill="rgba(232,232,234,0.25)"/>
+              <rect x="68" y="55" width="184" height="115" fill="var(--grafite)" stroke="rgba(232,232,234,0.08)" stroke-width="1"/>
+              <line x1="80" y1="75" x2="240" y2="75" stroke="rgba(232,232,234,0.12)" stroke-dasharray="2 2"/>
+              <line x1="80" y1="90" x2="200" y2="90" stroke="rgba(232,232,234,0.12)" stroke-dasharray="2 2"/>
+              <line x1="68" y1="30" x2="68" y2="180" stroke="rgba(250,250,252,0.3)" stroke-width="1" stroke-dasharray="3 3"/>
+              <line x1="252" y1="30" x2="252" y2="180" stroke="rgba(250,250,252,0.3)" stroke-width="1" stroke-dasharray="3 3"/>
+              <line x1="20" y1="140" x2="68" y2="140" stroke="rgba(250,250,252,0.5)" stroke-width="1"/>
+              <line x1="20" y1="136" x2="20" y2="144" stroke="rgba(250,250,252,0.5)" stroke-width="1"/>
+              <line x1="68" y1="136" x2="68" y2="144" stroke="rgba(250,250,252,0.5)" stroke-width="1"/>
+              <text x="44" y="132" font-family="var(--mono)" font-size="8" fill="var(--silver-2)" text-anchor="middle">8vw / 96px</text>
+              <line x1="252" y1="140" x2="300" y2="140" stroke="rgba(250,250,252,0.5)" stroke-width="1"/>
+              <line x1="252" y1="136" x2="252" y2="144" stroke="rgba(250,250,252,0.5)" stroke-width="1"/>
+              <line x1="300" y1="136" x2="300" y2="144" stroke="rgba(250,250,252,0.5)" stroke-width="1"/>
+              <text x="276" y="132" font-family="var(--mono)" font-size="8" fill="var(--silver-2)" text-anchor="middle">8vw / 96px</text>
+              <text x="160" y="20" font-family="var(--sans)" font-size="9" font-weight="500" fill="var(--silver-2)" letter-spacing="2" text-anchor="middle">GRID DE DESKTOP</text>
+            </svg>
+          </div>
+          <p class="prot-note" style="margin-top:20px"><strong>Margem Desktop.</strong> A margem lateral padrão para layouts desktop é de <strong>8vw</strong> ou <strong>96px</strong>. Isso garante que a área de conteúdo respire livremente em monitores de alta resolução, mantendo o apelo de grid editorial.</p>
+        </div>
+
+        <div class="prot-card rvr">
+          <div class="prot-card-tag">Mobile Layout</div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:var(--grafite);padding:0;border:none;overflow:hidden" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid8-3" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.75"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid8-3)"/>
+              <rect x="110" y="20" width="100" height="170" fill="var(--preto)" stroke="rgba(232,232,234,0.12)" stroke-width="1.5" rx="8"/>
+              <line x1="145" y1="28" x2="165" y2="28" stroke="rgba(232,232,234,0.2)" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="173" cy="28" r="1.5" fill="rgba(232,232,234,0.2)"/>
+              <rect x="122" y="45" width="22" height="120" fill="rgba(232,232,234,0.03)" stroke="rgba(232,232,234,0.06)" stroke-width="0.5"/>
+              <rect x="149" y="45" width="22" height="120" fill="rgba(232,232,234,0.03)" stroke="rgba(232,232,234,0.06)" stroke-width="0.5"/>
+              <rect x="176" y="45" width="22" height="120" fill="rgba(232,232,234,0.03)" stroke="rgba(232,232,234,0.06)" stroke-width="0.5"/>
+              <line x1="110" y1="110" x2="122" y2="110" stroke="rgba(250,250,252,0.5)" stroke-width="0.75"/>
+              <line x1="110" y1="107" x2="110" y2="113" stroke="rgba(250,250,252,0.5)" stroke-width="0.75"/>
+              <line x1="122" y1="107" x2="122" y2="113" stroke="rgba(250,250,252,0.5)" stroke-width="0.75"/>
+              <text x="105" y="113" font-family="var(--mono)" font-size="7" fill="var(--silver-2)" text-anchor="end">24px</text>
+              <line x1="144" y1="75" x2="149" y2="75" stroke="rgba(250,250,252,0.5)" stroke-width="0.75"/>
+              <line x1="144" y1="72" x2="144" y2="78" stroke="rgba(250,250,252,0.5)" stroke-width="0.75"/>
+              <line x1="149" y1="72" x2="149" y2="78" stroke="rgba(250,250,252,0.5)" stroke-width="0.75"/>
+              <text x="146.5" y="70" font-family="var(--mono)" font-size="6" fill="var(--silver-2)" text-anchor="middle">16px</text>
+              <text x="160" y="12" font-family="var(--sans)" font-size="9" font-weight="500" fill="var(--silver-2)" letter-spacing="2" text-anchor="middle">GRID DE SMARTPHONE</text>
+            </svg>
+          </div>
+          <p class="prot-note" style="margin-top:20px"><strong>Margem Mobile.</strong> Margem lateral externa padrão de <strong>24px</strong> nas bordas do dispositivo móvel. Os gutters (espaçamentos entre elementos internos de colunas) devem ser de <strong>16px</strong>, para o aproveitamento ideal de tela.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <!-- PARTE 04 -->
   <section id="parte-tipografia" class="part-divider" aria-label="Parte 04: Tipografia">
     <div class="part-inner rv">
@@ -6172,7 +5766,7 @@
   <section id="tipografia">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">15 · Sistema tipográfico</span>
+        <span class="tag rv">20 · Sistema tipográfico</span>
         <h2 class="st rv d1">Uma voz, <span class="ac">uma sintaxe</span></h2>
       </div>
       <div class="typo-specimen rv">
@@ -6216,7 +5810,7 @@
 
       <!-- HIERARQUIA DIGITAL COMPLETA -->
       <div class="head" style="margin-top:80px">
-        <span class="tag rv">15.1 · Hierarquia digital</span>
+        <span class="tag rv">20.1 · Hierarquia digital</span>
         <h2 class="st rv d1">Escala tipográfica <span class="ac">do app</span></h2>
         <p class="lead rv d2" style="margin-top:20px">Cada tamanho tem uma função. Nada é aleatório. A escala funciona
           igual no iPhone, no Android e no desktop — só os valores mudam.</p>
@@ -6340,14 +5934,14 @@
     <div class="part-inner rv">
       <span class="part-num">Parte 05</span>
       <h2 class="part-title">Aplicação</h2>
-      <span class="part-sub">marca aplicada · no produto · possibilidades · limites</span>
+      <span class="part-sub">marca aplicada · co-branding · direção fotográfica · no produto digital · limites</span>
     </div>
   </section>
 
   <section id="aplicacoes">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">20 · Marca aplicada</span>
+        <span class="tag rv">21 · Marca aplicada</span>
         <h2 class="st rv d1">No mundo <span class="ac">físico</span></h2>
         <p class="lead rv d2" style="margin-top:20px">Este manual rege a marca em tudo: produto, redes, campanha,
           evento e brinde. A mesma lógica de preto, respiro e prata cirúrgica vale em qualquer superfície.</p>
@@ -6355,14 +5949,14 @@
       <div class="ap-grid rv">
         <div class="ap-grid-col">
           <div class="ap-img-wrap rv d1" style="height:320px">
-            <img src="docs/Arquivos%20Manual/08-imagens-diversas/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
+            <img src="assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
             <div class="ap-img-caption">
               <span>Kit Presentes & Embalagem</span>
               <span style="opacity:0.5;font-size:8px">01</span>
             </div>
           </div>
           <div class="ap-img-wrap rv d3" style="height:440px">
-            <img src="docs/Arquivos%20Manual/08-imagens-diversas/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
+            <img src="assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
             <div class="ap-img-caption">
               <span>Campanhas & Outdoors</span>
               <span style="opacity:0.5;font-size:8px">02</span>
@@ -6371,14 +5965,14 @@
         </div>
         <div class="ap-grid-col">
           <div class="ap-img-wrap rv d2" style="height:440px">
-            <img src="docs/Arquivos%20Manual/08-imagens-diversas/dandi-evento.png" alt="Totem e painel de evento Dandi">
+            <img src="assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
             <div class="ap-img-caption">
               <span>Fachadas & Eventos</span>
               <span style="opacity:0.5;font-size:8px">03</span>
             </div>
           </div>
           <div class="ap-img-wrap rv d4" style="height:320px">
-            <img src="docs/Arquivos%20Manual/08-imagens-diversas/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
+            <img src="assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
             <div class="ap-img-caption">
               <span>Mídia Urbana</span>
               <span style="opacity:0.5;font-size:8px">04</span>
@@ -6392,7 +5986,7 @@
         <span class="tag rv">Marca aplicada · <span class="ac">No digital</span></span>
       </div>
       <div class="ap-digital-img-wrap rv" style="max-width: 900px; margin: 32px auto 0;">
-        <img src="docs/Arquivos%20Manual/08-imagens-diversas/modelo-instagram.png" alt="Mockup da marca aplicada no Instagram">
+        <img src="assets/marca/modelo-instagram.png" alt="Mockup da marca aplicada no Instagram">
       </div>
 
       <div class="cob-block rv" id="cobranding" style="margin-top:64px;scroll-margin-top:80px">
@@ -6402,14 +5996,13 @@
         </div>
         <div class="cob-grid">
           <div class="cob-lockup rv">
-            <span class="cob-mark">D</span>
+            <img class="cob-mark-img" src="assets/marca/icone-prata.svg" alt="Monograma Dandi em prata">
             <span class="cob-bar" aria-hidden="true"></span>
             <span class="cob-partner">Parceiro</span>
           </div>
           <div class="rv">
             <p class="bt"><strong style="color:var(--offwhite)">Assinatura conjunta.</strong> Dandi e parceiro lado a
-              lado, divisória fina entre as marcas, com respiro igual de cada lado, no mínimo metade da altura do
-              símbolo.</p>
+              lado, divisória fina entre as marcas, com respiro igual de cada lado, respeitando a área de proteção mínima de 1X (largura interna do monograma D).</p>
             <p class="bt" style="margin-top:14px"><strong style="color:var(--offwhite)">O parceiro recebe</strong> o
               monograma ou a versão monocromática oficial. Nunca uma versão improvisada.</p>
             <p class="bt" style="margin-top:14px;color:#C98B8B"><strong>Nunca:</strong> recolorir, distorcer, aplicar
@@ -6420,10 +6013,38 @@
     </div>
   </section>
 
+  <!-- SEÇÃO 22 · DIREÇÃO FOTOGRÁFICA -->
+  <section id="direcao-fotografica" style="background:var(--preto)">
+    <div class="maxw">
+      <div class="head">
+        <span class="tag rv">22 · Direção Fotográfica</span>
+        <h2 class="st rv d1">Estilo real, <span class="ac">sem artifícios</span></h2>
+        <p class="lead rv d2" style="margin-top:20px">As fotografias da Dandi são editoriais e aspiracionais. Elas comunicam elegância de forma silenciosa e evitam clichés comuns do mercado.</p>
+      </div>
+      <div class="slo-rules" style="margin-top:32px">
+        <div class="slo-rule rv d1">
+          <div class="slo-rule-n">01</div>
+          <div class="slo-rule-t">Styling & Roupas</div>
+          <div class="slo-rule-d">Modelos devem vestir alfaiataria minimalista estruturada, cores neutras (preto, grafite, off-white) e caimento perfeito. Evite roupas esportivas, cores berrantes ou estampas.</div>
+        </div>
+        <div class="slo-rule rv d2">
+          <div class="slo-rule-t">Cenário & Luz</div>
+          <div class="slo-rule-n">02</div>
+          <div class="slo-rule-d">Luz direcional com contraste marcado (luz e sombra) para valorizar as texturas dos tecidos. Cenários limpos, monocromáticos ou de arquitetura urbana brutalista.</div>
+        </div>
+        <div class="slo-rule rv d3">
+          <div class="slo-rule-n">03</div>
+          <div class="slo-rule-t">Atitude & Retrato</div>
+          <div class="slo-rule-d">O modelo retratado deve demonstrar sobriedade natural, seriedade inteligente e introspecção. Nunca use sorrisos caricatos, poses forçadas de catálogo ou filtros artificiais de cor.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="produto">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">24 · No produto digital</span>
+        <span class="tag rv">23 · No produto digital</span>
         <h2 class="st rv d1">A marca <span class="ac">vira interface</span></h2>
         <p class="lead rv d2" style="margin-top:20px">O aplicativo Dandi (iOS e Android) é o lugar onde a marca mais
           aparece. Aqui está como cada elemento deste manual se traduz em tela. A equipe de produto parte daqui, não
@@ -6572,7 +6193,7 @@
   <section id="conexoes">
     <div class="maxw">
       <div class="head">
-        <span class="tag rv">23 · Possibilidades</span>
+        <span class="tag rv">24 · Possibilidades</span>
         <h2 class="st rv d1">Onde Dandi <span class="ac">pode ir</span></h2>
       </div>
       <div class="con-grid">
@@ -6610,21 +6231,7 @@
     </div>
   </section>
 
-  <section id="evitar">
-    <div class="maxw">
-      <div class="head" style="text-align:center">
-        <span class="tag rv">19 · O que evitar</span>
-        <h2 class="st rv d1">Dandi nunca <span class="ac">é</span></h2>
-      </div>
-      <div class="evitar-stack">
-        <div class="evitar-word rv d1" data-num="01">Arrogante.</div>
-        <div class="evitar-word rv d2" data-num="02">Inacessível.</div>
-        <div class="evitar-word rv d3" data-num="03">Fashionista demais.</div>
-      </div>
-      <div class="evitar-foot rv d4">Porque o produto é utilitário, social e acessível.</div>
-    </div>
-  </section>
-
+  
   <!-- PARTE 06 -->
   <section id="parte-arquivos" class="part-divider" aria-label="Parte 06: Arquivos">
     <div class="part-inner rv">
@@ -6676,6 +6283,7 @@
     <div class="cl-tag rv d2">Manual de Marca · 2026</div>
     <div class="cl-tagline rv d3">Estilo&nbsp;&nbsp;<em>Inteligente.</em></div>
     <div class="cl-copy rv d7">© 2026 Dandi · Todos os direitos reservados</div>
+    <div class="cl-credits rv d7">Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5 Agência</a></div>
   </section>
 
   <script>
@@ -6964,7 +6572,10 @@
         }
       });
     }, { threshold: 0.35 });
-    document.querySelectorAll('section').forEach(function (s) { so.observe(s); });
+    sdots.forEach(function (d) {
+      var s = document.getElementById(d.dataset.s);
+      if (s) so.observe(s);
+    });
     sdots.forEach(function (d) {
       d.addEventListener('click', function () {
         var t = document.getElementById(d.dataset.s);
