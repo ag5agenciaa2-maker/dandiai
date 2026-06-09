@@ -969,9 +969,9 @@
     .dna-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: rgba(232, 232, 234, .08);
-      border: 1px solid rgba(232, 232, 234, .08);
+      gap: 0;
+      background: transparent;
+      border: none;
       margin-top: 8px
     }
 
@@ -982,8 +982,13 @@
     }
 
     .dna-cell {
-      background: var(--grafite);
-      padding: 40px 36px
+      background: transparent;
+      padding: 44px 36px;
+      border-bottom: 1px solid rgba(232,232,234,.10)
+    }
+
+    .dna-cell:nth-child(odd) {
+      border-right: 1px solid rgba(232,232,234,.10)
     }
 
     .dna-cell-tag {
@@ -5844,7 +5849,7 @@
         <h2 class="st rv d1">Identidade <span class="ac">visual</span></h2>
       </div>
       <div class="logo-3">
-        <div class="lc rv d1" style="background:#0D0D0D"><img src="../assets/marca/logo-vertical-clara.svg" alt="Logo sobre preto">
+        <div class="lc rv d1" style="background:#0D0D0D;box-shadow:inset 0 0 0 1px rgba(200,185,155,.35)"><img src="../assets/marca/logo-vertical-clara.svg" alt="Logo sobre preto">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Principal</div>
