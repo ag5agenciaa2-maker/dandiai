@@ -1521,17 +1521,21 @@
       width: 65%
     }
 
+    .symb-caps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 8px
+    }
+
     .symb-piece-cap {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
       text-align: center;
       font-family: var(--sans);
-      font-size: 8.5px;
+      font-size: 9px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--silver-2)
+      color: var(--silver-2);
+      padding: 6px 0
     }
 
     /* ════ VERSÕES LOGO ════ */
@@ -5947,15 +5951,14 @@
             Da<strong>n</strong>di. A letra que liga começo e fim, escondida em plena vista.</p>
           <p class="bt" style="margin-top:14px">Marca registrável. Única. Silenciosa. Como o próprio dândi.</p>
           <div class="symb-pieces">
-            <div class="symb-piece"><img src="../assets/marca/icone-claro.svg" alt="D em off-white">
-              <div class="symb-piece-cap">Off-white</div>
-            </div>
-            <div class="symb-piece"><img src="../assets/marca/icone-prata.svg" alt="D em prata">
-              <div class="symb-piece-cap">Prata</div>
-            </div>
-            <div class="symb-piece" style="background:#F2F2F2"><img src="../assets/marca/icone-escuro.svg" alt="D em preto">
-              <div class="symb-piece-cap">Preto</div>
-            </div>
+            <div class="symb-piece"><img src="../assets/marca/icone-claro.svg" alt="D em off-white"></div>
+            <div class="symb-piece"><img src="../assets/marca/icone-prata.svg" alt="D em prata"></div>
+            <div class="symb-piece" style="background:#F2F2F2"><img src="../assets/marca/icone-escuro.svg" alt="D em preto"></div>
+          </div>
+          <div class="symb-caps">
+            <span class="symb-piece-cap">Off-white</span>
+            <span class="symb-piece-cap">Prata</span>
+            <span class="symb-piece-cap">Preto</span>
           </div>
           <p class="bt" style="margin-top:24px;font-size:12px">Margem mínima: <strong>50% da altura</strong> do símbolo.
             Mínimo digital: <strong>24px</strong> · impressão: <strong>10mm</strong>.</p>

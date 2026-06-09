@@ -1537,10 +1537,17 @@
     }
 
     .symb-piece-cap {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
+      display: none
+    }
+
+    .symb-piece-labels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 10px;
+      gap: 1px
+    }
+
+    .symb-piece-labels span {
       text-align: center;
       font-family: var(--sans);
       font-size: 8.5px;
@@ -5583,7 +5590,6 @@
       <span class="part-num">Parte 02</span>
       <h2 class="part-title">Logotipo</h2>
       <span class="part-sub">símbolo · versões · horizontal · respiro · usos indevidos · acabamentos · iconografia</span>
-      <img src="assets/marca/logo-vertical-clara.svg" alt="Logo vertical Dandi" class="part-logo-inline">
     </div>
   </section>
 
@@ -5626,15 +5632,14 @@
             Da<strong>n</strong>di. A letra que liga começo e fim, escondida em plena vista.</p>
           <p class="bt" style="margin-top:14px">Marca registrável. Única. Silenciosa. Como o próprio dândi.</p>
           <div class="symb-pieces">
-            <div class="symb-piece"><img src="assets/marca/icone-claro.svg" alt="D em off-white">
-              <div class="symb-piece-cap">Off-white</div>
-            </div>
-            <div class="symb-piece"><img src="assets/marca/icone-prata.svg" alt="D em prata">
-              <div class="symb-piece-cap">Prata</div>
-            </div>
-            <div class="symb-piece" style="background:#F2F2F2"><img src="assets/marca/icone-escuro.svg" alt="D em preto">
-              <div class="symb-piece-cap">Preto</div>
-            </div>
+            <div class="symb-piece"><img src="assets/marca/icone-claro.svg" alt="D em off-white"></div>
+            <div class="symb-piece"><img src="assets/marca/icone-prata.svg" alt="D em prata"></div>
+            <div class="symb-piece" style="background:#F2F2F2"><img src="assets/marca/icone-escuro.svg" alt="D em preto"></div>
+          </div>
+          <div class="symb-piece-labels">
+            <span>Off-white</span>
+            <span>Prata</span>
+            <span>Preto</span>
           </div>
           <p class="bt" style="margin-top:24px;font-size:12px">Margem mínima de respiro: <strong>50% da altura</strong> do símbolo.
             Redução mínima em telas: a partir de <strong>24px</strong> para interfaces e <strong>16px</strong> para favicons.</p>
