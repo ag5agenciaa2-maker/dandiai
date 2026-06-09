@@ -47,7 +47,7 @@
       --silver-3: #5A5A5C;
       --erro: #4A1A1A;
       --sucesso: #1F2F1F;
-      --alerta: #3A3510;
+      --alerta: #5C4400;
       --prata-grad: linear-gradient(180deg, rgb(194, 193, 196) 0%, rgb(115, 115, 119) 40%, rgb(134, 134, 138) 62%, rgb(208, 208, 211) 82%, rgb(252, 252, 253) 92%, rgb(232, 232, 234) 100%);
       --display: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       --sans: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5235,6 +5235,48 @@
       display: inline
     }
 
+    /* ════ LIGHTBOX ════ */
+    .lb-trigger {
+      cursor: zoom-in
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,.92);
+      align-items: center;
+      justify-content: center;
+      padding: 24px
+    }
+
+    #lightbox.open {
+      display: flex
+    }
+
+    #lightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border: 1px solid rgba(232,232,234,.10)
+    }
+
+    #lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px
+    }
+
     @media(max-width:768px) {
       .cl-tagline {
         font-size: clamp(22px, 8vw, 36px);
@@ -5247,6 +5289,11 @@
         letter-spacing: 3px;
         margin-top: 4px;
         color: var(--silver-2)
+      }
+      .cl-copy {
+        font-size: 7px;
+        letter-spacing: 2px;
+        margin-top: 40px
       }
       #closing {
         padding: 80px 24px;
@@ -6939,7 +6986,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px" class="rv d1">
         <div>
           <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
+            <img class="lb-trigger" src="../assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
           </div>
           <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
             <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Kit Presentes & Embalagem</span>
@@ -6948,7 +6995,7 @@
         </div>
         <div>
           <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
+            <img class="lb-trigger" src="../assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
           </div>
           <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
             <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Campanhas & Outdoors</span>
@@ -6969,7 +7016,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px" class="rv">
         <div>
           <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
+            <img class="lb-trigger" src="../assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
           </div>
           <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
             <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Fachadas & Eventos</span>
@@ -6978,7 +7025,7 @@
         </div>
         <div>
           <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
+            <img class="lb-trigger" src="../assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
           </div>
           <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
             <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Mídia Urbana</span>
@@ -7501,6 +7548,25 @@
         heroMarble.style.transform = 'scale(1.05) translate(' + x + 'px,' + y + 'px)';
       });
     }
+  </script>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button id="lightbox-close" aria-label="Fechar">Fechar ×</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    (function(){
+      var lb=document.getElementById('lightbox'),img=document.getElementById('lightbox-img');
+      document.querySelectorAll('.lb-trigger').forEach(function(el){
+        el.addEventListener('click',function(){
+          img.src=el.src; img.alt=el.alt; lb.classList.add('open');
+        });
+      });
+      document.getElementById('lightbox-close').addEventListener('click',function(){lb.classList.remove('open');img.src='';});
+      lb.addEventListener('click',function(e){if(e.target===lb){lb.classList.remove('open');img.src='';}});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.classList.remove('open');img.src='';}});
+    })();
   </script>
 </body>
 

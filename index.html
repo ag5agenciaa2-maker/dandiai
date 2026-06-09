@@ -47,7 +47,7 @@
       --silver-3: #8A8A8C;
       --erro: #4A1A1A;
       --sucesso: #1F2F1F;
-      --alerta: #4A3A08;
+      --alerta: #5C4400;
       --prata-grad: linear-gradient(180deg, rgb(194, 193, 196) 0%, rgb(115, 115, 119) 40%, rgb(134, 134, 138) 62%, rgb(208, 208, 211) 82%, rgb(252, 252, 253) 92%, rgb(232, 232, 234) 100%);
       --display: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       --sans: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3155,7 +3155,8 @@
       position: relative;
       overflow: hidden;
       border: 1px solid rgba(232, 232, 234, .06);
-      background: #0d0d0d
+      background: #0d0d0d;
+      cursor: zoom-in
     }
 
     .ap-img-wrap img {
@@ -3168,6 +3169,43 @@
 
     .ap-img-wrap:hover img {
       transform: scale(1.04)
+    }
+
+    /* Lightbox */
+    #ap-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,.92);
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+      padding: 24px
+    }
+    #ap-lightbox.open {
+      display: flex
+    }
+    #ap-lightbox img {
+      max-width: 92vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border: 1px solid rgba(232,232,234,.1);
+      box-shadow: 0 40px 120px rgba(0,0,0,.8)
+    }
+    #ap-lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--silver-2);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px
     }
 
     .ap-img-caption {
@@ -3784,6 +3822,13 @@
       line-height: 1.8
     }
 
+
+    /* ════ LIGHTBOX ════ */
+    .lb-trigger { cursor: zoom-in }
+    #lightbox { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.92); align-items:center; justify-content:center; padding:24px }
+    #lightbox.open { display:flex }
+    #lightbox img { max-width:92vw; max-height:88vh; object-fit:contain; border:1px solid rgba(232,232,234,.10) }
+    #lightbox-close { position:absolute; top:20px; right:24px; font-family:var(--sans); font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--silver-2); cursor:pointer; background:none; border:none; padding:8px }
     /* ════ CLOSING ════ */
     #closing {
       min-height: 80vh;
@@ -3991,6 +4036,15 @@
         font-size: 8px;
         letter-spacing: 3px;
         color: var(--silver-2)
+      }
+      .cl-copy {
+        font-size: 7px;
+        letter-spacing: 2px;
+        margin-top: 40px
+      }
+      .cl-credits {
+        font-size: 7px;
+        letter-spacing: 1.5px
       }
     }
 
@@ -7293,6 +7347,54 @@
         heroMarble.style.transform = 'scale(1.05) translate(' + x + 'px,' + y + 'px)';
       });
     }
+  </script>
+
+  <!-- Lightbox imagens marca aplicada -->
+  <div id="ap-lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button id="ap-lightbox-close" aria-label="Fechar">Fechar</button>
+    <img id="ap-lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    (function(){
+      var lb = document.getElementById('ap-lightbox');
+      var lbImg = document.getElementById('ap-lightbox-img');
+      document.querySelectorAll('.ap-img-wrap img').forEach(function(img){
+        img.parentElement.addEventListener('click', function(){
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      function closeLb(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      lb.addEventListener('click', function(e){
+        if(e.target === lb || e.target.id === 'ap-lightbox-close') closeLb();
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') closeLb();
+      });
+    })();
+  </script>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button id="lightbox-close" aria-label="Fechar">Fechar ×</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    (function(){
+      var lb=document.getElementById('lightbox'),img=document.getElementById('lightbox-img');
+      document.querySelectorAll('.lb-trigger').forEach(function(el){
+        el.addEventListener('click',function(){ img.src=el.src; img.alt=el.alt; lb.classList.add('open'); });
+      });
+      document.getElementById('lightbox-close').addEventListener('click',function(){lb.classList.remove('open');img.src='';});
+      lb.addEventListener('click',function(e){if(e.target===lb){lb.classList.remove('open');img.src='';}});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.classList.remove('open');img.src='';}});
+    })();
   </script>
 </body>
 
