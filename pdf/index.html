@@ -5197,10 +5197,21 @@
     /* ==========================================================================
        REGRAS DE IMPRESSÃO (PDF AUTO-PAGINADO SEM CHAT/PRELOADER)
        ========================================================================== */
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
     @media print {
-      /* Oculta UI inútil na impressão */
-      #prog, #sidenav, #audio-toggle {
+      /* UI de tela: some sem rastro */
+      #prog, #sidenav, #audio-toggle,
+      .sec-divider {
         display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
       }
 
       body {
@@ -5208,36 +5219,77 @@
         color: #EDEAE4 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
-      /* Força início em nova página para todas as seções e altura de tela */
+      /* 1 seção = 1 página A4 landscape */
       section {
-        page-break-before: always !important;
-        break-before: page !important;
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
+        width: 297mm !important;
+        height: 210mm !important;
+        min-height: unset !important;
+        max-height: 210mm !important;
         overflow: hidden !important;
         box-sizing: border-box !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
-        padding: 4vh 8vw !important;
+        padding: 14mm 20mm !important;
         margin: 0 !important;
+        page-break-before: always !important;
+        break-before: page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
       }
 
-      /* Garante visibilidade imediata de elementos animados pelo scroll reveal */
-      body.js .rv, 
-      body.js .rvl, 
-      body.js .rvr, 
-      body.js .rvs,
-      .rv, .rvl, .rvr, .rvs,
-      .mf-quote .line {
+      /* Primeira seção: sem quebra antes (evita página em branco) */
+      section:first-of-type {
+        page-break-before: avoid !important;
+        break-before: avoid !important;
+      }
+
+      /* Todos os elementos de reveal: visíveis imediatamente */
+      body.js .rv, body.js .rvl, body.js .rvr, body.js .rvs,
+      .rv, .rvl, .rvr, .rvs, .mf-quote .line {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
+      }
+
+      /* Seções com background-image: força renderização */
+      .logo-marble,
+      .logo-marble-overlay,
+      [style*="background:url"],
+      [style*="background: url"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      /* logo-marble: corrige layout dos filhos absolutos no print */
+      .logo-marble {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: none !important;
+      }
+
+      .logo-marble-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .logo-marble-inner {
+        position: relative !important;
+        z-index: 2 !important;
+      }
+
+      .logo-marble-eyebrow {
+        position: static !important;
+        transform: none !important;
+        margin-bottom: 24px !important;
       }
     }
 </style>
