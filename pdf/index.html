@@ -3700,9 +3700,8 @@
       text-align: center;
       border-top: 1px solid rgba(232, 232, 234, .07);
       border-bottom: 1px solid rgba(232, 232, 234, .07);
-      background:
-        radial-gradient(ellipse at 50% 40%, rgba(232, 232, 234, .05), transparent 60%),
-        var(--preto)
+      background: var(--preto);
+      overflow: hidden
     }
 
     .part-divider-half {
@@ -3770,11 +3769,7 @@
     }
 
     #closing::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(232, 232, 234, .05), transparent);
-      pointer-events: none
+      display: none
     }
 
     .arq-formats {
@@ -5233,6 +5228,22 @@
     @page {
       size: A4 landscape;
       margin: 0;
+    }
+
+    @media(max-width:768px) {
+      .cl-tagline {
+        font-size: clamp(22px, 8vw, 36px);
+        letter-spacing: 2px;
+        word-break: break-word
+      }
+      #closing {
+        padding: 80px 24px;
+        overflow: hidden
+      }
+      .part-title {
+        font-size: clamp(36px, 14vw, 72px);
+        letter-spacing: 2px
+      }
     }
 
     @media print {

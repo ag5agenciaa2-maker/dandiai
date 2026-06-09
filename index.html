@@ -64,7 +64,8 @@
     }
 
     html {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      overflow-x: hidden
     }
 
     body {
@@ -427,12 +428,7 @@
     }
 
     #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(232, 232, 234, .05), transparent);
-      pointer-events: none;
-      z-index: 0
+      display: none
     }
 
     #hero > * {
@@ -468,12 +464,7 @@
     }
 
     .hero-marble {
-      position: absolute;
-      inset: -2%;
-      background: radial-gradient(circle at 30% 30%, rgba(232,232,234,.10), transparent 60%);
-      opacity: .5;
-      filter: blur(2px);
-      animation: drift 30s ease-in-out infinite alternate
+      display: none
     }
 
     @keyframes drift {
@@ -3617,9 +3608,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background:
-        radial-gradient(ellipse at 50% 36%, rgba(232, 232, 234, .05), transparent 60%),
-        var(--preto);
+      background: var(--preto);
       border-top: 1px solid rgba(232, 232, 234, .07);
       border-bottom: 1px solid rgba(232, 232, 234, .07);
       overflow: hidden
