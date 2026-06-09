@@ -47,7 +47,7 @@
       --silver-3: #8A8A8C;
       --erro: #4A1A1A;
       --sucesso: #1F2F1F;
-      --alerta: #3A3510;
+      --alerta: #4A3A08;
       --prata-grad: linear-gradient(180deg, rgb(194, 193, 196) 0%, rgb(115, 115, 119) 40%, rgb(134, 134, 138) 62%, rgb(208, 208, 211) 82%, rgb(252, 252, 253) 92%, rgb(232, 232, 234) 100%);
       --display: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       --sans: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1408,6 +1408,25 @@
       .symb-grid {
         grid-template-columns: 1fr;
         gap: 48px
+      }
+    }
+
+    @media(max-width:768px) {
+      .symb-grid {
+        gap: 32px
+      }
+      .symb-grid .rvl {
+        order: 1
+      }
+      .symb-grid .rvr {
+        order: 2
+      }
+      .symb-pieces {
+        margin-top: 24px
+      }
+      .symb-piece-cap {
+        font-size: 9px;
+        letter-spacing: 1.5px
       }
     }
 
@@ -3603,7 +3622,7 @@
     /* ════ STATEMENT MÁRMORE ════ */
     .marmore-stmt {
       position: relative;
-      min-height: 66vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -3665,6 +3684,39 @@
       display: block;
       margin-left: auto;
       margin-right: auto
+    }
+
+    @media(max-width:768px) {
+      .marmore-stmt {
+        padding: 80px 6vw;
+        justify-content: flex-start;
+        flex-direction: column
+      }
+      .marmore-content {
+        width: 100%
+      }
+      .marmore-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 16px;
+        margin-top: 36px
+      }
+    }
+
+    /* Logo inline na Parte 02 mobile */
+    .part-logo-inline {
+      display: none
+    }
+
+    @media(max-width:768px) {
+      #logo-vertical-feature {
+        display: none
+      }
+      .part-logo-inline {
+        display: block;
+        width: min(180px, 52vw);
+        margin: 36px auto 0
+      }
     }
 
     /* ════ DIVISORES DE PARTE ════ */
@@ -5477,6 +5529,7 @@
       <span class="part-num">Parte 02</span>
       <h2 class="part-title">Logotipo</h2>
       <span class="part-sub">símbolo · versões · horizontal · respiro · usos indevidos · acabamentos · iconografia</span>
+      <img src="assets/marca/logo-vertical-clara.svg" alt="Logo vertical Dandi" class="part-logo-inline">
     </div>
   </section>
 
