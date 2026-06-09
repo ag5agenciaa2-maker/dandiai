@@ -873,8 +873,7 @@
     }
 
     .mf-bg {
-      position: absolute;
-      inset: 0;
+      display: none;
       background: radial-gradient(circle at 30% 40%, rgba(154, 154, 156, .05), transparent 50%),
         radial-gradient(circle at 70% 60%, rgba(154, 154, 156, .05), transparent 50%);
       pointer-events: none
@@ -1022,13 +1021,14 @@
     }
 
     .dna-value {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 2px;
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 14px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--silver-1);
+      color: var(--offwhite);
       border: 1px solid rgba(232, 232, 234, .14);
-      padding: 7px 14px
+      padding: 9px 18px
     }
 
     /* ════ PÚBLICO ════ */
@@ -3346,7 +3346,7 @@
       margin-top: 32px;
       border: 1px solid rgba(232, 232, 234, .08);
       overflow: hidden;
-      background: radial-gradient(circle, rgba(232, 232, 234, .05), transparent 70%)
+      background: transparent
     }
 
     .brand-banner img {
@@ -3669,20 +3669,20 @@
 
     /* ════ DIVISORES DE PARTE ════ */
     .part-divider {
-      min-height: 64vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       border-top: 1px solid rgba(232, 232, 234, .07);
       border-bottom: 1px solid rgba(232, 232, 234, .07);
-      background:
-        radial-gradient(ellipse at 50% 40%, rgba(232, 232, 234, .05), transparent 60%),
-        var(--preto)
+      background: var(--preto);
+      overflow: hidden;
+      box-sizing: border-box
     }
 
     .part-divider-half {
-      min-height: 52vh;
+      min-height: 100vh;
       border-bottom: none
     }
 
@@ -3746,11 +3746,7 @@
     }
 
     #closing::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(232, 232, 234, .05), transparent);
-      pointer-events: none
+      display: none
     }
 
     .arq-formats {
@@ -3917,6 +3913,33 @@
 
     .cl-credits a:hover {
       color: var(--offwhite)
+    }
+
+    .cl-version {
+      display: inline
+    }
+
+    @media(max-width:768px) {
+      .cl-tagline {
+        font-size: clamp(22px, 8vw, 36px);
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px
+      }
+      .cl-tag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px
+      }
+      .cl-version {
+        display: block;
+        font-size: 8px;
+        letter-spacing: 3px;
+        color: var(--silver-2)
+      }
     }
 
     body.loading {
@@ -6905,8 +6928,8 @@
   <section id="closing">
     <img src="assets/marca/logo-vertical-clara.svg" alt="Logo Dandi" class="cl-logo rv">
     <div class="cl-rule rv d1"></div>
-    <div class="cl-tag rv d2">Manual de Marca · v1.0 · 2026</div>
-    <div class="cl-tagline rv d3">Estilo&nbsp;&nbsp;<em>Inteligente.</em></div>
+    <div class="cl-tag rv d2">Manual de Marca · 2026<span class="cl-version"> · v1.0</span></div>
+    <div class="cl-tagline rv d3">Estilo <em>Inteligente.</em></div>
     <div class="cl-copy rv d7">© 2026 Dandi · Todos os direitos reservados</div>
     <div class="cl-credits rv d7">Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5 Agência</a></div>
   </section>

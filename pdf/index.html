@@ -1025,13 +1025,14 @@
     }
 
     .dna-value {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 2px;
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: 15px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--silver-1);
+      color: var(--offwhite);
       border: 1px solid rgba(232, 232, 234, .14);
-      padding: 7px 14px
+      padding: 9px 18px
     }
 
     /* ════ PÚBLICO ════ */
@@ -5230,11 +5231,22 @@
       margin: 0;
     }
 
+    .cl-version {
+      display: inline
+    }
+
     @media(max-width:768px) {
       .cl-tagline {
         font-size: clamp(22px, 8vw, 36px);
         letter-spacing: 2px;
-        word-break: break-word
+        word-spacing: 100vw
+      }
+      .cl-version {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-top: 4px;
+        color: var(--silver-2)
       }
       #closing {
         padding: 80px 24px;
@@ -7342,7 +7354,7 @@
   <section id="closing">
     <img src="../assets/marca/logo-vertical-clara.svg" alt="Logo Dandi" class="cl-logo rv">
     <div class="cl-rule rv d1"></div>
-    <div class="cl-tag rv d2">Manual de Marca · 2026</div>
+    <div class="cl-tag rv d2">Manual de Marca · 2026<span class="cl-version"> · v1.0</span></div>
     <div class="cl-tagline rv d3">Estilo&nbsp;&nbsp;<em>Inteligente.</em></div>
     <div class="cl-copy rv d7">© 2026 Dandi · Todos os direitos reservados</div>
     <div class="cl-credits rv d7">Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5 Agência</a></div>
