@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dandi · Manual de Marca · Versão para Impressão</title>
-  <link rel="icon" type="image/png" href="../assets/marca/favicon-32.png">
+  <title>Dandi · Manual de Marca · 2026</title>
+  <link rel="icon" type="image/png" href="assets/marca/favicon-32.png">
 
   <!-- Meta Tags de Compartilhamento (SEO & Social Media) -->
   <link rel="canonical" href="https://manual-marca-dandi.ag5agencia.site/">
   <meta property="og:title" content="Dandi - Manual de Marca · 2026">
   <meta property="og:description"
     content="Estilo Inteligente. O guia oficial de identidade visual, tipografia e tom de voz da marca Dandi.">
-  <meta property="og:image" content="https://manual-marca-dandi.ag5agencia.site/../assets/marca/og-card.png">
+  <meta property="og:image" content="https://manual-marca-dandi.ag5agencia.site/assets/marca/og-card.png">
   <meta property="og:url" content="https://manual-marca-dandi.ag5agencia.site/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Dandi - Manual de Marca · 2026">
   <meta name="twitter:description"
     content="Estilo Inteligente. O guia oficial de identidade visual, tipografia e tom de voz da marca Dandi.">
-  <meta name="twitter:image" content="https://manual-marca-dandi.ag5agencia.site/../assets/marca/og-card.png">
+  <meta name="twitter:image" content="https://manual-marca-dandi.ag5agencia.site/assets/marca/og-card.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -399,18 +399,13 @@
     }
 
     section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 100px 8vw;
+      padding: 120px 8vw;
       position: relative
     }
 
     .maxw {
       max-width: 1280px;
-      margin: 0 auto;
-      width: 100%
+      margin: 0 auto
     }
 
     .head {
@@ -424,61 +419,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: relative;
       text-align: center;
-      background: #0D0D0D;
+      background: #000000;
       padding: 80px 40px;
       overflow: hidden
-    }
-
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(232, 232, 234, .05), transparent);
-      pointer-events: none;
-      z-index: 0
-    }
-
-    #hero > * {
-      position: relative;
-      z-index: 1
-    }
-
-    .sec-divider {
-      position: relative;
-      height: 72px;
-      background: linear-gradient(180deg, var(--from, #0D0D0D), var(--to, #0D0D0D));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: visible
-    }
-
-    .sec-divider::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      width: 1px;
-      height: 100%;
-      background: linear-gradient(180deg,
-        transparent 0%,
-        rgba(232,232,234,.12) 30%,
-        rgba(232,232,234,.30) 50%,
-        rgba(232,232,234,.12) 70%,
-        transparent 100%)
-    }
-
-    .sec-divider-gem {
-      position: relative;
-      z-index: 2;
-      width: 5px;
-      height: 5px;
-      background: rgba(232,232,234,.45);
-      transform: rotate(45deg);
-      box-shadow: 0 0 8px rgba(232,232,234,.18)
     }
 
     .hero-marble {
@@ -524,7 +468,24 @@
       filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .6))
     }
 
+    body.loaded .hero-eyebrow {
+      opacity: 0;
+      animation: fadeIn 1.4s var(--ease) .4s both
+    }
 
+    body.loaded .hero-line {
+      height: 0;
+      animation: vgrow 1.6s var(--ease) .8s both
+    }
+
+    body.loaded .hero-logo {
+      animation: logoIn 1.5s var(--ease) 1.1s both
+    }
+
+    body.loaded .hero-tagline {
+      opacity: 0;
+      animation: fadeIn 1.4s var(--ease) 1.8s both
+    }
 
     @keyframes vgrow {
       to {
@@ -581,7 +542,10 @@
       align-items: center
     }
 
-
+    body.loaded .scroll-cue {
+      opacity: 0;
+      animation: bob 3s ease 2.4s infinite both
+    }
 
     .scroll-cue::after {
       content: '';
@@ -607,8 +571,7 @@
 
     /* ════ ÍNDICE ════ */
     #indice {
-      background: var(--preto);
-      padding-top: 60px
+      background: var(--preto)
     }
 
     .idx-grid {
@@ -679,7 +642,7 @@
 
     /* ════ HISTÓRIA ════ */
     #historia {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .hist-grid {
@@ -867,7 +830,7 @@
     /* ════ MANIFESTO ════ */
     #manifesto {
       background: var(--preto);
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -963,7 +926,7 @@
 
     /* ════ DNA ════ */
     #dna {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .dna-grid {
@@ -1142,7 +1105,7 @@
 
     /* ════ NOME E SLOGAN ════ */
     #slogan {
-      background: #0D0D0D;
+      background: var(--grafite);
       text-align: center
     }
 
@@ -1297,7 +1260,7 @@
 
     /* ════ PERSONALIDADE ════ */
     #personalidade {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .pers-grid {
@@ -1530,7 +1493,7 @@
 
     /* ════ VERSÕES LOGO ════ */
     #identidade {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .logo-3 {
@@ -1616,7 +1579,7 @@
 
     /* ════ HORIZONTAL ════ */
     #horizontal {
-      background: #0D0D0D
+      background: var(--marmore-d)
     }
 
     .horiz-img-wrap {
@@ -1763,9 +1726,9 @@
     .prot-note {
       margin-top: 20px;
       font-family: var(--sans);
-      font-size: 12.5px;
-      line-height: 1.6;
-      color: rgba(232, 232, 234, .65)
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: rgba(232, 232, 234, .72)
     }
 
     .prot-note strong {
@@ -1775,7 +1738,7 @@
 
     /* ════ USOS INDEVIDOS ════ */
     #usos-indevidos {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .dont-grid {
@@ -2467,7 +2430,7 @@
 
     /* ════ TIPOGRAFIA ════ */
     #tipografia {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .typo-specimen {
@@ -2809,7 +2772,7 @@
 
     /* ════ VOCABULÁRIO ════ */
     #vocabulario {
-      background: #0D0D0D
+      background: var(--grafite)
     }
 
     .voc-grid {
@@ -3054,12 +3017,12 @@
 
     /* ════ O QUE EVITAR ════ */
     #evitar {
-      background: #0D0D0D;
+      background: var(--marmore-d);
       text-align: center
     }
 
     .evitar-stack {
-      width: 100%;
+      max-width: 1000px;
       margin: 0 auto
     }
 
@@ -3072,10 +3035,7 @@
       color: rgba(255, 255, 255, .2);
       padding: 20px 0;
       border-bottom: 1px solid rgba(232, 232, 234, .06);
-      position: relative;
-      text-decoration: line-through;
-      text-decoration-color: #8B3A3A;
-      text-decoration-thickness: 3px
+      position: relative
     }
 
     .evitar-word:last-child {
@@ -3085,9 +3045,9 @@
     .evitar-word::before {
       content: attr(data-num);
       position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       font-family: var(--mono);
       font-size: 11px;
       color: var(--silver-3);
@@ -3119,35 +3079,22 @@
 
     .ap-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 32px
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px
     }
 
-    @media(max-width:900px) {
-      .ap-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-    }
-
-    @media(max-width:480px) {
-      .ap-grid {
-        grid-template-columns: 1fr
-      }
+    .ap-grid-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
     }
 
     .ap-img-wrap {
       position: relative;
       overflow: hidden;
       border: 1px solid rgba(232, 232, 234, .06);
-      background: #0d0d0d;
-      height: 250px
-    }
-
-    @media(max-height: 768px) {
-      .ap-img-wrap {
-        height: 28vh
-      }
+      background: #0d0d0d
     }
 
     .ap-img-wrap img {
@@ -3160,22 +3107,6 @@
 
     .ap-img-wrap:hover img {
       transform: scale(1.04)
-    }
-
-    .ap-digital-img-wrap {
-      max-width: 900px;
-      margin: 32px auto 0;
-      display: flex;
-      justify-content: center;
-      align-items: center
-    }
-
-    .ap-digital-img {
-      max-height: 52vh;
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
-      border: 1px solid rgba(232, 232, 234, .08)
     }
 
     .ap-img-caption {
@@ -3575,7 +3506,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url('../assets/marca/fundo-marmore.webp') center/cover no-repeat;
+      background: url('assets/marca/fundo-marmore.webp') center/cover no-repeat;
       border-top: 1px solid rgba(232, 232, 234, .07);
       border-bottom: 1px solid rgba(232, 232, 234, .07);
       overflow: hidden
@@ -3594,20 +3525,31 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+      width: 100%;
+      min-height: 100vh;
       justify-content: center;
-      text-align: center
+    }
+
+    #marca-marmore .part-num {
+      position: absolute;
+      top: 80px;
+      margin-bottom: 0;
+    }
+
+    #marca-marmore .part-title {
+      position: absolute;
+      top: 110px;
+      font-size: clamp(24px, 5vw, 40px);
     }
 
     .logo-marble-eyebrow {
-      position: absolute;
-      top: 18vh;
-      left: 50%;
-      transform: translateX(-50%);
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 5px;
       text-transform: uppercase;
       color: var(--silver-2);
+      margin-bottom: 80px;
       opacity: .85
     }
 
@@ -3619,14 +3561,17 @@
     /* ════ STATEMENT MÁRMORE ════ */
     .marmore-stmt {
       position: relative;
-      min-height: 100vh;
+      min-height: 66vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: #0D0D0D;
-      overflow: hidden;
-      padding: 60px 40px;
+      background:
+        radial-gradient(ellipse at 50% 36%, rgba(232, 232, 234, .05), transparent 60%),
+        var(--preto);
+      border-top: 1px solid rgba(232, 232, 234, .07);
+      border-bottom: 1px solid rgba(232, 232, 234, .07);
+      overflow: hidden
     }
 
     .marmore-content {
@@ -3643,13 +3588,13 @@
       letter-spacing: 5px;
       text-transform: uppercase;
       color: var(--silver-1);
-      margin-bottom: 20px
+      margin-bottom: 28px
     }
 
     .marmore-line {
       font-family: var(--display);
       font-weight: 200;
-      font-size: clamp(22px, 3.8vw, 44px);
+      font-size: clamp(26px, 4.3vw, 52px);
       letter-spacing: .5px;
       line-height: 1.22;
       color: var(--offwhite)
@@ -3661,9 +3606,9 @@
     }
 
     .marmore-sub {
-      margin-top: 10px;
+      margin-top: 14px;
       font-family: var(--sans);
-      font-size: clamp(10px, 1vw, 12px);
+      font-size: clamp(11px, 1.1vw, 13px);
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--silver-1);
@@ -3671,11 +3616,9 @@
     }
 
     .marmore-img {
-      margin-top: 24px;
-      max-height: 42vh;
-      max-width: 100%;
-      width: auto;
-      object-fit: contain;
+      margin-top: 48px;
+      max-width: 720px;
+      width: 90%;
       border: 1px solid rgba(232, 232, 234, .1);
       border-radius: 24px;
       box-shadow: 0 40px 100px rgba(0, 0, 0, .7);
@@ -3686,7 +3629,7 @@
 
     /* ════ DIVISORES DE PARTE ════ */
     .part-divider {
-      min-height: 100vh;
+      min-height: 64vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -3699,12 +3642,12 @@
     }
 
     .part-divider-half {
-      min-height: 100vh;
+      min-height: 52vh;
       border-bottom: none
     }
 
     .logo-feature {
-      min-height: 100vh;
+      min-height: 56vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -3751,7 +3694,7 @@
 
     /* ════ CLOSING ════ */
     #closing {
-      min-height: 100vh;
+      min-height: 80vh;
       background: var(--preto);
       display: flex;
       flex-direction: column;
@@ -4382,7 +4325,8 @@
     /* Opções Interativas de Clique */
     .pl-chat-options {
       display: flex;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px 12px;
       justify-content: center;
       opacity: 0;
       transform: translateY(10px);
@@ -4737,460 +4681,77 @@
     }
 
 
+    /* Efeito de abertura no Hero */
+    body:not(.loaded) #hero {
+      opacity: 0;
+      transform: scale(1.06);
+      filter: blur(4px);
+    }
 
+    #hero {
+      transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), filter 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body.loaded #hero {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
 
     /* ==========================================================================
-       REGRAS DE IMPRESSÃO (PDF AUTO-PAGINADO SEM CHAT/PRELOADER)
+       AJUSTES DE RESPONSIVIDADE MOBILE (UX/UI PREMIUM)
        ========================================================================== */
-        /* ══ AJUSTE ULTRA-PREMIUM PARA PDF E APRESENTAÇÃO EM TELA CHEIA (100VH) ══ */
-    @media (min-width: 1025px) {
-      html, body {
-        height: 100% !important;
-        overflow-y: auto !important;
-      }
-      
+    @media (max-width: 768px) {
       section {
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
-        position: relative !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        padding: 4vh 8vw !important;
-        margin: 0 !important;
-      }
-
-      /* Ajusta o sumário */
-      #indice {
-        justify-content: center !important;
-      }
-      #indice .maxw {
-        width: 100% !important;
-      }
-
-      /* Seção Marca / Mármore */
-      .logo-marble, .logo-marble-inner {
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
-      }
-      #marca-marmore .part-num {
-        top: 6vh !important;
-      }
-      #marca-marmore .part-title {
-        top: 10vh !important;
-      }
-
-      /* Redução geral de margens de títulos para evitar transbordo */
-      .head {
-        margin-bottom: 2.5vh !important;
-      }
-      .tag {
-        margin-bottom: 1.5vh !important;
-      }
-      .st {
-        font-size: clamp(20px, 2.5vw, 32px) !important;
-      }
-      .bt {
-        max-width: 600px !important;
-        font-size: 13px !important;
-      }
-
-      /* Seções de Divisores de Partes */
-      .part-divider, .part-divider-half, .logo-feature {
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
-      }
-
-      /* Redução proporcional de gaps e elementos */
-      #historia .hist-grid {
-        gap: 4vw !important;
-      }
-      #historia .timeline {
-        margin-top: 3vh !important;
-        padding-top: 2vh !important;
-      }
-      #historia .timeline::before {
-        top: 4vh !important;
-      }
-
-      #dna .dna-grid {
-        gap: 1.5vw !important;
-      }
-      #dna .dna-cell {
-        padding: 2.5vh 2vw !important;
-      }
-
-      #posicionamento .pos-grid {
-        display: grid !important;
-        grid-template-columns: 1.1fr 1fr !important;
-        gap: 4vw !important;
-        align-items: center !important;
-      }
-      #posicionamento .pos-map {
-        transform: scale(0.85) !important;
-        transform-origin: center !important;
-        margin: 0 auto !important;
-      }
-
-      #publico .pub-grid {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 4vw !important;
-        align-items: center !important;
-      }
-      #publico .pub-persona {
-        padding: 3vh 2.5vw !important;
-      }
-
-      #personalidade .pers-grid {
-        gap: 2vw !important;
-      }
-      #personalidade .pers-card {
-        padding: 3vh 2vw !important;
-      }
-
-      #evitar .evitar-stack {
-        margin: 2vh 0 !important;
-      }
-      #evitar .evitar-word {
-        font-size: clamp(32px, 5vw, 64px) !important;
-        line-height: 1.1 !important;
-      }
-
-      #manifesto .mf-wrap {
-        padding: 4vh 4vw !important;
-      }
-      #manifesto .mf-quote {
-        font-size: clamp(36px, 6vw, 72px) !important;
-        line-height: 1.1 !important;
-        margin: 2vh 0 !important;
-      }
-
-      #marmore {
-        justify-content: flex-start !important;
-        padding-top: 6vh !important;
-      }
-      #marmore .marmore-content {
-        padding: 0 !important;
-        max-width: 1000px !important;
-      }
-      #marmore .marmore-img {
-        max-height: 52vh !important;
-        width: auto !important;
-        margin-top: 2vh !important;
-      }
-
-      #slogan .slogan-wrap {
-        padding: 4vh 0 !important;
-      }
-      #slogan .slogan-line {
-        font-size: clamp(32px, 5vw, 64px) !important;
-        line-height: 1.1 !important;
-      }
-
-      #redes-sociais .maxw {
-        display: flex !important;
-        flex-direction: column !important;
-        height: 100% !important;
-        justify-content: center !important;
-      }
-      #redes-sociais .mock-grid {
-        gap: 2vh !important;
-      }
-      #redes-sociais .mock-card {
-        height: 45vh !important;
-      }
-
-      #simbolo .symb-stage {
-        height: 35vh !important;
-      }
-      #simbolo .symb-grid-preview {
-        height: 35vh !important;
-      }
-
-      /* Geometria do símbolo */
-      #simbolo-geometria .build-stage {
-        height: 42vh !important;
-        width: 42vh !important;
-        margin: 0 auto !important;
-      }
-      #simbolo-geometria .build-wrap {
-        display: grid !important;
-        grid-template-columns: 1fr 1.1fr !important;
-        gap: 4vw !important;
-        align-items: center !important;
-      }
-
-      #identidade .lc-grid {
-        gap: 2vh !important;
-      }
-      #identidade .lc {
-        height: 38vh !important;
-      }
-
-      #horizontal .horiz-stage {
-        height: 40vh !important;
-      }
-
-      /* Área de proteção */
-      #protecao .prot-grid-areas {
-        display: grid !important;
-        grid-template-columns: 1.1fr 1.9fr !important;
-        gap: 2.5vw !important;
-        align-items: center !important;
-        margin-top: 2vh !important;
-      }
-      #protecao .prot-card {
-        margin-bottom: 0 !important;
-      }
-      #protecao svg {
-        max-height: 48vh !important;
-        width: 100% !important;
+        padding: 80px 6vw !important;
       }
       
-      /* Redução mínima e limites */
-      #reducao-minima .prot-grid {
-        display: grid !important;
-        grid-template-columns: 1fr 1.2fr !important;
-        gap: 2.5vw !important;
-        align-items: center !important;
-      }
-      #reducao-minima .prot-card {
-        padding: 3vh 2.5vw !important;
-      }
-      #reducao-minima .prot-sizes {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 2vh !important;
+      .ap-img-wrap {
+        height: 280px !important;
       }
 
-      #usos-indevidos .dont-grid {
-        gap: 1.5vh 1.5vw !important;
+      .audio-control-btn {
+        bottom: 16px !important;
+        left: 16px !important;
+        width: 40px !important;
+        height: 40px !important;
       }
-      #usos-indevidos .dont-card {
-        padding: 2vh !important;
-      }
-      #usos-indevidos .dont-preview {
-        height: 8vh !important;
-      }
-
-      #icones-app .icon-grid {
-        gap: 2vh !important;
-      }
-      #icones-app .icon-card {
-        padding: 2.5vh !important;
-      }
-      #icones-app .icon-card-img {
-        height: 12vh !important;
-        width: 12vh !important;
-        margin: 0 auto 1.5vh !important;
+      
+      .audio-tooltip {
+        left: 52px !important;
       }
 
-      #iconografia .ic-grid {
-        gap: 1.5vh 1.5vw !important;
+      .pl-models-track {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
       }
-      #iconografia .ic-card {
-        padding: 2vh !important;
-      }
-      #iconografia .ic-svg {
-        height: 5vh !important;
-      }
+    }
 
-      #paleta .palette-grid {
-        gap: 2vh !important;
+    @media (max-width: 600px) {
+      .pub-trait {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
       }
-      #paleta .c-card {
-        padding: 2vh !important;
-      }
-      #paleta .c-swatch {
-        height: 15vh !important;
-      }
+    }
 
-      #prata .prata-wrap {
-        padding: 3vh 0 !important;
+    @media (max-width: 480px) {
+      .pl-chat-bar {
+        padding: 12px 16px !important;
+        gap: 12px !important;
       }
-      #prata .c-swatch {
-        height: 12vh !important;
-      }
+    }
 
-      /* Texturas de Apoio */
-      #texturas-apoio .prot-grid, #texturas-couro .prot-grid {
-        display: block !important;
-        max-width: 680px !important;
-        margin: 0 auto !important;
+    @media (max-width: 400px) {
+      .pos-dandi .dot-big {
+        width: 48px !important;
+        height: 48px !important;
       }
-      #texturas-apoio .prot-card, #texturas-couro .prot-card {
-        padding: 3vh 3vw !important;
-      }
-      #texturas-apoio .prot-stage, #texturas-couro .prot-stage {
-        height: 25vh !important;
-      }
-
-      #sistema-espacamento .esp-grid {
-        gap: 2vh !important;
-      }
-      #sistema-espacamento .prot-card {
-        padding: 2.5vh !important;
-      }
-      #sistema-espacamento .prot-stage {
-        height: 22vh !important;
-      }
-
-      /* Tipografia institucional */
-      #tipografia .typo-specimen {
-        padding: 2.5vh 2vw !important;
-      }
-      #tipografia .typo-Aa {
-        font-size: clamp(70px, 7vw, 100px) !important;
-        line-height: 0.95 !important;
-      }
-      #tipografia .typo-name {
-        margin-top: 1vh !important;
-        font-size: 10px !important;
-      }
-      #tipografia .typo-row {
-        padding: 1.2vh 0 !important;
-        gap: 1.5vw !important;
-      }
-      #tipografia .typo-demo .demo-h1 {
-        font-size: clamp(20px, 2vw, 28px) !important;
-      }
-      #tipografia .typo-demo .demo-body {
-        font-size: 12.5px !important;
-        line-height: 1.5 !important;
-      }
-      #tipografia .typo-demo .demo-quote {
-        font-size: 15px !important;
-      }
-      #tipografia .typo-spec {
+      .pos-dandi .label-big {
         font-size: 11px !important;
-        line-height: 1.4 !important;
-      }
-
-      /* Escala tipográfica digital compacta */
-      #hierarquia-digital .typo-digital-row, #hierarquia-digital-2 .typo-digital-row {
-        padding: 1vh 1.5vw !important;
-      }
-      #hierarquia-digital .typo-digital-grid, #hierarquia-digital-2 .typo-digital-grid {
-        margin-top: 2vh !important;
-      }
-      #hierarquia-digital-2 .typo-digital-legend {
-        margin-top: 2vh !important;
-      }
-
-      /* Regras de uso tipográfico */
-      #hierarquia-digital-regras .regras-container {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 24px !important;
-        margin-top: 2vh !important;
-      }
-      #hierarquia-digital-regras .typo-digital-note {
-        margin-top: 0 !important;
-        padding: 3vh 2.5vw !important;
-      }
-
-      /* Grid de mockups físicos */
-      .ap-grid-row {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 24px !important;
-        margin-top: 24px !important;
-      }
-      #aplicacoes .ap-img-wrap, #aplicacoes-fisico-2 .ap-img-wrap {
-        height: auto !important;
-        width: 100% !important;
-      }
-      #aplicacoes .ap-img-wrap img, #aplicacoes-fisico-2 .ap-img-wrap img {
-        height: 48vh !important;
-        width: 100% !important;
-        object-fit: cover !important;
-      }
-
-      #direcao-fotografica .foto-grid {
-        gap: 2vh !important;
-      }
-      #direcao-fotografica .foto-card {
-        height: 42vh !important;
-      }
-
-      /* Direção Fotográfica */
-      #direcao-fotografica .slo-rules {
-        margin-top: 2vh !important;
-      }
-      #direcao-fotografica .slo-rule {
-        padding: 2.5vh 2vw !important;
-      }
-      #direcao-fotografica .slo-rule-d {
-        font-size: 11.5px !important;
-        line-height: 1.5 !important;
-      }
-
-      /* Produto - Ícone na loja */
-      #produto .con-grid {
-        gap: 2vh !important;
-        margin-top: 2vh !important;
-      }
-      #produto .con-card {
-        padding: 2.5vh 2vw !important;
-      }
-      #produto .con-card-list span {
-        font-size: 11.5px !important;
-        line-height: 1.5 !important;
-      }
-
-      /* Produto - Cores da tela */
-      #produto-cores .prod-rows {
-        margin-top: 2vh !important;
-      }
-      #produto-cores .prod-row {
-        padding: 1vh 0 !important;
-      }
-      #produto-cores .prod-sw {
-        width: 24px !important;
-        height: 24px !important;
-      }
-      #produto-cores .prod-role {
-        font-size: 13px !important;
-      }
-      #produto-cores .prod-use {
-        font-size: 11.5px !important;
-      }
-
-      /* Produto - Tipografia e Voz do app */
-      #produto-especificacoes .prod-block {
-        margin-top: 2vh !important;
-      }
-      #produto-especificacoes .prod-rows {
-        margin-top: 1.5vh !important;
-      }
-      #produto-especificacoes .prod-row {
-        padding: 0.8vh 0 !important;
-      }
-      #produto-especificacoes .con-grid {
-        gap: 2vh !important;
-        margin-top: 1.5vh !important;
-      }
-      #produto-especificacoes .con-card {
-        padding: 2vh 1.5vw !important;
-      }
-
-      #conexoes .cx-grid {
-        gap: 2vh !important;
-      }
-      #conexoes .cx-card {
-        padding: 2.5vh !important;
-      }
-
-      #arquivos .arq-grid {
-        gap: 2.5vh !important;
-      }
-      #arquivos .arq-card {
-        padding: 3vh !important;
       }
     }
 
@@ -5198,37 +4759,39 @@
        REGRAS DE IMPRESSÃO (PDF AUTO-PAGINADO SEM CHAT/PRELOADER)
        ========================================================================== */
     @media print {
-      /* Oculta UI inútil na impressão */
-      #prog, #sidenav, #audio-toggle {
+      /* Remove o preloader e elementos flutuantes de UI */
+      #preloader,
+      #sidenav,
+      #audio-toggle,
+      #prog,
+      .scroll-cue,
+      .audio-tooltip {
         display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
       }
 
-      body {
-        background: #0D0D0D !important;
+      /* Libera o body para ser impresso em múltiplas páginas */
+      body, 
+      body.loading, 
+      html {
+        overflow: visible !important;
+        height: auto !important;
+        position: relative !important;
+        width: 100% !important;
+        background: #000000 !important;
         color: #EDEAE4 !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
       }
 
-      /* Força início em nova página para todas as seções e altura de tela */
-      section {
-        page-break-before: always !important;
-        break-before: page !important;
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
-        overflow: hidden !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        padding: 4vh 8vw !important;
-        margin: 0 !important;
+      /* Garante que elementos de Hero e seções fiquem visíveis imediatamente */
+      #hero {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
       }
 
-      /* Garante visibilidade imediata de elementos animados pelo scroll reveal */
+      /* Força a visibilidade imediata de elementos animados pelo scroll reveal */
       body.js .rv, 
       body.js .rvl, 
       body.js .rvr, 
@@ -5239,30 +4802,150 @@
         transform: none !important;
         transition: none !important;
       }
+
+      /* Configuração das quebras de página */
+      section {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      /* Força início em nova página para divisores de partes e seções principais */
+      .part-divider,
+      #indice, 
+      #historia, 
+      #dna, 
+      #publico, 
+      #slogan, 
+      #simbolo, 
+      #identidade, 
+      #horizontal, 
+      #cores, 
+      #tipografia, 
+      #direcao-fotografica, 
+      #produto, 
+      #conexoes, 
+      #arquivos,
+      #closing {
+        page-break-before: always !important;
+        break-before: always !important;
+      }
+
+      /* Garante cores adequadas de contraste e fundos */
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
     }
-</style>
+  </style>
 </head>
 
-<body class="loaded">
+<body>
 
+  <!-- Áudio Local de Fundo · Michael Bublé · Feeling Good · começa em 8s -->
+  <audio id="bg-audio" preload="auto"
+    src="https://assets.cdn.filesafe.space/7hzaWcGgawCV1WudlwA7/media/6a0f6724ca9579c76bbf5b1a.mp3"></audio>
 
+  <!-- Botão de Controle de Áudio Flutuante -->
+  <button id="audio-toggle" class="audio-control-btn" aria-label="Ativar som" title="Música de fundo">
+    <!-- Balão de Ativar Som -->
+    <div class="audio-tooltip">
+      <span>Ativar Som ✦</span>
+    </div>
+    <svg class="audio-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+      <line x1="22" y1="9" x2="16" y2="15" />
+      <line x1="16" y1="9" x2="22" y2="15" />
+    </svg>
+    <svg class="audio-icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+      style="display:none;">
+      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+    </svg>
+  </button>
 
-  <!-- PRELOADER PREMIUM REMOVIDO PARA VERSÃO DE IMPRESSÃO (ABRE DIRETO) -->
+  <!-- PRELOADER PREMIUM -->
+  <div id="preloader">
+    <div class="preloader-wrapper">
+      <!-- Fase 1: Revelação Cinematográfica da Logo -->
+      <div class="pl-phase pl-phase-1">
+        <div class="pl-logo-reveal">
+          <img src="assets/marca/app-icon-preto.png" alt="Dandi" class="pl-logo-bg">
+          <div class="pl-logo-fill-wrap">
+            <img src="assets/marca/app-icon-preto.png" alt="Dandi" class="pl-logo-fill">
+            <div class="pl-logo-glow-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fase 2: Digitação da Essência e Chat do Assistente de Estilo -->
+      <div class="pl-phase pl-phase-2">
+        <div class="pl-chat-container">
+          <div class="pl-chat-bar">
+            <div class="pl-chat-logo">
+              <img src="assets/marca/icone-claro.svg" alt="Dandi">
+            </div>
+            <div class="pl-chat-content">
+              <div class="pl-chat-label">ASSISTENTE DE ESTILO</div>
+              <div class="pl-chat-bubble">
+                <span class="pl-chat-text"></span>
+              </div>
+            </div>
+            <div class="pl-chat-status">
+              <div class="pl-chat-glow-dot"></div>
+              <div class="pl-chat-dots">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ação para prosseguir -->
+          <div class="pl-chat-options">
+            <button class="pl-chat-btn" data-action="vamos">Vamos lá</button>
+          </div>
+
+          <!-- Campo de input (oculto · escolha é por imagem) -->
+          <div class="pl-chat-input-wrapper" style="display:none">
+            <input type="text" class="pl-chat-input" placeholder="Escreva algo e aperte Enter..." disabled>
+            <button class="pl-chat-send" aria-label="Enviar" disabled>→</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Fase 3: Conexão e Progresso -->
+      <div class="pl-phase pl-phase-3">
+        <div class="preloader-type-status pl-type-status"></div>
+        <div class="preloader-line-container">
+          <div class="preloader-line"></div>
+        </div>
+        <div class="preloader-counter"><span id="pl-count">00</span>%</div>
+      </div>
+    </div>
+  </div>
 
   <div id="prog"></div>
 
-
+  <nav id="sidenav" aria-label="Navegação do manual">
+    <div id="snav-progress-bar"></div>
+    <div class="snav-dot active" data-l="Capa" data-s="hero"></div>
+    <div class="snav-dot" data-l="Sumário" data-s="indice"></div>
+    <div class="snav-dot" data-l="A Marca" data-s="marca-marmore"></div>
+    <div class="snav-dot" data-l="Logotipo" data-s="parte-logotipo"></div>
+    <div class="snav-dot" data-l="Cores" data-s="parte-cores"></div>
+    <div class="snav-dot" data-l="Tipografia" data-s="parte-tipografia"></div>
+    <div class="snav-dot" data-l="Aplicação" data-s="parte-aplicacao"></div>
+    <div class="snav-dot" data-l="Arquivos" data-s="parte-arquivos"></div>
+    <div class="snav-dot" data-l="Fim" data-s="closing"></div>
+  </nav>
 
   <!-- HERO -->
   <section id="hero" aria-labelledby="hero-title">
     <div class="hero-eyebrow">Manual de Marca · 2026</div>
     <div class="hero-line" aria-hidden="true"></div>
-    <img src="../assets/marca/logo-vertical-slogan-prata.svg" alt="Logotipo Dandi com slogan" class="hero-logo" id="hero-title">
+    <img src="assets/marca/logo-vertical-slogan-prata.svg" alt="Logotipo Dandi com slogan" class="hero-logo" id="hero-title">
+    <div class="scroll-cue" aria-hidden="true"></div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <!-- 00 · ÍNDICE -->
   <section id="indice">
@@ -5287,8 +4970,9 @@
   <section id="marca-marmore" class="logo-marble" aria-label="Parte 01: A Marca">
     <div class="logo-marble-overlay" aria-hidden="true"></div>
     <div class="logo-marble-inner rv">
-      <span class="logo-marble-eyebrow">Parte 01 · A Marca</span>
-      <img src="../assets/marca/logo-horizontal-slogan-branca.svg" alt="Logo Dandi com slogan" class="logo-marble-img">
+      <span class="part-num">Parte 01</span>
+      <h2 class="part-title">A Marca</h2>
+      <img src="assets/marca/logo-horizontal-slogan-offwhite.svg" alt="Logo Dandi com slogan" class="logo-marble-img">
     </div>
   </section>
 
@@ -5342,10 +5026,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="manifesto">
     <div class="mf-bg" aria-hidden="true"></div>
     <div class="mf-wrap">
@@ -5362,22 +5042,14 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="marmore" class="marmore-stmt" aria-label="Tradução estratégica">
     <div class="marmore-content rv">
       <span class="marmore-eyebrow">03 · Tradução estratégica</span>
       <h2 class="marmore-line">Não estamos criando um app de moda. Estamos criando o <em class="prata">dândi
           moderno</em>. <span class="marmore-sub">Acessível, prático e orientado por tecnologia.</span></h2>
-      <img src="../assets/marca/app-na-tela-shopping.png" alt="App Dandi na tela de um smartphone" class="marmore-img rv d2">
+      <img src="assets/marca/app-na-tela-shopping.png" alt="App Dandi na tela de um smartphone" class="marmore-img rv d2">
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="dna">
     <div class="maxw">
@@ -5414,10 +5086,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="posicionamento">
     <div class="maxw">
       <div class="pos-grid">
@@ -5444,10 +5112,6 @@
       </div>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="publico">
     <div class="maxw">
@@ -5489,10 +5153,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="personalidade">
     <div class="maxw">
       <div class="head">
@@ -5528,10 +5188,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="evitar">
     <div class="maxw">
       <div class="head" style="text-align:center">
@@ -5547,9 +5203,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="slogan">
     <div class="maxw">
@@ -5579,10 +5232,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="tom">
     <div class="maxw">
       <div class="head">
@@ -5609,10 +5258,6 @@
       </div>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="vocabulario">
     <div class="maxw">
@@ -5652,10 +5297,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- SEÇÃO 11.1 · REDES SOCIAIS -->
   <section id="redes-sociais" style="background:var(--preto)">
     <div class="maxw">
@@ -5682,12 +5323,8 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- PARTE 02 -->
-  <section id="parte-logotipo" class="part-divider part-divider-half" style="border-top:none" aria-label="Parte 02: Logotipo">
+  <section id="parte-logotipo" class="part-divider part-divider-half" aria-label="Parte 02: Logotipo">
     <div class="part-inner rv">
       <span class="part-num">Parte 02</span>
       <h2 class="part-title">Logotipo</h2>
@@ -5695,13 +5332,9 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- DESTAQUE · LOGO VERTICAL -->
-  <section id="logo-vertical-feature" class="logo-feature" style="border-bottom:none" aria-label="Logo vertical Dandi">
-    <img src="../assets/marca/logo-vertical-clara.svg" alt="Logo vertical Dandi" class="logo-feature-img rv">
+  <section id="logo-vertical-feature" class="logo-feature" aria-label="Logo vertical Dandi">
+    <img src="assets/marca/logo-vertical-clara.svg" alt="Logo vertical Dandi" class="logo-feature-img rv">
   </section>
 
   <section id="simbolo">
@@ -5718,8 +5351,8 @@
             <span class="symb-corner tr" aria-hidden="true"></span>
             <span class="symb-corner bl" aria-hidden="true"></span>
             <span class="symb-corner br" aria-hidden="true"></span>
-            <img src="../assets/marca/icone-claro.svg" alt="" class="symb-ghost" aria-hidden="true">
-            <img src="../assets/marca/icone-claro.svg" alt="Monograma Dandi · D com N sobreposto" class="symb-front">
+            <img src="assets/marca/icone-claro.svg" alt="" class="symb-ghost" aria-hidden="true">
+            <img src="assets/marca/icone-claro.svg" alt="Monograma Dandi · D com N sobreposto" class="symb-front">
           </div>
         </div>
         <div class="rvr">
@@ -5727,33 +5360,27 @@
             Da<strong>n</strong>di. A letra que liga começo e fim, escondida em plena vista.</p>
           <p class="bt" style="margin-top:14px">Marca registrável. Única. Silenciosa. Como o próprio dândi.</p>
           <div class="symb-pieces">
-            <div class="symb-piece"><img src="../assets/marca/icone-claro.svg" alt="D em off-white">
+            <div class="symb-piece"><img src="assets/marca/icone-claro.svg" alt="D em off-white">
               <div class="symb-piece-cap">Off-white</div>
             </div>
-            <div class="symb-piece"><img src="../assets/marca/icone-prata.svg" alt="D em prata">
+            <div class="symb-piece"><img src="assets/marca/icone-prata.svg" alt="D em prata">
               <div class="symb-piece-cap">Prata</div>
             </div>
-            <div class="symb-piece" style="background:#F2F2F2"><img src="../assets/marca/icone-escuro.svg" alt="D em preto">
+            <div class="symb-piece" style="background:#F2F2F2"><img src="assets/marca/icone-escuro.svg" alt="D em preto">
               <div class="symb-piece-cap">Preto</div>
             </div>
           </div>
-          <p class="bt" style="margin-top:24px;font-size:12px">Margem mínima: <strong>50% da altura</strong> do símbolo.
-            Mínimo digital: <strong>24px</strong> · impressão: <strong>10mm</strong>.</p>
+          <p class="bt" style="margin-top:24px;font-size:12px">Margem mínima de respiro: <strong>50% da altura</strong> do símbolo.
+            Redução mínima em telas: a partir de <strong>24px</strong> para interfaces e <strong>16px</strong> para favicons.</p>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section id="simbolo-geometria" style="background:var(--preto)">
-    <div class="maxw">
-      <div class="head">
+      <div class="head" style="margin-top:80px">
         <span class="tag rv">Construção · <span class="ac">Geometria</span></span>
-        <h2 class="st rv d1">Grid de construção <span class="ac">do monograma Dandi</span></h2>
       </div>
       <div class="build-wrap">
         <div class="build-stage rvl">
-          <img src="../assets/marca/icone-claro.svg" alt="Grid de construção do monograma Dandi">
+          <img src="assets/marca/icone-claro.svg" alt="Grid de construção do monograma Dandi">
         </div>
         <div class="rvr">
           <p class="bt">O símbolo é desenhado sobre uma malha de <strong>12 × 12 unidades</strong>. Toda proporção
@@ -5781,10 +5408,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="identidade">
     <div class="maxw">
       <div class="head">
@@ -5792,21 +5415,21 @@
         <h2 class="st rv d1">Identidade <span class="ac">visual</span></h2>
       </div>
       <div class="logo-3">
-        <div class="lc rv d1" style="background:#0D0D0D"><img src="../assets/marca/logo-vertical-clara.svg" alt="Logo sobre preto">
+        <div class="lc rv d1" style="background:#0D0D0D"><img src="assets/marca/logo-vertical-clara.svg" alt="Logo sobre preto">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Principal</div>
             <div class="lc-label-name">Fundo preto</div>
           </div>
         </div>
-        <div class="lc rv d2" style="background:linear-gradient(135deg,#1c1c1e,#0e0e10)"><img src="../assets/marca/logo-vertical-prata.svg" alt="Logo sobre grafite">
+        <div class="lc rv d2" style="background:linear-gradient(135deg,#1c1c1e,#0e0e10)"><img src="assets/marca/logo-vertical-prata.svg" alt="Logo sobre grafite">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Editorial</div>
             <div class="lc-label-name">Fundo Grafite</div>
           </div>
         </div>
-        <div class="lc rv d3" style="background:#F2F2F2"><img src="../assets/marca/logo-vertical-escura.svg" alt="Logo sobre branco">
+        <div class="lc rv d3" style="background:#F2F2F2"><img src="assets/marca/logo-vertical-escura.svg" alt="Logo sobre branco">
           <div class="lc-overlay"></div>
           <div class="lc-label">
             <div class="lc-label-tag">Impresso</div>
@@ -5817,10 +5440,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="horizontal">
     <div class="maxw">
       <div class="head">
@@ -5828,16 +5447,12 @@
         <h2 class="st rv d1">Para <span class="ac">leituras em fluxo</span></h2>
       </div>
       <div class="horiz-img-wrap rv d2">
-        <img src="../assets/marca/logo-horizontal-clara.svg" alt="Logo horizontal Dandi" class="horiz-img">
+        <img src="assets/marca/logo-horizontal-clara.svg" alt="Logo horizontal Dandi" class="horiz-img">
       </div>
       <p class="bt rv d3" style="margin-top:24px;text-align:center;margin-left:auto;margin-right:auto">Cabeçalhos · cartões
         de visita · assinaturas de e-mail · documentos institucionais</p>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="protecao">
     <div class="maxw">
@@ -5848,42 +5463,144 @@
           mantém a leitura limpa em qualquer fundo.</p>
       </div>
 
+      <!-- DIAGRAMA DE MATEMÁTICA VISUAL (FULL WIDTH) -->
+      <div class="prot-card rv d1" style="margin-bottom: 28px;">
+        <div class="prot-card-tag">Área de Proteção e Assinatura Logotípica (Matemática Visual)</div>
+        <div style="position:relative; background:var(--grafite); border:1px solid rgba(232,232,234,0.08); overflow:hidden;" aria-hidden="true">
+          <svg viewBox="0 0 1200 520" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <defs>
+              <pattern id="grid-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(232, 232, 234, 0.025)" stroke-width="0.75" />
+              </pattern>
+              <marker id="arrow-start" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 10 0 L 0 5 L 10 10 z" fill="#868686" />
+              </marker>
+              <marker id="arrow-end" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#868686" />
+              </marker>
+              <marker id="arrow-start-white" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 10 0 L 0 5 L 10 10 z" fill="#EDEAE4" />
+              </marker>
+              <marker id="arrow-end-white" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#EDEAE4" />
+              </marker>
+            </defs>
+            <rect width="100%" height="100%" fill="#1C1C1E" />
+            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+            
+            <!-- Painel Esquerdo: Zoom do Monograma e Medida X -->
+            <rect x="60" y="60" width="300" height="340" fill="#0D0D0D" stroke="rgba(232, 232, 234, 0.08)" stroke-width="1" />
+            <text x="210" y="95" font-family="var(--sans)" font-size="10px" font-weight="500" fill="#868686" letter-spacing="2px" text-anchor="middle">UNIDADE DE MEDIDA BASE (X)</text>
+            
+            <!-- Monograma Zoom -->
+            <svg x="110" y="125" width="200" height="206.5" viewBox="0 0 6393.38 6601.98">
+              <path fill="#EDEAE4" d="M1684.13 3857.19c-0.43,-1147.21 -0.86,-2294.42 -0.71,-2889.39 0.15,-594.98 0.87,-637.72 0.64,-680.17 -0.22,-42.45 -1.4,-84.6 22.98,-106.65 24.37,-22.04 74.3,-23.98 179.34,-24.71 105.05,-0.73 265.22,-0.24 409.44,-0.14 144.22,0.11 338.69,-0.17 507.73,3.63 427.94,9.61 788.36,58.76 1180.58,252.47 357.98,176.79 596.14,399.65 832.95,716.87 187.61,251.32 275.4,453.17 382.52,744.68 137.25,373.49 166.45,629.91 190.21,1023.77 36.65,607.59 -17.92,1226.46 -207.96,1800.75 -107.1,323.65 -287.73,671.95 -507.46,933.62 -185.9,221.38 -471.72,448.58 -690.27,550.06 -350.24,162.62 -704.95,245.29 -1180.58,263.5 -162.21,6.21 -331.27,0.03 -507.73,0.09 -176.46,0.06 -305.06,-0 -409.44,-0.32 -104.38,-0.32 -152.29,-0.9 -176.89,-21.17 -24.6,-20.27 -25.22,-60.22 -25.41,-101.4 -0.2,-41.18 0.04,-83.59 0.11,-342.81 0.08,-259.22 0,-735.25 -0.07,-1211.27 -338.67,-375.32 -677.35,-750.63 -1016.02,-1125.95 -0.11,363.64 -0.23,727.27 -0.28,1033.58 -0.05,306.31 -0.04,555.3 0.22,720.29 0.26,165 0.76,246.02 -0.56,361.62 -1.33,115.61 -4.49,265.82 -21.79,369.92 -17.3,104.1 -48.74,162.09 -85.66,204.96 -36.92,42.88 -79.32,70.64 -116.88,91.91 -37.56,21.28 -70.27,36.07 -101.95,46.4 -31.68,10.33 -62.34,16.2 -119.01,22.75 -56.68,6.54 -139.39,13.76 -222.09,20.97 -0.03,28.98 -0.06,57.96 -0.09,86.93 971.6,-0.62 1968.56,-1.24 2487.43,-2.18 294.08,-0.53 577.28,8.53 871.02,-20.26 394.73,-38.69 777.01,-142.39 1123.12,-302.39 366.86,-169.59 696.98,-404.23 977.22,-700.53 320.35,-338.7 607.81,-810.24 751.91,-1252.92 239.71,-736.41 247.35,-1556.22 0,-2286.53 -153.63,-453.6 -399.8,-839.32 -747.57,-1170.46 -256.32,-244.06 -651.36,-490.96 -981.56,-617.41 -362,-138.62 -733.89,-205.55 -1120.16,-232.93 -134.6,-9.54 -329.74,-10.18 -873.98,-13.34 -544.24,-3.16 -1515.83,-3.09 -2487.43,-3.03 0,28.99 -0,57.98 -0,86.98 83.18,7.1 166.36,14.2 222.78,20.9 56.42,6.7 86.08,13.01 117.1,22.72 31.02,9.71 63.39,22.82 101.5,43.54 38.11,20.72 81.96,49.04 120.72,89.72 38.75,40.68 72.42,93.72 89.33,217.69 16.91,123.97 17.08,318.88 16.9,452.87 -0.18,133.99 -0.71,207.07 -0.76,368.5 -0.05,161.43 0.37,411.19 0.54,663.75 0.17,252.56 0.09,507.9 0,763.24 338.67,375.75 677.33,751.5 1016,1127.25z"/>
+            </svg>
+            
+            <!-- Caixa de destaque do X: a FENDA interna vertical do D (largura X) -->
+            <rect x="187" y="172" width="46" height="112" fill="rgba(232, 232, 234, 0.10)" stroke="#EDEAE4" stroke-width="0.75" stroke-dasharray="2,2"/>
+            <!-- Cota horizontal da largura X, acima da caixa, com folga do monograma -->
+            <line x1="187" x2="233" y1="160" y2="160" stroke="#EDEAE4" stroke-width="1" marker-start="url(#arrow-start-white)" marker-end="url(#arrow-end-white)"/>
+            <line x1="187" x2="187" y1="156" y2="172" stroke="rgba(237,234,228,0.4)" stroke-width="0.6"/>
+            <line x1="233" x2="233" y1="156" y2="172" stroke="rgba(237,234,228,0.4)" stroke-width="0.6"/>
+            <text x="210" y="152" font-family="var(--mono)" font-size="11px" fill="#EDEAE4" text-anchor="middle">X</text>
+            <!-- Label descritivo numa faixa limpa abaixo do monograma -->
+            <text x="210" y="372" font-family="var(--sans)" font-size="11px" fill="#9A9A9C" letter-spacing="0.5px" text-anchor="middle">X = 4 Unidades = 16px</text>
+            
+            <!-- Painel Direito: Assinatura e Área de Não-Invasão -->
+            <!-- Caixa de não-invasão tracejada (1X ao redor da logo) -->
+            <rect x="461.8" y="151.8" width="636.4" height="241" fill="rgba(255,255,255,0.015)" stroke="#9A9A9C" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+            
+            <!-- Cota 1X Esquerda -->
+            <line x1="461.8" x2="510" y1="272.3" y2="272.3" stroke="#868686" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+            <text x="485.9" y="263" font-family="var(--mono)" font-size="10px" fill="#868686" text-anchor="middle">1X (16px)</text>
+            
+            <!-- Cota 1X Direita -->
+            <line x1="1050" x2="1098.2" y1="272.3" y2="272.3" stroke="#868686" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+            <text x="1074.1" y="263" font-family="var(--mono)" font-size="10px" fill="#868686" text-anchor="middle">1X (16px)</text>
+            
+            <!-- Cota 1X Topo (texto deslocado pra fora da caixa, sem tocar as letras) -->
+            <line x1="780" x2="780" y1="151.8" y2="200" stroke="#868686" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+            <text x="780" y="143" font-family="var(--mono)" font-size="10px" fill="#868686" text-anchor="middle">1X · 16px</text>
+
+            <!-- Cota 1X Base (texto abaixo da caixa, centralizado) -->
+            <line x1="780" x2="780" y1="344.6" y2="392.8" stroke="#868686" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+            <text x="780" y="408" font-family="var(--mono)" font-size="10px" fill="#868686" text-anchor="middle">1X · 16px</text>
+
+            <!-- Borda interna da assinatura (Sem margem) -->
+            <rect x="510" y="200" width="540" height="144.6" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.75" />
+
+            <!-- Assinatura Horizontal Dandi -->
+            <svg x="510" y="200" width="540" height="144.6" viewBox="0 0 388085.46 103930.47">
+              <!-- Monograma -->
+              <path fill="#EDEAE4" d="M26512.07 60721.01c-6.76,-18059.73 -13.57,-36119.4 -11.25,-45485.69 2.33,-9366.32 13.69,-10039.24 10.15,-10707.43 -3.53,-668.24 -21.99,-1331.85 361.76,-1678.88 383.66,-347.03 1169.59,-377.57 2823.26,-389.01 1653.7,-11.44 4175.25,-3.84 6445.56,-2.16 2270.34,1.65 5331.71,-2.64 7992.83,57.18 6736.73,151.32 12410.54,925 18585.11,3974.43 5635.5,2783.16 9384.64,6291.4 13112.54,11285.23 2953.47,3956.37 4335.37,7133.93 6021.77,11723.01 2160.69,5879.56 2620.37,9916.19 2994.35,16116.46 874.58,14499.97 -1617.58,31559.96 -11262.26,43045.16 -2926.49,3484.97 -7425.88,7061.75 -10866.4,8659.22 -5513.54,2559.99 -11097.53,3861.5 -18585.11,4148.13 -2553.63,97.76 -5214.89,0.5 -7992.83,1.43 -2777.94,0.93 -4802.37,-0.08 -6445.56,-5.08 -1643.21,-4.99 -2397.4,-14.22 -2784.65,-333.29 -387.25,-319.07 -396.95,-947.97 -400.03,-1596.29 -3.08,-648.33 0.56,-1315.98 1.79,-5396.66 1.21,-4080.71 0.06,-11574.49 -1.09,-19068.21 -5331.52,-5908.36 -10663.01,-11816.7 -15994.52,-17725.06 -1.79,5724.48 -3.65,11448.91 -4.4,16270.97 -0.87,4822.06 -0.67,8741.64 3.45,11339.07 4.04,2597.52 12.03,3872.86 -8.86,5692.8 -20.89,1819.97 -70.64,4184.61 -342.99,5823.34 -272.35,1638.72 -767.31,2551.61 -1348.53,3226.55 -581.25,675 -1248.76,1111.99 -1839.96,1446.94 -591.23,335 -1106.21,567.84 -1604.9,730.52 -498.77,162.65 -981.34,255.05 -1873.53,358.08 -892.3,103.03 -2194.31,216.58 -3496.27,330.18 -0.45,456.18 -0.98,912.38 -1.4,1368.56 15295.21,-9.7 30989.71,-19.49 39157.92,-34.32 4629.49,-8.41 9087.69,134.3 13711.85,-318.91 6214.03,-608.98 12231.96,-2241.57 17680.58,-4760.34 5775.19,-2669.73 10972.07,-6363.53 15383.77,-11027.96 5043.07,-5331.94 9568.37,-12754.99 11836.8,-19723.8 3773.61,-11592.83 3893.92,-24498.5 0,-35995.25 -2418.55,-7140.71 -6293.84,-13212.82 -11768.52,-18425.69 -4035.06,-3842.07 -10253.97,-7728.83 -15452.06,-9719.41 -5698.66,-2182.25 -11553.12,-3235.83 -17633.95,-3666.83 -2118.85,-150.17 -5190.94,-160.29 -13758.48,-209.99 -8567.57,-49.72 -23862.7,-48.74 -39157.92,-47.65 0,456.43 -0.08,912.8 -0.08,1369.2 1309.41,111.75 2618.91,223.5 3507.06,329.03 888.12,105.53 1355.12,204.83 1843.41,357.72 488.26,152.83 997.91,359.23 1597.89,685.4 600.01,326.14 1290.26,772 1900.39,1412.42 610.1,640.42 1140.09,1475.43 1406.36,3426.97 266.24,1951.6 268.88,5019.85 266.04,7129.25 -2.83,2109.31 -11.11,3259.81 -11.89,5801.07 -0.84,2541.21 5.78,6473.07 8.47,10448.87 2.66,3975.8 1.37,7995.52 0.08,12015.21 5331.43,5915.15 10662.81,11830.38 15994.24,17745.53z"/>
+              <!-- Linha divisória -->
+              <line stroke="#EDEAE4" stroke-width="841.29" x1="129283.1" y1="11934.11" x2="129283.1" y2= "90341.85" />
+              <!-- Texto DANDI -->
+              <path fill="#EDEAE4" d="M160291.74 63564.74l0 -23198.98 9169.13 0c2469.05,0 4623.23,497.12 6473.63,1491.36 1855.92,988.71 3297.58,2358.56 4330.49,4098.49 1027.39,1745.43 1541.08,3744.98 1541.08,6004.1 0,2270.2 -513.69,4275.25 -1541.08,6015.18 -1032.91,1734.41 -2474.58,3098.73 -4330.49,4098.49 -1850.39,994.24 -4004.58,1491.36 -6473.63,1491.36l-9169.13 0zm1701.26 -1513.46l7357.4 0c2187.33,0 4087.44,-430.85 5694.79,-1292.5 1607.37,-867.2 2850.18,-2060.3 3728.41,-3568.23 883.78,-1519.01 1325.68,-3258.91 1325.68,-5230.84 0,-1966.38 -441.9,-3706.31 -1325.68,-5214.24 -878.22,-1513.46 -2121.04,-2701.02 -3728.41,-3562.7 -1607.34,-867.2 -3507.46,-1303.55 -5694.79,-1303.55l-7357.4 0 0 20172.07zm51792.18 1513.43l10671.53 -23198.98 1695.74 0 10688.11 23198.98 -1839.34 0 -10063.95 -22144 729.12 0 -10069.48 22144 -1811.72 0zm3916.21 -6523.35l557.89 -1430.59 13880.72 0 574.46 1430.59 -15013.07 0zm53664.67 6523.35l0 -23198.98 1419.57 0 16554.12 21105.54 -767.76 0 0 -21105.54 1695.74 0 0 23198.98 -1414.04 0 -16565.17 -21100.04 778.81 0 0 21100.04 -1701.26 0zm57310.21 -0.03l0 -23198.98 9169.13 0c2469.05,0 4623.23,497.12 6473.63,1491.36 1855.92,988.71 3297.58,2358.56 4330.49,4098.49 1027.39,1745.43 1541.08,3744.98 1541.08,6004.1 0,2270.2 -513.69,4275.25 -1541.08,6015.18 -1032.91,1734.41 -2474.58,3098.73 -4330.49,4098.49 -1850.39,994.24 -4004.58,1491.36 -6473.63,1491.36l-9169.13 0zm1701.26 -1513.46l7357.4 0c2187.33,0 4087.44,-430.85 5694.79,-1292.5 1607.37,-867.2 2850.18,-2060.3 3728.41,-3568.23 883.78,-1519.01 1325.68,-3258.91 1325.68,-5230.84 0,-1966.38 -441.9,-3706.31 -1325.68,-5214.24 -878.22,-1513.46 -2121.04,-2701.02 -3728.41,-3562.7 -1607.34,-867.2 -3507.46,-1303.55 -5694.79,-1303.55l-7357.4 0 0 20172.07zm56006.66 1513.46l0 -23198.98 1701.26 0 0 23198.98 -1701.26 0z"/>
+            </svg>
+
+            <!-- Cota e Guias do Símbolo H -->
+            <line x1="445" x2="445" y1="200" y2="344.6" stroke="#EDEAE4" stroke-width="1" marker-start="url(#arrow-start-white)" marker-end="url(#arrow-end-white)"/>
+            <text x="435" y="276" font-family="var(--mono)" font-size="11px" fill="#EDEAE4" text-anchor="end">12 U (48px)</text>
+            <line x1="440" x2="480" y1="200" y2="200" stroke="rgba(255,255,255,0.15)" stroke-width="0.75" />
+            <line x1="440" x2="480" y1="344.6" y2="344.6" stroke="rgba(255,255,255,0.15)" stroke-width="0.75" />
+
+            <!-- Cota e Guias da Divisória 0.75H -->
+            <line x1="640" x2="640" y1="216.6" y2="325.7" stroke="#868686" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+            <text x="650" y="275" font-family="var(--mono)" font-size="10px" fill="#868686">9 U (36px)</text>
+            <line x1="630" x2="690" y1="216.6" y2="216.6" stroke="rgba(255,255,255,0.1)" stroke-width="0.75" stroke-dasharray="2,2" />
+            <line x1="630" x2="690" y1="325.7" y2="325.7" stroke="rgba(255,255,255,0.1)" stroke-width="0.75" stroke-dasharray="2,2" />
+
+            <!-- Cota e Guias do Texto 0.22H -->
+            <line x1="1110" x2="1110" y1="256.2" y2="288.5" stroke="#868686" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+            <text x="1120" y="276" font-family="var(--mono)" font-size="10px" fill="#868686">2.7 U (11px)</text>
+            <line x1="1025" x2="1115" y1="256.2" y2="256.2" stroke="rgba(255,255,255,0.1)" stroke-width="0.75" stroke-dasharray="2,2" />
+            <line x1="1025" x2="1115" y1="288.5" y2="288.5" stroke="rgba(255,255,255,0.1)" stroke-width="0.75" stroke-dasharray="2,2" />
+
+            <!-- Barra de Legendas Inferiores -->
+            <rect x="60" y="440" width="1080" height="40" fill="#0D0D0D" stroke="rgba(232, 232, 234, 0.05)" />
+            <text x="80" y="464" font-family="var(--sans)" font-size="10px" fill="#868686" letter-spacing="1px">PROPORÇÃO DA ASSINATURA DIGITAL: Símbolo = 48px | Separador = 36px | Tipografia = 11px (Centralizada verticalmente)</text>
+            <text x="1060" y="464" font-family="var(--sans)" font-size="10px" fill="#9A9A9C" font-weight="500" text-anchor="end" letter-spacing="1px">CLEAR SPACE (1X) = 16px</text>
+          </svg>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:24px;">
+          <div>
+            <p class="prot-note" style="margin-top:0"><strong>Área de Não-Invasão (Clear Space):</strong> A margem de segurança ao redor da assinatura horizontal é de exatamente <strong>1X</strong> (16px) em todos os lados. Nenhum elemento de UI, texto ou borda do contêiner pode invadir esta área.</p>
+          </div>
+          <div>
+            <p class="prot-note" style="margin-top:0"><strong>Proporção e Alinhamento Óptico:</strong> A assinatura segue a grade de layout digital. A altura do símbolo é de <strong>12 U</strong> (48px), o divisor tem <strong>9 U</strong> (36px) e a palavra "Dandi" possui <strong>2.7 U</strong> (11px), centralizada verticalmente no grid.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARDS DE DETALHES (Grid de 2 colunas para Redução e Unidade Base) -->
       <div class="prot-grid">
         <div class="prot-card rvl">
-          <div class="prot-card-tag">Área de proteção</div>
-          <div class="prot-stage" aria-hidden="true">
-            <span class="prot-margin"></span>
-            <img src="../assets/marca/logo-vertical-clara.svg" alt="Área de proteção da marca Dandi">
-          </div>
-          <p class="prot-note">A unidade de espaçamento <strong>X</strong> é definida pela <strong>largura do espaço interno central do monograma "D"</strong> (medido horizontalmente no espaço negativo da letra). A margem de proteção e respiro mínimo ao redor de qualquer versão da marca é de <strong>1X</strong> em todos os lados (superior, inferior e laterais).</p>
+          <div class="prot-card-tag">Unidade de Medida Base (X)</div>
+          <p class="prot-note" style="margin-top:0">A unidade de espaçamento <strong>X</strong> é definida pela <strong>largura do espaço interno central do monograma "D"</strong> (medido horizontalmente no espaço negativo da letra, correspondente a 4 unidades na grade geométrica original de 12 × 12, ou seja, 16px).</p>
+          <p class="prot-note">Este padrão garante que o respiro aumente proporcionalmente quando o logotipo é redimensionado nas interfaces, mantendo o equilíbrio óptico em qualquer resolução de tela.</p>
         </div>
 
         <div class="prot-card rvr">
-          <div class="prot-card-tag">Redução mínima</div>
-          <div class="prot-sizes">
+          <div class="prot-card-tag">Redução mínima em telas</div>
+          <div class="prot-sizes" style="grid-template-columns:1fr 1fr;">
             <div class="prot-size">
-              <img src="../assets/marca/icone-claro.svg" alt="Símbolo em tamanho mínimo digital">
-              <div class="prot-size-label">Tela</div>
-              <div class="prot-size-val">símbolo a partir de <strong>24px</strong><br>logo horizontal a partir de
-                <strong>120px</strong></div>
+              <img src="assets/marca/icone-claro.svg" alt="Símbolo isolado" style="height:24px; width:auto; margin-bottom:8px;">
+              <div class="prot-size-label">Símbolo (Avatar / Favicon)</div>
+              <div class="prot-size-val">a partir de <strong>16px</strong> (Favicons)<br>ou <strong>24px</strong> (Avatares/Interfaces)</div>
             </div>
             <div class="prot-size">
-              <img src="../assets/marca/icone-claro.svg" alt="Símbolo em tamanho mínimo impresso">
-              <div class="prot-size-label">Impresso</div>
-              <div class="prot-size-val">símbolo a partir de <strong>10mm</strong><br>logo horizontal a partir de
-                <strong>30mm</strong></div>
+              <img src="assets/marca/logo-horizontal-clara.svg" alt="Logo horizontal" style="height:14px; width:auto; margin-bottom:8px; filter:brightness(0.95);">
+              <div class="prot-size-label">Assinatura Horizontal</div>
+              <div class="prot-size-val">a partir de <strong>120px</strong> de largura<br>em cabeçalhos e telas de UI</div>
             </div>
           </div>
-          <p class="prot-note">Abaixo do mínimo, a marca perde definição. Em peças grandes (acima de 1m), use sempre o
-            arquivo vetorial.</p>
+          <p class="prot-note" style="margin-top:12px;">Abaixo disso, a marca perde definição. Para telas de alta densidade (Retina/4K), utilize sempre o arquivo em formato vetorial (.SVG).</p>
         </div>
       </div>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="usos-indevidos">
     <div class="maxw">
@@ -5897,41 +5614,37 @@
       <div class="dont-grid">
         <div class="dont-card rv d1">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="transform:scaleX(1.6)"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="transform:scaleX(1.6)"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Distorcer ou esticar</div>
         </div>
         <div class="dont-card rv d2">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="transform:rotate(18deg)"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="transform:rotate(18deg)"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Girar a marca</div>
         </div>
         <div class="dont-card rv d3">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="filter:drop-shadow(0 6px 4px rgba(255,255,255,.6))"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="filter:drop-shadow(0 6px 4px rgba(255,255,255,.6))"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Aplicar sombra ou efeito</div>
         </div>
         <div class="dont-card rv d1">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview dont-recolor"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview dont-recolor"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Recolorir fora da paleta</div>
         </div>
         <div class="dont-card rv d2">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview dont-busy"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview dont-busy"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Fundo de baixo contraste</div>
         </div>
         <div class="dont-card rv d3">
           <div class="dont-x" aria-hidden="true">✕</div>
-          <div class="dont-preview" style="transform:scale(.62)"><img src="../assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
+          <div class="dont-preview" style="transform:scale(.62)"><img src="assets/marca/icone-claro.svg" alt="" aria-hidden="true"></div>
           <div class="dont-label">Abaixo da redução mínima</div>
         </div>
       </div>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="icones-app">
     <div class="maxw">
@@ -5945,27 +5658,27 @@
 
       <div class="icons-grid">
         <div class="icon-card rv d1">
-          <div class="icon-card-img"><img src="../assets/marca/app-icon-couro.jpg" alt="Ícone couro com D prata"></div>
+          <div class="icon-card-img"><img src="assets/marca/app-icon-couro.jpg" alt="Ícone couro com D prata"></div>
           <div class="icon-card-meta"><span class="icon-card-num">01</span><span class="icon-card-name">Couro ·
               direção oficial</span></div>
         </div>
         <div class="icon-card rv d2">
-          <div class="icon-card-img"><img src="../assets/marca/app-icon-couro-prata.jpg" alt="Ícone couro com D prata cromada"></div>
+          <div class="icon-card-img"><img src="assets/marca/app-icon-couro-prata.jpg" alt="Ícone couro com D prata cromada"></div>
           <div class="icon-card-meta"><span class="icon-card-num">02</span><span class="icon-card-name">Couro ·
               prata cromada</span></div>
         </div>
         <div class="icon-card rv d3">
-          <div class="icon-card-img"><img src="../assets/marca/app-icon-prata.png" alt="Ícone D prata sobre preto"></div>
+          <div class="icon-card-img"><img src="assets/marca/app-icon-prata.png" alt="Ícone D prata sobre preto"></div>
           <div class="icon-card-meta"><span class="icon-card-num">03</span><span class="icon-card-name">Prata ·
               fundo preto</span></div>
         </div>
         <div class="icon-card rv d4">
-          <div class="icon-card-img"><img src="../assets/marca/app-icon-preto.png" alt="Ícone D off-white sobre preto"></div>
+          <div class="icon-card-img"><img src="assets/marca/app-icon-preto.png" alt="Ícone D off-white sobre preto"></div>
           <div class="icon-card-meta"><span class="icon-card-num">04</span><span class="icon-card-name">Off-white ·
               fundo preto</span></div>
         </div>
         <div class="icon-card rv d1">
-          <div class="icon-card-img"><img src="../assets/marca/app-icon-claro.png" alt="Ícone D preto sobre off-white"></div>
+          <div class="icon-card-img"><img src="assets/marca/app-icon-claro.png" alt="Ícone D preto sobre off-white"></div>
           <div class="icon-card-meta"><span class="icon-card-num">05</span><span class="icon-card-name">Claro ·
               impressão</span></div>
         </div>
@@ -6001,22 +5714,14 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- PARTE 03 -->
-  <section id="parte-cores" class="part-divider" style="border-top:none;border-bottom:none" aria-label="Parte 03: Cores">
+  <section id="parte-cores" class="part-divider" aria-label="Parte 03: Cores">
     <div class="part-inner rv">
       <span class="part-num">Parte 03</span>
       <h2 class="part-title">Cores</h2>
       <span class="part-sub">paleta institucional · uso do prata · texturas · grid e espaçamento</span>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="paleta">
     <div class="maxw">
@@ -6072,15 +5777,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section id="paleta-tecnica" style="background:var(--preto)">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">18.1 · Cores técnicas e semânticas</span>
-        <h2 class="st rv d1">Suporte e <span class="ac">feedback</span></h2>
-      </div>
       <div class="pal-tech rv d3">
         <div class="pal-tech-head">Uso técnico · isoladas</div>
         <p class="pal-tech-note">Os puros não entram na composição do dia a dia. Servem só quando a técnica exige:
@@ -6136,15 +5832,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section id="paleta-proporcao" style="background:var(--preto)">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">18.2 · Proporção de uso</span>
-        <h2 class="st rv d1">Equilíbrio da <span class="ac">paleta</span></h2>
-      </div>
       <div class="pal-prop rv d4">
         <div class="pal-prop-title">Proporção de uso</div>
         <div class="pal-prop-bar">
@@ -6161,16 +5848,7 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section id="paleta-prata" style="background:var(--preto)">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">18.3 · O gradiente prata</span>
-        <h2 class="st rv d1">Especificação <span class="ac">do metal</span></h2>
-      </div>
-      <div class="rv d3" style="max-width:800px;margin-left:auto;margin-right:auto">
+      <div class="rv d3" style="margin-top:56px;border-top:1px solid rgba(232,232,234,0.08);padding-top:48px;max-width:800px;margin-left:auto;margin-right:auto">
         <div style="font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--silver-2);margin-bottom:32px;text-align:center">Especificação Técnica do Gradiente Prata (2% de Acento)</div>
         
         <div style="position:relative;margin-bottom:48px;padding:0 20px">
@@ -6290,10 +5968,6 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="prata">
     <div class="maxw">
       <div class="head">
@@ -6328,7 +6002,7 @@
   </section>
 
   <!-- SEÇÃO 19.1 · TEXTURAS DE APOIO -->
-  <section id="texturas-apoio" style="background:#0D0D0D">
+  <section id="texturas-apoio" style="background:var(--grafite)">
     <div class="maxw">
       <div class="head">
         <span class="tag rv">19.1 · Texturas de Apoio</span>
@@ -6338,23 +6012,12 @@
       <div class="prot-grid" style="margin-top:32px">
         <div class="prot-card rvl">
           <div class="prot-card-tag">Textura de Mármore</div>
-          <div class="prot-stage" style="aspect-ratio:16/10;background:url('../assets/marca/fundo-marmore.webp') center/cover no-repeat;border:none" aria-hidden="true"></div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:url('assets/marca/fundo-marmore.webp') center/cover no-repeat;border:none" aria-hidden="true"></div>
           <p class="prot-note" style="margin-top:20px"><strong>Uso editorial estático.</strong> O mármore preto representa a solidez estrutural e a sofisticação da marca. Deve ser usado apenas como textura de fundo de capítulos, mockups de alta joalheria ou planos de fundo de apresentações.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="texturas-couro" style="background:#0D0D0D">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">19.1.1 · Texturas de Apoio</span>
-        <h2 class="st rv d1">O couro <span class="ac">tátil</span></h2>
-      </div>
-      <div class="prot-grid">
         <div class="prot-card rvr">
           <div class="prot-card-tag">Textura de Couro</div>
-          <div class="prot-stage" style="aspect-ratio:16/10;background:url('../assets/marca/fundo-couro.png') center/cover no-repeat;border:none" aria-hidden="true"></div>
+          <div class="prot-stage" style="aspect-ratio:16/10;background:url('assets/marca/fundo-couro.png') center/cover no-repeat;border:none" aria-hidden="true"></div>
           <p class="prot-note" style="margin-top:20px"><strong>Uso físico e tátil.</strong> O couro preto fosco traz a sensação de calor, robustez e vestuário clássico. É de uso exclusivo para o fundo do ícone oficial do aplicativo (springboard) e acabamentos físicos de papelaria (sacolas, caixas).</p>
         </div>
       </div>
@@ -6362,12 +6025,8 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- SEÇÃO 19.2 · SISTEMA DE ESPAÇAMENTO -->
-  <section id="sistema-espacamento" style="background:#0D0D0D">
+  <section id="sistema-espacamento" style="background:var(--preto)">
     <div class="maxw">
       <div class="head">
         <span class="tag rv">19.2 · Grid de Layout e Espaçamento</span>
@@ -6474,22 +6133,14 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
-  <!-- PARTE 04 -->
-  <section id="parte-tipografia" class="part-divider" style="border-top:none;border-bottom:none" aria-label="Parte 04: Tipografia">
+<!-- PARTE 04 -->
+  <section id="parte-tipografia" class="part-divider" aria-label="Parte 04: Tipografia">
     <div class="part-inner rv">
       <span class="part-num">Parte 04</span>
       <h2 class="part-title">Tipografia</h2>
       <span class="part-sub">sistema tipográfico</span>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="tipografia">
     <div class="maxw">
@@ -6536,13 +6187,8 @@
         manual: <strong style="color:var(--offwhite)">Montserrat</strong>. Os pesos leves (200 e 300) dão o ar editorial;
         o itálico aparece só em citações.</p>
 
-    </div>
-  </section>
-
-  <section id="hierarquia-digital" style="background:#0D0D0D">
-    <div class="maxw">
       <!-- HIERARQUIA DIGITAL COMPLETA -->
-      <div class="head">
+      <div class="head" style="margin-top:80px">
         <span class="tag rv">20.1 · Hierarquia digital</span>
         <h2 class="st rv d1">Escala tipográfica <span class="ac">do app</span></h2>
         <p class="lead rv d2" style="margin-top:20px">Cada tamanho tem uma função. Nada é aleatório. A escala funciona
@@ -6580,17 +6226,6 @@
             Blazer de lã · Azul-marinho · Essencial</div>
           <div class="typo-digital-spec">12-13 px · Regular 400<br>line 1.5 · color #868686<br>Mobile: 11-12 px</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="hierarquia-digital-2" style="background:#0D0D0D">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">20.1.1 · Hierarquia digital</span>
-        <h2 class="st rv d1">Escala tipográfica <span class="ac">do app · Parte II</span></h2>
-      </div>
-      <div class="typo-digital-grid rv d2">
         <div class="typo-digital-row">
           <div class="typo-digital-role">Micro · rótulo</div>
           <div class="typo-digital-sample"
@@ -6630,17 +6265,7 @@
         <span class="leg-w500">Medium 500</span>
       </div>
 
-    </div>
-  </section>
-
-  <section id="hierarquia-digital-regras" style="background:#0D0D0D">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">20.2 · Regras e Diretrizes</span>
-        <h2 class="st rv d1">Boas práticas <span class="ac">de uso</span></h2>
-      </div>
-      <div class="regras-container">
-        <div class="typo-digital-note rv d3">
+      <div class="typo-digital-note rv d3">
         <div class="typo-digital-note-title">Regras de limite</div>
         <div class="typo-digital-note-grid">
           <div class="typo-digital-note-col">
@@ -6680,26 +6305,17 @@
           </div>
         </div>
       </div>
-      </div> <!-- fecha .regras-container -->
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- PARTE 05 -->
-  <section id="parte-aplicacao" class="part-divider" style="border-top:none;border-bottom:none" aria-label="Parte 05: Aplicação">
+  <section id="parte-aplicacao" class="part-divider" aria-label="Parte 05: Aplicação">
     <div class="part-inner rv">
       <span class="part-num">Parte 05</span>
       <h2 class="part-title">Aplicação</h2>
       <span class="part-sub">marca aplicada · co-branding · direção fotográfica · no produto digital · limites</span>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="aplicacoes">
     <div class="maxw">
@@ -6709,111 +6325,75 @@
         <p class="lead rv d2" style="margin-top:20px">Este manual rege a marca em tudo: produto, redes, campanha,
           evento e brinde. A mesma lógica de preto, respiro e prata cirúrgica vale em qualquer superfície.</p>
       </div>
-
-      <!-- Linha 1: 2 imagens grandes -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px" class="rv d1">
-        <div>
-          <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
+      <div class="ap-grid rv">
+        <div class="ap-grid-col">
+          <div class="ap-img-wrap rv d1" style="height:320px">
+            <img src="assets/marca/kit-presentes-parceiro.png" alt="Kit de presentes e sacola Dandi">
+            <div class="ap-img-caption">
+              <span>Kit Presentes & Embalagem</span>
+              <span style="opacity:0.5;font-size:8px">01</span>
+            </div>
           </div>
-          <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
-            <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Kit Presentes & Embalagem</span>
-            <span style="font-family:var(--mono);font-size:10px;color:var(--chumbo)">01</span>
-          </div>
-        </div>
-        <div>
-          <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
-          </div>
-          <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
-            <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Campanhas & Outdoors</span>
-            <span style="font-family:var(--mono);font-size:10px;color:var(--chumbo)">02</span>
+          <div class="ap-img-wrap rv d3" style="height:440px">
+            <img src="assets/marca/anuncios-em-paredes.png" alt="Anúncios de parede Dandi">
+            <div class="ap-img-caption">
+              <span>Campanhas & Outdoors</span>
+              <span style="opacity:0.5;font-size:8px">02</span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
-  <!-- 21 · continuação: Fachadas + Mídia Urbana -->
-  <section id="aplicacoes-2" style="background:#0D0D0D">
-    <div class="maxw">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px" class="rv">
-        <div>
-          <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
+        <div class="ap-grid-col">
+          <div class="ap-img-wrap rv d2" style="height:440px">
+            <img src="assets/marca/dandi-evento.png" alt="Totem e painel de evento Dandi">
+            <div class="ap-img-caption">
+              <span>Fachadas & Eventos</span>
+              <span style="opacity:0.5;font-size:8px">03</span>
+            </div>
           </div>
-          <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
-            <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Fachadas & Eventos</span>
-            <span style="font-family:var(--mono);font-size:10px;color:var(--chumbo)">03</span>
-          </div>
-        </div>
-        <div>
-          <div class="ap-img-wrap" style="height:52vh">
-            <img src="../assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
-          </div>
-          <div style="padding:16px 4px 0;display:flex;justify-content:space-between;align-items:baseline">
-            <span style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver-2)">Mídia Urbana</span>
-            <span style="font-family:var(--mono);font-size:10px;color:var(--chumbo)">04</span>
+          <div class="ap-img-wrap rv d4" style="height:320px">
+            <img src="assets/marca/onibus-dandi.png" alt="Anúncio em ônibus Dandi">
+            <div class="ap-img-caption">
+              <span>Mídia Urbana</span>
+              <span style="opacity:0.5;font-size:8px">04</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
-  <section id="aplicacao-digital">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">21.1 · Marca aplicada · <span class="ac">No digital</span></span>
-        <h2 class="st rv d1">Presença nas <span class="ac">telas</span></h2>
+      <div class="head" style="margin-top:64px">
+        <span class="tag rv">Marca aplicada · <span class="ac">No digital</span></span>
       </div>
-      <div class="rv" style="margin-top:40px;max-width:720px;margin-left:auto;margin-right:auto;border:1px solid rgba(232,232,234,.08);overflow:hidden;background:#0D0D0D">
-        <img src="../assets/marca/modelo-instagram.png" alt="Mockup da marca aplicada no Instagram" style="width:100%;height:auto;display:block">
+      <div class="ap-digital-img-wrap rv" style="max-width: 900px; margin: 32px auto 0;">
+        <img src="assets/marca/modelo-instagram.png" alt="Mockup da marca aplicada no Instagram">
       </div>
-    </div>
-  </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
-  <section id="cobranding">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag">21.2 · Co-branding · <span class="ac">Parcerias</span></span>
-        <h2 class="st" style="margin-top:8px">A marca ao lado de <span class="ac">um parceiro</span></h2>
-      </div>
-      <div class="cob-grid">
-        <div class="cob-lockup rv">
-          <img class="cob-mark-img" src="../assets/marca/icone-prata.svg" alt="Monograma Dandi em prata">
-          <span class="cob-bar" aria-hidden="true"></span>
-          <span class="cob-partner">Parceiro</span>
+      <div class="cob-block rv" id="cobranding" style="margin-top:64px;scroll-margin-top:80px">
+        <div class="head">
+          <span class="tag">21 · Co-branding · <span class="ac">Parcerias</span></span>
+          <h2 class="st" style="margin-top:8px">A marca ao lado de <span class="ac">um parceiro</span></h2>
         </div>
-        <div class="rv">
-          <p class="bt"><strong style="color:var(--offwhite)">Assinatura conjunta.</strong> Dandi e parceiro lado a
-            lado, divisória fina entre as marcas, com respiro igual de cada lado, respeitando a área de proteção mínima de 1X (largura interna do monograma D).</p>
-          <p class="bt" style="margin-top:14px"><strong style="color:var(--offwhite)">O parceiro recebe</strong> o
-            monograma ou a versão monocromática oficial. Nunca uma versão improvisada.</p>
-          <p class="bt" style="margin-top:14px;color:#C98B8B"><strong>Nunca:</strong> recolorir, distorcer, aplicar
-            prata em fundo cheio ou reposicionar elementos da marca.</p>
+        <div class="cob-grid">
+          <div class="cob-lockup rv">
+            <img class="cob-mark-img" src="assets/marca/icone-prata.svg" alt="Monograma Dandi em prata">
+            <span class="cob-bar" aria-hidden="true"></span>
+            <span class="cob-partner">Parceiro</span>
+          </div>
+          <div class="rv">
+            <p class="bt"><strong style="color:var(--offwhite)">Assinatura conjunta.</strong> Dandi e parceiro lado a
+              lado, divisória fina entre as marcas, com respiro igual de cada lado, respeitando a área de proteção mínima de 1X (largura interna do monograma D).</p>
+            <p class="bt" style="margin-top:14px"><strong style="color:var(--offwhite)">O parceiro recebe</strong> o
+              monograma ou a versão monocromática oficial. Nunca uma versão improvisada.</p>
+            <p class="bt" style="margin-top:14px;color:#C98B8B"><strong>Nunca:</strong> recolorir, distorcer, aplicar
+              prata em fundo cheio ou reposicionar elementos da marca.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <!-- SEÇÃO 22 · DIREÇÃO FOTOGRÁFICA -->
-  <section id="direcao-fotografica" style="background:#0D0D0D">
+  <section id="direcao-fotografica" style="background:var(--preto)">
     <div class="maxw">
       <div class="head">
         <span class="tag rv">22 · Direção Fotográfica</span>
@@ -6839,10 +6419,6 @@
       </div>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="produto">
     <div class="maxw">
@@ -6891,21 +6467,8 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
-  <section id="produto-cores" style="background:#0D0D0D">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">23.0.1 · Cores do App</span>
-        <h2 class="st rv d1">Esquema cromático <span class="ac">da interface</span></h2>
-      </div>
       <!-- Cor na tela -->
-      <div class="prod-block rv d3" style="margin-top:0">
+      <div class="prod-block rv d3">
         <div class="prod-block-label">A cor na tela</div>
         <p class="prod-block-note">O app nasce escuro. Fundo profundo, conteúdo claro. É a identidade do manual levada
           ao produto, não uma decisão de tela à parte.</p>
@@ -6939,21 +6502,8 @@
           combinação. É a régua de acessibilidade (WCAG AA). Texto cinza só em tamanhos maiores, onde ainda passa.</p>
       </div>
 
-    </div>
-  </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
-  <section id="produto-especificacoes" style="background:#0D0D0D">
-    <div class="maxw">
-      <div class="head">
-        <span class="tag rv">23.1 · Especificações do app</span>
-        <h2 class="st rv d1">Sintaxe e <span class="ac">interação</span></h2>
-      </div>
       <!-- Tipografia de tela -->
-      <div class="prod-block rv d3" style="margin-top:0">
+      <div class="prod-block rv d3">
         <div class="prod-block-label">A tipografia em tela</div>
         <p class="prod-block-note">Montserrat é a fonte do app, igual à do manual. Uma escala curta mantém a hierarquia
           limpa. Pesos leves, do jeito que a marca fala.</p>
@@ -7019,10 +6569,6 @@
   </section>
 
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="conexoes">
     <div class="maxw">
       <div class="head">
@@ -7065,22 +6611,14 @@
   </section>
 
   
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <!-- PARTE 06 -->
-  <section id="parte-arquivos" class="part-divider" style="border-top:none;border-bottom:none" aria-label="Parte 06: Arquivos">
+  <section id="parte-arquivos" class="part-divider" aria-label="Parte 06: Arquivos">
     <div class="part-inner rv">
       <span class="part-num">Parte 06</span>
       <h2 class="part-title">Arquivos</h2>
       <span class="part-sub">o pacote da marca</span>
     </div>
   </section>
-
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
 
   <section id="arquivos">
     <div class="maxw">
@@ -7118,12 +6656,8 @@
     </div>
   </section>
 
-  <div class="sec-divider" style="--from:#0D0D0D;--to:#0D0D0D" aria-hidden="true">
-    <span class="sec-divider-gem"></span>
-  </div>
-
   <section id="closing">
-    <img src="../assets/marca/logo-vertical-clara.svg" alt="Logo Dandi" class="cl-logo rv">
+    <img src="assets/marca/logo-vertical-clara.svg" alt="Logo Dandi" class="cl-logo rv">
     <div class="cl-rule rv d1"></div>
     <div class="cl-tag rv d2">Manual de Marca · 2026</div>
     <div class="cl-tagline rv d3">Estilo&nbsp;&nbsp;<em>Inteligente.</em></div>
@@ -7132,8 +6666,169 @@
   </section>
 
   <script>
-    // Mantém carregado para estilos estáticos, mas sem adicionar classe 'js' para evitar esconder elementos por padrão
-    document.body.classList.add('loaded');
+    /* Marca body.js para habilitar animações progressivas - sem JS, tudo já está visível */
+    document.body.classList.add('js');
+
+    /* PRELOADER PREMIUM JS */
+    (function () {
+      document.body.classList.add('loading');
+      var pl = document.getElementById('preloader');
+      var line = document.querySelector('.preloader-line');
+      var countText = document.getElementById('pl-count');
+      var phase1 = document.querySelector('.pl-phase-1');
+      var phase2 = document.querySelector('.pl-phase-2');
+      var phase3 = document.querySelector('.pl-phase-3');
+
+      var titleEl = document.querySelector('.pl-type-title');
+      var taglineEl = document.querySelector('.pl-type-tagline');
+      var statusEl = document.querySelector('.pl-type-status');
+
+      // Função Typewriter
+      function typeEffect(element, text, speed, callback) {
+        if (!element) return;
+        var i = 0;
+        element.textContent = "";
+        var cursor = document.createElement('span');
+        cursor.className = 'typewriter-cursor';
+        element.appendChild(cursor);
+
+        function type() {
+          if (i < text.length) {
+            cursor.insertAdjacentHTML('beforebegin', text.charAt(i));
+            i++;
+            setTimeout(type, speed + (Math.random() * 25));
+          } else {
+            cursor.remove();
+            if (callback) callback();
+          }
+        }
+        type();
+      }
+
+      // Inicia Fase 1 (Revelação cinemática do Logo) imediatamente
+      setTimeout(function () {
+        if (phase1) phase1.classList.add('active');
+      }, 100);
+
+      // Elementos do Chat
+      var chatTextEl = document.querySelector('.pl-chat-text');
+      var chatOptionsEl = document.querySelector('.pl-chat-options');
+      var chatInputWrapperEl = document.querySelector('.pl-chat-input-wrapper');
+      var chatInputEl = document.querySelector('.pl-chat-input');
+      var chatSendEl = document.querySelector('.pl-chat-send');
+      var modelsRowEl = document.querySelector('.pl-models-row');
+      var fallbackTimer = null;
+      var interativeProceeding = false;
+
+      // Transição para Fase 2 (após 3.4s) - Quando acaba a revelação da logo
+      setTimeout(function () {
+        if (phase1) {
+          phase1.classList.remove('active');
+          phase1.classList.add('exit');
+        }
+        setTimeout(function () {
+          if (phase2) {
+            phase2.classList.add('active');
+            // Assistente de estilo começa a digitar a pergunta interativa
+            typeEffect(chatTextEl, "Olá. Sou o seu Assistente de Estilo Dandi. Quando quiser, acesse o manual de marca.", 30, function () {
+              // Exibe o botão como única forma de prosseguir
+              if (chatOptionsEl) chatOptionsEl.classList.add('show');
+            });
+          }
+        }, 450);
+      }, 3400);
+
+      // Função para processar a ação interativa e prosseguir
+      function handleChatAction(userInputText) {
+        if (interativeProceeding) return;
+        interativeProceeding = true;
+
+        if (fallbackTimer) clearTimeout(fallbackTimer);
+
+        // Desabilitar todas as interações
+        if (chatInputEl) chatInputEl.setAttribute('disabled', 'true');
+        if (chatSendEl) chatSendEl.setAttribute('disabled', 'true');
+        if (chatOptionsEl) chatOptionsEl.classList.remove('show');
+        if (chatInputWrapperEl) chatInputWrapperEl.classList.remove('show');
+        if (modelsRowEl) modelsRowEl.classList.remove('show');
+
+        // Pequeno feedback do assistente digitando rapidamente
+        setTimeout(function () {
+          typeEffect(chatTextEl, "Excelente escolha. Acessando as diretrizes de marca Dandi...", 20, function () {
+            // Após responder, transiciona para a Fase 3 de carregamento
+            setTimeout(function () {
+              if (phase2) {
+                phase2.classList.remove('active');
+                phase2.classList.add('exit');
+              }
+              setTimeout(function () {
+                if (phase3) {
+                  phase3.classList.add('active');
+                  typeEffect(statusEl, "Carregando o universo Dandi...", 25, function () {
+                    setTimeout(startCounter, 200);
+                  });
+                }
+              }, 450);
+            }, 800);
+          });
+        }, 150);
+      }
+
+      // Adiciona listeners para os cliques nas sugestões
+      var chatBtns = document.querySelectorAll('.pl-chat-btn');
+      chatBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          handleChatAction(btn.textContent);
+        });
+      });
+
+      // Listener para o input de texto do usuário (Enter)
+      if (chatInputEl) {
+        chatInputEl.addEventListener('keypress', function (e) {
+          if (e.key === 'Enter' && chatInputEl.value.trim() !== '') {
+            handleChatAction(chatInputEl.value.trim());
+          }
+        });
+      }
+      if (chatSendEl && chatInputEl) {
+        chatSendEl.addEventListener('click', function () {
+          if (chatInputEl.value.trim() !== '') {
+            handleChatAction(chatInputEl.value.trim());
+          }
+        });
+      }
+
+      function startCounter() {
+        var count = 0;
+        var duration = 2000; // Contador de progresso roda por 2s
+        var intervalTime = 16;
+        var step = 100 / (duration / intervalTime);
+
+        var timer = setInterval(function () {
+          count += step + (Math.random() * 1.5);
+          if (count >= 100) {
+            count = 100;
+            clearInterval(timer);
+            finishLoader();
+          }
+          var displayCount = Math.floor(count);
+          if (displayCount < 10) displayCount = '0' + displayCount;
+          if (countText) countText.textContent = displayCount;
+          if (line) line.style.width = count + '%';
+        }, intervalTime);
+      }
+
+      function finishLoader() {
+        setTimeout(function () {
+          if (pl) pl.classList.add('loaded');
+          document.body.classList.remove('loading');
+          document.body.classList.add('loaded');
+          setTimeout(function () {
+            if (pl) pl.remove();
+          }, 1400);
+        }, 300);
+      }
+    })();
 
     /* LOCAL MP3 BACKGROUND AUDIO · Michael Bublé · Feeling Good · começa em 8s */
     (function () {
@@ -7240,7 +6935,11 @@
       }
     });
 
-    /* REVEAL ON SCROLL - Desativado para a versão PDF */
+    /* REVEAL ON SCROLL */
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.rv,.rvl,.rvr,.rvs,.mf-quote').forEach(function (el) { ro.observe(el); });
 
     /* SIDENAV */
     var sdots = document.querySelectorAll('.snav-dot');
